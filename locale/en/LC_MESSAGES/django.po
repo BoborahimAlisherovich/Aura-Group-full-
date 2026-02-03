@@ -1,0 +1,1739 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-04 01:11+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\about.html:4 .\templates\about.html:10 .\templates\base.html:70
+#: .\templates\base.html:138
+msgid "Biz haqimizda"
+msgstr "About Us"
+
+#: .\templates\about.html:12
+msgid ""
+"AURA Group - O'zbekistondagi yetakchi IT kompaniya. Biznesingiz uchun "
+"innovatsion raqamli yechimlar yaratamiz."
+msgstr ""
+"AURA Group - a leading IT company in Uzbekistan. We create innovative "
+"digital solutions for your business."
+
+#: .\templates\about.html:22
+msgid "Bizning hikoyamiz"
+msgstr "Our Story"
+
+#: .\templates\about.html:23
+msgid "Texnologiya va innovatsiya bilan kelajakni bunyod etamiz"
+msgstr "Building the future with technology and innovation"
+
+#: .\templates\about.html:25
+msgid ""
+"AURA Group 2025-yil 1-iyunda tashkil topgan yosh va dinamik IT kompaniyadir."
+" Qisqa vaqt ichida 20 dan ortiq muvaffaqiyatli loyihalarni amalga oshirdik."
+msgstr ""
+"AURA Group is a young and dynamic IT company founded on June 1, 2025. In a "
+"short time, we have implemented more than 20 successful projects."
+
+#: .\templates\about.html:28
+msgid ""
+"Bizning jamoamiz tajribali dasturchilar, dizaynerlar va loyiha "
+"menejerlaridan tashkil topgan. Har bir loyihada eng yuqori sifat va mijozlar"
+" qoniqishini ta'minlashga intilamiz."
+msgstr ""
+"Our team consists of experienced developers, designers and project managers."
+" In every project, we strive to ensure the highest quality and customer "
+"satisfaction."
+
+#: .\templates\about.html:31
+msgid ""
+"Biz zamonaviy texnologiyalar va innovatsion yondashuvlar orqali "
+"O'zbekistondagi bizneslarni raqamlashtirish bo'yicha yetakchi kompaniyaga "
+"aylanishni maqsad qilganmiz."
+msgstr ""
+"Our goal is to become a leading company in digitizing businesses in "
+"Uzbekistan through modern technologies and innovative approaches."
+
+#: .\templates\about.html:38 .\templates\career.html:88
+#: .\templates\index.html:33 .\templates\portfolio.html:124
+msgid "Loyihalar"
+msgstr "Projects"
+
+#: .\templates\about.html:42 .\templates\index.html:37
+#: .\templates\portfolio.html:138
+msgid "Qoniqish"
+msgstr "Satisfaction"
+
+#: .\templates\about.html:46 .\templates\career.html:102
+msgid "Tashkil topgan"
+msgstr "Founded"
+
+#: .\templates\about.html:63
+#| msgid "Bizning xizmatlarimiz"
+msgid "Bizning maqsadimiz"
+msgstr "Our Goal"
+
+#: .\templates\about.html:65
+msgid ""
+"Har bir mijozimizga eng yuqori sifatli IT yechimlarni taqdim etish va "
+"ularning biznesini raqamli transformatsiya qilishda ishonchli hamkor "
+"bo'lish."
+msgstr ""
+"To provide each client with the highest quality IT solutions and be a "
+"trusted partner in digital transformation of their business."
+
+#: .\templates\about.html:68
+msgid "Sifatli dasturiy mahsulotlar"
+msgstr "Quality software products"
+
+#: .\templates\about.html:69
+#| msgid "Barcha xizmatlarni ko'rish"
+msgid "Tezkor xizmat ko'rsatish"
+msgstr "Fast service"
+
+#: .\templates\about.html:70
+msgid "Hamyonbop narxlar"
+msgstr "Affordable prices"
+
+#: .\templates\about.html:79
+#| msgid "Bizning vazifamiz"
+msgid "Bizning vizyonimiz"
+msgstr "Our Vision"
+
+#: .\templates\about.html:81
+msgid ""
+"O'zbekistondagi eng ishonchli va innovatsion IT kompaniyaga aylanish, hamda "
+"xalqaro miqyosda tan olingan loyihalar yaratish."
+msgstr ""
+"To become the most trusted and innovative IT company in Uzbekistan and "
+"create internationally recognized projects."
+
+#: .\templates\about.html:84
+msgid "Xalqaro standartlar"
+msgstr "International standards"
+
+#: .\templates\about.html:85 .\templates\services.html:82
+#| msgid "Zamonaviy Texnologiyalar"
+msgid "Zamonaviy texnologiyalar"
+msgstr "Modern technologies"
+
+#: .\templates\about.html:86
+#| msgid "Innovatsiya"
+msgid "Innovatsion yondashuvlar"
+msgstr "Innovative approaches"
+
+#: .\templates\about.html:98
+#| msgid "Xizmatlar"
+msgid "Qadriyatlar"
+msgstr "Values"
+
+#: .\templates\about.html:99
+#| msgid "Bizning loyihalarimiz"
+msgid "Bizning asosiy qadriyatlarimiz"
+msgstr "Our core values"
+
+#: .\templates\about.html:101
+msgid "Har bir loyihada quyidagi qadriyatlarimizga amal qilamiz"
+msgstr "We follow these values in every project"
+
+#: .\templates\about.html:110
+msgid "Ishonch"
+msgstr "Trust"
+
+#: .\templates\about.html:111
+msgid "Mijozlar bilan ochiq va shaffof munosabatlar o'rnatamiz"
+msgstr "We establish open and transparent relationships with clients"
+
+#: .\templates\about.html:119
+msgid "Sifat"
+msgstr "Quality"
+
+#: .\templates\about.html:120
+msgid "Har bir loyihada eng yuqori sifat standartlarini ta'minlaymiz"
+msgstr "We ensure the highest quality standards in every project"
+
+#: .\templates\about.html:128
+msgid "Innovatsiya"
+msgstr "Innovation"
+
+#: .\templates\about.html:129
+msgid "Doimo yangi texnologiyalar va yondashuvlarni o'rganamiz"
+msgstr "We constantly learn new technologies and approaches"
+
+#: .\templates\about.html:137
+msgid "Jamoaviylik"
+msgstr "Teamwork"
+
+#: .\templates\about.html:138
+msgid "Jamoa bo'lib ishlash orqali katta muvaffaqiyatlarga erishamiz"
+msgstr "We achieve great success by working as a team"
+
+#: .\templates\about.html:150 .\templates\index.html:252
+msgid "Jamoamiz"
+msgstr "Our Team"
+
+#: .\templates\about.html:151
+#| msgid "Professional jamoa"
+msgid "Professional"
+msgstr "Professional"
+
+#: .\templates\about.html:151
+msgid "jamoamiz"
+msgstr "team"
+
+#: .\templates\about.html:153 .\templates\index.html:255
+msgid ""
+"Tajribali mutaxassislardan tashkil topgan professional jamoamiz bilan "
+"tanishing"
+msgstr "Meet our professional team of experienced specialists"
+
+#: .\templates\about.html:203
+msgid "Bizning jamoamizga qo'shilmoqchimisiz?"
+msgstr "Want to join our team?"
+
+#: .\templates\about.html:205
+msgid "Iste'dodli mutaxassislarni har doim kutib qolamiz!"
+msgstr "We always welcome talented specialists!"
+
+#: .\templates\about.html:209 .\templates\career.html:115
+msgid "Bo'sh ish o'rinlari"
+msgstr "Vacancies"
+
+#: .\templates\about.html:212 .\templates\base.html:90
+#: .\templates\career.html:150 .\templates\career.html:220
+#: .\templates\contact.html:4 .\templates\contact.html:10
+#: .\templates\index.html:384 .\templates\portfolio.html:163
+#: .\templates\portfolio_detail.html:206 .\templates\services.html:194
+msgid "Bog'lanish"
+msgstr "Contact"
+
+#: .\templates\base.html:55 .\templates\base.html:135 .\templates\index.html:4
+#: .\templates\portfolio_detail.html:11 .\templates\service_request.html:11
+msgid "Bosh sahifa"
+msgstr "Home"
+
+#: .\templates\base.html:60 .\templates\base.html:136
+#: .\templates\base.html:144 .\templates\index.html:80
+#: .\templates\service_request.html:13 .\templates\services.html:4
+#: .\templates\services.html:21
+msgid "Xizmatlar"
+msgstr "Services"
+
+#: .\templates\base.html:65 .\templates\base.html:137
+#: .\templates\index.html:202 .\templates\portfolio.html:4
+#: .\templates\portfolio.html:21 .\templates\portfolio_detail.html:13
+#: .\templates\service_request.html:169
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: .\templates\base.html:75 .\templates\base.html:139
+#: .\templates\career.html:4 .\templates\career.html:10
+msgid "Karyera"
+msgstr "Career"
+
+#: .\templates\base.html:122
+msgid ""
+"Biznesingizni raqamli transformatsiya qiling. Professional IT yechimlar "
+"bilan kelajakka qadam qo'ying."
+msgstr ""
+"Digital transformation for your business. Step into the future with "
+"professional IT solutions."
+
+#: .\templates\base.html:133
+#| msgid "Barcha toifalar"
+msgid "Sahifalar"
+msgstr "Pages"
+
+#: .\templates\base.html:146
+#| msgid "IT Yechimlar"
+msgid "AI Yechimlar"
+msgstr "AI Solutions"
+
+#: .\templates\base.html:147
+#| msgid "Web sayt"
+msgid "Veb-saytlar"
+msgstr "Websites"
+
+#: .\templates\base.html:148
+#| msgid "Telegram bot"
+msgid "Telegram botlar"
+msgstr "Telegram bots"
+
+#: .\templates\base.html:149
+#| msgid "CRM tizimi"
+msgid "CRM tizimlari"
+msgstr "CRM systems"
+
+#: .\templates\base.html:150
+msgid "E-tijorat"
+msgstr "E-commerce"
+
+#: .\templates\base.html:151
+#| msgid "Mobil ilova"
+msgid "Mobil ilovalar"
+msgstr "Mobile apps"
+
+#: .\templates\base.html:156
+msgid "Aloqa"
+msgstr "Contact"
+
+#: .\templates\base.html:160
+msgid "Toshkent, O'zbekiston"
+msgstr "Tashkent, Uzbekistan"
+
+#: .\templates\base.html:182
+#| msgid "Barcha huquqlar himoyalangan"
+msgid "Barcha huquqlar himoyalangan."
+msgstr "All rights reserved."
+
+#: .\templates\base.html:186
+msgid "Maxfiylik siyosati"
+msgstr "Privacy Policy"
+
+#: .\templates\base.html:187
+msgid "Foydalanish shartlari"
+msgstr "Terms of Use"
+
+#: .\templates\career.html:12
+msgid "AURA Group jamoasiga qo'shiling va kelajakni birga yarating!"
+msgstr "Join the AURA Group team and create the future together!"
+
+#: .\templates\career.html:22
+msgid "Bizga qo'shiling"
+msgstr "Join Us"
+
+#: .\templates\career.html:23
+msgid "Nega AURA Group da ishlash kerak?"
+msgstr "Why work at AURA Group?"
+
+#: .\templates\career.html:25
+msgid ""
+"Biz jamoamizning rivojlanishi va qulayligi uchun eng yaxshi sharoitlarni "
+"yaratamiz. AURA Group da siz nafaqat ishlaymiz, balki birga o'sib, "
+"rivojlanasiz."
+msgstr ""
+"We create the best conditions for the development and comfort of our team. "
+"At AURA Group, you don't just work, you grow and develop together with us."
+
+#: .\templates\career.html:34
+msgid "Moslashuvchan grafik"
+msgstr "Flexible schedule"
+
+#: .\templates\career.html:35
+msgid "Remote yoki office"
+msgstr "Remote or office"
+
+#: .\templates\career.html:45
+#| msgid "Karyera"
+msgid "Karyera o'sishi"
+msgstr "Career growth"
+
+#: .\templates\career.html:46
+msgid "Tez rivojlanish"
+msgstr "Fast development"
+
+#: .\templates\career.html:56
+msgid "O'qish imkoniyati"
+msgstr "Learning opportunity"
+
+#: .\templates\career.html:57
+msgid "Kurslar va treninglar"
+msgstr "Courses and trainings"
+
+#: .\templates\career.html:67
+#| msgid "Professional jamoa"
+msgid "Do'stona jamoa"
+msgstr "Friendly team"
+
+#: .\templates\career.html:68
+#| msgid "Professional jamoa"
+msgid "Professional muhit"
+msgstr "Professional environment"
+
+#: .\templates\career.html:81
+#| msgid "Aloqa ma'lumotlari"
+msgid "Jamoa a'zolari"
+msgstr "Team members"
+
+#: .\templates\career.html:95
+#| msgid "Qoniqish"
+msgid "Ishdan qoniqish"
+msgstr "Job satisfaction"
+
+#: .\templates\career.html:114
+msgid "Vakansiyalar"
+msgstr "Vacancies"
+
+#: .\templates\career.html:117
+msgid "O'zingizga mos lavozimni toping va bizga qo'shiling"
+msgstr "Find a suitable position and join us"
+
+#: .\templates\career.html:132
+#| msgid "Muddat"
+msgid "Muddat:"
+msgstr "Deadline:"
+
+#: .\templates\career.html:136 .\templates\career_detail.html:4
+msgid "Ariza topshirish"
+msgstr "Apply"
+
+#: .\templates\career.html:147
+#| msgid "Bo'sh ish o'rinlari"
+msgid "Hozircha bo'sh ish o'rinlari yo'q"
+msgstr "No vacancies at the moment"
+
+#: .\templates\career.html:148
+msgid ""
+"Lekin siz o'z rezumyeingizni yuborishingiz mumkin, biz sizni ma'lum qilamiz."
+msgstr "But you can send your resume, we will contact you."
+
+#: .\templates\career.html:163 .\templates\services.html:137
+msgid "Jarayon"
+msgstr "Process"
+
+#: .\templates\career.html:164
+#| msgid "Qayerdan olishim mumkin?"
+msgid "Qanday qo'shilish mumkin?"
+msgstr "How to join?"
+
+#: .\templates\career.html:166
+msgid "To'rtta oddiy qadam orqali jamoamizga qo'shiling"
+msgstr "Join our team in four simple steps"
+
+#: .\templates\career.html:175
+msgid "Ariza"
+msgstr "Application"
+
+#: .\templates\career.html:176
+#| msgid "Bo'sh ish o'rinlarini ko'rish"
+msgid "Bo'sh ish o'rnini tanlang va ariza yuboring"
+msgstr "Choose a vacancy and send an application"
+
+#: .\templates\career.html:184
+msgid "Suhbat"
+msgstr "Interview"
+
+#: .\templates\career.html:185
+msgid "HR bilan telefon orqali dastlabki suhbat"
+msgstr "Initial phone interview with HR"
+
+#: .\templates\career.html:193
+msgid "Test"
+msgstr "Test"
+
+#: .\templates\career.html:194
+msgid "Texnik ko'nikmalarni baholash"
+msgstr "Technical skills assessment"
+
+#: .\templates\career.html:202
+msgid "Taklif"
+msgstr "Offer"
+
+#: .\templates\career.html:203
+msgid "Rasmiy taklif va shartnoma imzolash"
+msgstr "Official offer and contract signing"
+
+#: .\templates\career.html:214
+msgid "Savollaringiz bormi?"
+msgstr "Have questions?"
+
+#: .\templates\career.html:216
+msgid "Biz bilan bog'laning, barcha savollaringizga javob beramiz"
+msgstr "Contact us, we will answer all your questions"
+
+#: .\templates\career_detail.html:12
+#| msgid ""
+#| "Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
+msgid "Bu lavozimga ariza topshirish uchun quyidagi formani to'ldiring"
+msgstr "Fill out the form below to apply for this position"
+
+#: .\templates\career_detail.html:24
+msgid "Lavozim tafsilotlari"
+msgstr "Position details"
+
+#: .\templates\career_detail.html:32
+msgid "Lavozim"
+msgstr "Position"
+
+#: .\templates\career_detail.html:42
+msgid "Joylashuv"
+msgstr "Location"
+
+#: .\templates\career_detail.html:52
+msgid "Ish haqi"
+msgstr "Salary"
+
+#: .\templates\career_detail.html:62
+#| msgid "Tajriba yillari"
+msgid "Tajriba darajasi"
+msgstr "Experience level"
+
+#: .\templates\career_detail.html:72
+msgid "Ariza muddati"
+msgstr "Application deadline"
+
+#: .\templates\career_detail.html:80
+msgid "Tavsif"
+msgstr "Description"
+
+#: .\templates\career_detail.html:84
+msgid "Talablar"
+msgstr "Requirements"
+
+#: .\templates\career_detail.html:97
+#| msgid "Ariza yuborish"
+msgid "Ariza formasi"
+msgstr "Application form"
+
+#: .\templates\career_detail.html:98
+#| msgid "Barcha xizmatlarni ko'rish"
+msgid "Barcha maydonlarni to'ldiring"
+msgstr "Fill in all fields"
+
+#: .\templates\career_detail.html:105 .\templates\service_request.html:94
+#| msgid "Telegram bot"
+msgid "Telegram username"
+msgstr "Telegram username"
+
+#: .\templates\career_detail.html:109 .\templates\contact.html:33
+msgid "Telefon raqamingiz"
+msgstr "Your phone"
+
+#: .\templates\career_detail.html:113 .\templates\contact.html:29
+#| msgid "To'liq ism"
+msgid "To'liq ismingiz"
+msgstr "Your full name"
+
+#: .\templates\career_detail.html:114
+#| msgid "Ismingiz"
+msgid "Ism familiyangiz"
+msgstr "First and last name"
+
+#: .\templates\career_detail.html:117
+#| msgid "Biz haqimizda"
+msgid "O'zingiz haqingizda"
+msgstr "About yourself"
+
+#: .\templates\career_detail.html:118
+msgid "Tajribangiz va motivatsiyangiz haqida yozing"
+msgstr "Write about your experience and motivation"
+
+#: .\templates\career_detail.html:121
+msgid "Rezume (PDF, DOC)"
+msgstr "Resume (PDF, DOC)"
+
+#: .\templates\career_detail.html:123
+msgid "Maksimum 10MB"
+msgstr "Maximum 10MB"
+
+#: .\templates\career_detail.html:127
+msgid "Ariza yuborish"
+msgstr "Submit application"
+
+#: .\templates\career_detail.html:142
+#| msgid "Bo'sh ish o'rinlari"
+msgid "Boshqa bo'sh ish o'rinlari"
+msgstr "Other vacancies"
+
+#: .\templates\career_detail.html:143
+msgid "Sizga mos keladigan boshqa lavozimlarni ham ko'ring"
+msgstr "See other positions that may suit you"
+
+#: .\templates\career_detail.html:147
+#| msgid "Vakansiyalar"
+msgid "Barcha vakansiyalar"
+msgstr "All vacancies"
+
+#: .\templates\contact.html:12
+#| msgid "Loyihangiz haqida gapirib bering"
+msgid "Loyihangiz haqida gaplashish uchun biz bilan bog'laning"
+msgstr "Contact us to discuss your project"
+
+#: .\templates\contact.html:24 .\templates\contact.html:46
+msgid "Xabar yuborish"
+msgstr "Send message"
+
+#: .\templates\contact.html:37
+msgid "Email manzilingiz"
+msgstr "Your email"
+
+#: .\templates\contact.html:41
+msgid "Xabaringiz"
+msgstr "Your message"
+
+#: .\templates\contact.html:57
+msgid "Aloqa ma'lumotlari"
+msgstr "Contact information"
+
+#: .\templates\contact.html:64 .\templates\service_request.html:88
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\contact.html:74
+msgid "Telefon"
+msgstr "Phone"
+
+#: .\templates\contact.html:84 .\templates\contact.html:118
+msgid "Manzil"
+msgstr "Address"
+
+#: .\templates\contact.html:85
+msgid "PDP University, Toshkent, O'zbekiston"
+msgstr ""
+
+#: .\templates\contact.html:101
+msgid "Ijtimoiy tarmoqlar"
+msgstr "Social Media"
+
+#: .\templates\contact.html:119 .\templates\index.html:253
+#, fuzzy
+#| msgid "Bizning jamoa"
+msgid "Bizning"
+msgstr "Our Team"
+
+#: .\templates\contact.html:119
+#, fuzzy
+#| msgid "Ofis"
+msgid "Ofisimiz"
+msgstr "Office"
+
+#: .\templates\contact.html:120
+msgid "PDP University binosi, Toshkent shahri"
+msgstr ""
+
+#: .\templates\contact.html:142
+#, fuzzy
+#| msgid "Bepul Konsultatsiya"
+msgid "Bepul konsultatsiya oling!"
+msgstr "Free Consultation"
+
+#: .\templates\contact.html:144
+msgid "Loyihangiz haqida gaplashish uchun 30 daqiqalik bepul konsultatsiya"
+msgstr ""
+
+#: .\templates\contact.html:148
+msgid "Hozir qo'ng'iroq qiling"
+msgstr ""
+
+#: .\templates\index.html:14 .\templates\index.html:81
+msgid "IT Yechimlar"
+msgstr "IT Solutions"
+
+#: .\templates\index.html:17
+msgid "Biznesingizni"
+msgstr "Your Business"
+
+#: .\templates\index.html:17
+msgid "Raqamli"
+msgstr "Digital"
+
+#: .\templates\index.html:17
+msgid "Transformatsiya Qiling"
+msgstr "Transformation"
+
+#: .\templates\index.html:20
+msgid ""
+"AURA Group - sizning biznesingizni yangi bosqichga olib chiqadi. Veb-sayt, "
+"mobil ilova, CRM, Telegram bot va boshqa dasturiy yechimlar bilan "
+"professional jamoamiz har qanday loyihani muvaffaqiyatli amalga oshiradi."
+msgstr ""
+
+#: .\templates\index.html:24
+msgid "Bepul Konsultatsiya"
+msgstr "Free Consultation"
+
+#: .\templates\index.html:27
+msgid "Ishlarimizni Ko'ring"
+msgstr "See Our Work"
+
+#: .\templates\index.html:41 .\templates\index.html:189
+#: .\templates\services.html:118
+msgid "Qo'llab-quvvatlash"
+msgstr "Support"
+
+#: .\templates\index.html:81
+msgid "Har Qanday Biznes Uchun"
+msgstr "For Any Business"
+
+#: .\templates\index.html:83
+msgid ""
+"E-tijorat, logistika, ta'lim, sog'liqni saqlash yoki boshqa turdagi biznesni"
+" avtomatlashtiring"
+msgstr ""
+"Automate e-commerce, logistics, education, healthcare or any other business"
+
+#: .\templates\index.html:97
+msgid "Batafsil"
+msgstr "Details"
+
+#: .\templates\index.html:103
+msgid "Xizmatlar tez orada qo'shiladi..."
+msgstr "Services coming soon..."
+
+#: .\templates\index.html:110
+msgid "Barcha xizmatlarni ko'rish"
+msgstr "All services"
+
+#: .\templates\index.html:122 .\templates\services.html:65
+msgid "Afzalliklar"
+msgstr "Advantages"
+
+#: .\templates\index.html:123
+msgid "Nima Uchun"
+msgstr "Why"
+
+#: .\templates\index.html:123
+msgid "'ni Tanlaysiz?"
+msgstr "Choose Us?"
+
+#: .\templates\index.html:131
+msgid "Tajriba va Professionallik"
+msgstr "Experience and Professionalism"
+
+#: .\templates\index.html:132
+msgid ""
+"2025-yildan beri 20+ muvaffaqiyatli loyihani amalga oshirgan tajribali "
+"jamoamiz."
+msgstr ""
+"Experienced team that has implemented 20+ successful projects since 2025."
+
+#: .\templates\index.html:141
+msgid "Zamonaviy Texnologiyalar"
+msgstr "Modern Technologies"
+
+#: .\templates\index.html:142
+msgid ""
+"React, Django, Flutter, Node.js va boshqa zamonaviy texnologiyalar bilan "
+"ishlaymiz."
+msgstr ""
+"We work with React, Django, Flutter, Node.js and other modern technologies."
+
+#: .\templates\index.html:151
+msgid "Sifat Kafolati"
+msgstr "Quality Guarantee"
+
+#: .\templates\index.html:152
+msgid ""
+"Eng yuqori sifat standartlari va 6 oylik bepul texnik qo'llab-quvvatlash."
+msgstr "Highest quality standards and 6 months of free technical support."
+
+#: .\templates\index.html:161
+msgid "Shaffof Narxlar"
+msgstr "Transparent Prices"
+
+#: .\templates\index.html:162
+msgid "Aniq smeta va shaffof ish jarayoni. Yashirin to'lovlar yo'q."
+msgstr "Clear estimate and transparent workflow. No hidden fees."
+
+#: .\templates\index.html:174
+msgid "Tugallangan Loyihalar"
+msgstr "Completed Projects"
+
+#: .\templates\index.html:179
+msgid "Mijoz Qoniqishi"
+msgstr "Client Satisfaction"
+
+#: .\templates\index.html:184 .\templates\portfolio_detail.html:141
+msgid "Texnologiyalar"
+msgstr "Technologies"
+
+#: .\templates\index.html:203
+msgid "So'nggi"
+msgstr ""
+
+#: .\templates\index.html:203
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyihalarimiz"
+msgstr "Projects"
+
+#: .\templates\index.html:205
+#, fuzzy
+#| msgid "20 dan ortiq muvaffaqiyatli loyihalar bilan tanishing"
+msgid "Biz amalga oshirgan muvaffaqiyatli loyihalar bilan tanishing"
+msgstr "Discover more than 20 successful projects"
+
+#: .\templates\index.html:240
+#, fuzzy
+#| msgid "Barcha xizmatlarni ko'rish"
+msgid "Barcha Loyihalarni Ko'rish"
+msgstr "All Services"
+
+#: .\templates\index.html:253
+#, fuzzy
+#| msgid "Professional jamoa"
+msgid "Professional Jamoamiz"
+msgstr "Professional Team"
+
+#: .\templates\index.html:301
+#, fuzzy
+#| msgid "Barcha xizmatlarni ko'rish"
+msgid "Barcha jamoani ko'rish"
+msgstr "All Services"
+
+#: .\templates\index.html:312
+msgid "FAQ"
+msgstr ""
+
+#: .\templates\index.html:313
+#, fuzzy
+#| msgid "Ko'p so'raladigan savollar"
+msgid "Ko'p So'raladigan"
+msgstr "Frequently Asked Questions"
+
+#: .\templates\index.html:313
+#, fuzzy
+#| msgid "Tez havolalar"
+msgid "Savollar"
+msgstr "Quick Links"
+
+#: .\templates\index.html:322
+#, fuzzy
+#| msgid "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
+msgid "AURA Group qanday xizmatlarni taklif etadi?"
+msgstr "What services does Catalyst Analytics provide?"
+
+#: .\templates\index.html:327
+msgid ""
+"Biz veb-sayt, mobil ilova, CRM, Telegram bot, e-tijorat yechimi, API "
+"integratsiya va boshqa dasturiy xizmatlarni taklif etamiz. Har qanday "
+"turdagi biznes uchun maxsus yechimlarni yaratamiz."
+msgstr ""
+
+#: .\templates\index.html:335
+msgid "Loyiha qancha vaqt davom etadi?"
+msgstr ""
+
+#: .\templates\index.html:340
+msgid ""
+"Loyihaning murakkabligiga qarab 2 haftadan 3-4 oygacha vaqt sarflanadi. Biz "
+"har bir loyiha uchun alohida vaqt tahmini beramiz va mijoz bilan kelishib "
+"ishlaymiz."
+msgstr ""
+
+#: .\templates\index.html:348
+msgid "Loyiha yakunlanganidan keyin qo'llab-quvvatlash bormi?"
+msgstr ""
+
+#: .\templates\index.html:353
+msgid ""
+"Ha, loyiha yakunlanganidan keyin 6 oyga qadar bepul texnik qo'llab-"
+"quvvatlash va yangilashlar bilan sizga yordam beramiz. Keyin ham aloqada "
+"qolamiz."
+msgstr ""
+
+#: .\templates\index.html:361
+msgid "Narxlar qanday belgilanadi?"
+msgstr ""
+
+#: .\templates\index.html:366
+msgid ""
+"Narx loyihaning murakkabligi, funksiyalari va muddatiga qarab belgilanadi. "
+"Bepul konsultatsiya orqali loyihangizni tahlil qilamiz va aniq smeta "
+"beramiz. Yashirin to'lovlar yo'q."
+msgstr ""
+
+#: .\templates\index.html:380
+#, fuzzy
+#| msgid "Muammolaringizni muhokama qilishga tayyormisiz?"
+msgid "Loyihangizni Muhokama Qilishga Tayyormisiz?"
+msgstr "Ready to discuss your challenges?"
+
+#: .\templates\index.html:381
+msgid "Bepul konsultatsiya orqali g'oyangizni amalga oshirishni boshlang"
+msgstr ""
+
+#: .\templates\portfolio.html:10
+msgid "Bizning loyihalarimiz"
+msgstr "Our Projects"
+
+#: .\templates\portfolio.html:12
+msgid "20 dan ortiq muvaffaqiyatli loyihalar bilan tanishing"
+msgstr "Discover more than 20 successful projects"
+
+#: .\templates\portfolio.html:22
+msgid "Bajarilgan loyihalar"
+msgstr "Completed Projects"
+
+#: .\templates\portfolio.html:24
+msgid ""
+"Har bir loyiha bizning professional yondashuvimiz va sifatimizning dalilidir"
+msgstr "Each project is proof of our professional approach and quality"
+
+#: .\templates\portfolio.html:31
+msgid "Barchasi"
+msgstr "All"
+
+#: .\templates\portfolio.html:34
+msgid "Web sayt"
+msgstr "Website"
+
+#: .\templates\portfolio.html:37
+msgid "Mobil ilova"
+msgstr "Mobile App"
+
+#: .\templates\portfolio.html:40
+msgid "Telegram bot"
+msgstr "Telegram Bot"
+
+#: .\templates\portfolio.html:43
+msgid "AI"
+msgstr ""
+
+#: .\templates\portfolio.html:46
+msgid "CRM"
+msgstr "CRM"
+
+#: .\templates\portfolio.html:49
+msgid "E-commerce"
+msgstr "E-commerce"
+
+#: .\templates\portfolio.html:52
+#, fuzzy
+#| msgid "Desktop dastur"
+msgid "Desktop"
+msgstr "Desktop App"
+
+#: .\templates\portfolio.html:55 .\templates\services.html:158
+#, fuzzy
+#| msgid "UX/UI Dizayn"
+msgid "Dizayn"
+msgstr "UX/UI Design"
+
+#: .\templates\portfolio.html:90
+msgid ""
+"Hozircha portfolio loyihalar mavjud emas. Admin paneldan loyihalar qo'shing."
+msgstr "No portfolio projects yet. Add projects from the admin panel."
+
+#: .\templates\portfolio.html:100
+msgid "Bu kategoriyada loyihalar topilmadi"
+msgstr "No projects found in this category"
+
+#: .\templates\portfolio.html:111
+msgid "Statistika"
+msgstr "Statistics"
+
+#: .\templates\portfolio.html:112
+msgid "Raqamlarda AURA Group"
+msgstr "AURA Group in Numbers"
+
+#: .\templates\portfolio.html:114
+msgid ""
+"2025-yil 1-iyunda tashkil topgan kompaniyamiz qisqa vaqt ichida katta "
+"yutuqlarga erishdi. Mijozlarimizning ishonchi bizning eng katta "
+"yutuqimizdir."
+msgstr ""
+"Our company, founded on June 1, 2025, has achieved great success in a short "
+"time. The trust of our clients is our greatest achievement."
+
+#: .\templates\portfolio.html:131
+msgid "Mijozlar"
+msgstr "Clients"
+
+#: .\templates\portfolio.html:145
+msgid "Kod satrlari"
+msgstr "Lines of Code"
+
+#: .\templates\portfolio.html:157
+msgid "Loyihangizni biz bilan amalga oshiring!"
+msgstr "Implement your project with us!"
+
+#: .\templates\portfolio.html:159
+msgid "Bizning tajribamiz sizning g'oyangizni haqiqatga aylantiradi"
+msgstr "Our experience will turn your idea into reality"
+
+#: .\templates\portfolio.html:166
+msgid "Xizmatlarimiz"
+msgstr "Our Services"
+
+#: .\templates\portfolio_detail.html:48
+msgid "ko'rish"
+msgstr "views"
+
+#: .\templates\portfolio_detail.html:52
+msgid "yoqtirish"
+msgstr "likes"
+
+#: .\templates\portfolio_detail.html:65
+msgid "Tanlangan loyiha"
+msgstr "Featured Project"
+
+#: .\templates\portfolio_detail.html:74 .\templates\service_request.html:107
+msgid "Loyiha haqida"
+msgstr "About Project"
+
+#: .\templates\portfolio_detail.html:85
+msgid "Asosiy xususiyatlar"
+msgstr "Key Features"
+
+#: .\templates\portfolio_detail.html:100
+msgid "Loyihani ko'rish"
+msgstr "View Project"
+
+#: .\templates\portfolio_detail.html:105 .\templates\portfolio_detail.html:265
+msgid "Yoqtirish"
+msgstr "Like"
+
+#: .\templates\portfolio_detail.html:109
+msgid "Shunday loyiha buyurtma qilish"
+msgstr "Order Similar Project"
+
+#: .\templates\portfolio_detail.html:119
+msgid "Mijoz"
+msgstr "Client"
+
+#: .\templates\portfolio_detail.html:126
+msgid "Toifa"
+msgstr "Category"
+
+#: .\templates\portfolio_detail.html:133
+msgid "Tugallangan sana"
+msgstr "Completion Date"
+
+#: .\templates\portfolio_detail.html:153
+msgid "Sayt manzili"
+msgstr "Website"
+
+#: .\templates\portfolio_detail.html:165
+msgid "Loyiha rasmlari"
+msgstr "Project Images"
+
+#: .\templates\portfolio_detail.html:172 .\templates\portfolio_detail.html:187
+#, fuzzy
+#| msgid "Loyiha rasmlari"
+msgid "Loyiha rasmi"
+msgstr "Project Images"
+
+#: .\templates\portfolio_detail.html:200
+msgid "Shunga o'xshash loyiha kerakmi?"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:202
+msgid "Biz sizning loyihangizni ham shu darajada sifatli bajaramiz!"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:209
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Barcha loyihalar"
+msgstr "All Categories"
+
+#: .\templates\portfolio_detail.html:260
+msgid "Yoqdi"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:273
+msgid "Xatolik yuz berdi"
+msgstr "An error occurred"
+
+#: .\templates\service_request.html:4
+#, fuzzy
+#| msgid "Buyurtma berish"
+msgid "Buyurtma"
+msgstr "Order"
+
+#: .\templates\service_request.html:19
+#, fuzzy
+#| msgid ""
+#| "Batafsil ma'lumot va xizmat buyurtma berish uchun quyidagi formani "
+#| "to'ldiring."
+msgid "Xizmat buyurtma qilish uchun quyidagi formani to'ldiring"
+msgstr ""
+"For more details and to order a service, please fill out the form below."
+
+#: .\templates\service_request.html:44
+#, fuzzy
+#| msgid "Buyurtma yuborish"
+msgid "Buyurtma formasi"
+msgstr "Submit Order"
+
+#: .\templates\service_request.html:45
+msgid ""
+"Barcha maydonlarni to'ldiring, biz siz bilan tez orada bog'lanamiz va "
+"Telegram orqali xabar beramiz"
+msgstr ""
+
+#: .\templates\service_request.html:54
+msgid "Kompaniya nomi"
+msgstr "Company Name"
+
+#: .\templates\service_request.html:66
+msgid "Ism familiya"
+msgstr ""
+
+#: .\templates\service_request.html:75
+#, fuzzy
+#| msgid "Telefon raqamingiz"
+msgid "Telefon raqam"
+msgstr "Your Phone"
+
+#: .\templates\service_request.html:97
+#, fuzzy
+#| msgid "Transformatsiya Qiling"
+msgid "@username formatida kiriting"
+msgstr "Transformation"
+
+#: .\templates\service_request.html:110
+msgid ""
+"Loyihangiz haqida qisqacha ma'lumot bering: maqsad, funksiyalar, muddat va "
+"boshqalar"
+msgstr ""
+
+#: .\templates\service_request.html:119
+msgid "Fayl biriktirish (ixtiyoriy)"
+msgstr ""
+
+#: .\templates\service_request.html:122
+msgid "PDF, DOC, DOCX, ZIP - maksimum 10MB"
+msgstr ""
+
+#: .\templates\service_request.html:127
+msgid "Buyurtma yuborish"
+msgstr "Submit Order"
+
+#: .\templates\service_request.html:135
+msgid ""
+"Ma'lumotlaringiz xavfsiz saqlanadi va faqat siz bilan bog'lanish uchun "
+"ishlatiladi"
+msgstr ""
+
+#: .\templates\service_request.html:143
+msgid "Savollaringiz bormi? Biz bilan bevosita bog'laning:"
+msgstr ""
+
+#: .\templates\service_request.html:160
+#, fuzzy
+#| msgid "Barcha xizmatlarni ko'rish"
+msgid "Boshqa xizmatlarimizni ham ko'ring"
+msgstr "All Services"
+
+#: .\templates\service_request.html:162
+#, fuzzy
+#| msgid "Bizning xizmatlarimiz"
+msgid "Bizning barcha IT xizmatlarimiz bilan tanishing"
+msgstr "Our Services"
+
+#: .\templates\service_request.html:166
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Barcha xizmatlar"
+msgstr "All Categories"
+
+#: .\templates\services.html:10
+msgid "Bizning xizmatlarimiz"
+msgstr "Our Services"
+
+#: .\templates\services.html:12
+msgid "Biznesingiz uchun zamonaviy raqamli yechimlar yaratamiz"
+msgstr "We create modern digital solutions for your business"
+
+#: .\templates\services.html:22
+msgid "Professional IT xizmatlar"
+msgstr "Professional IT Services"
+
+#: .\templates\services.html:24
+msgid ""
+"Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda "
+"ishlab chiqamiz"
+msgstr "We develop each project individually according to customer needs"
+
+#: .\templates\services.html:43
+msgid "Buyurtma berish"
+msgstr "Order"
+
+#: .\templates\services.html:52
+msgid "Hozircha xizmatlar mavjud emas. Admin paneldan xizmatlar qo'shing."
+msgstr "No services available yet. Add services from the admin panel."
+
+#: .\templates\services.html:66
+msgid "Nega aynan bizni tanlash kerak?"
+msgstr "Why should you choose us?"
+
+#: .\templates\services.html:73
+msgid "Professional jamoa"
+msgstr "Professional Team"
+
+#: .\templates\services.html:74
+msgid "Tajribali dasturchilar va dizaynerlardan iborat kuchli jamoa"
+msgstr "A strong team of experienced developers and designers"
+
+#: .\templates\services.html:83
+msgid "Eng so'nggi va samarali texnologiyalardan foydalanamiz"
+msgstr ""
+
+#: .\templates\services.html:91
+#, fuzzy
+#| msgid "Qo'llab-quvvatlash"
+msgid "24/7 qo'llab-quvvatlash"
+msgstr "Support"
+
+#: .\templates\services.html:92
+msgid "Loyihadan keyin ham doimiy texnik yordam beramiz"
+msgstr ""
+
+#: .\templates\services.html:104
+#, fuzzy
+#| msgid "Tanlangan loyiha"
+msgid "Yakunlangan loyihalar"
+msgstr "Featured Project"
+
+#: .\templates\services.html:111
+#, fuzzy
+#| msgid "Mijoz Qoniqishi"
+msgid "Mijozlar qoniqishi"
+msgstr "Client Satisfaction"
+
+#: .\templates\services.html:125
+#, fuzzy
+#| msgid "raqamli yechimlarimiz"
+msgid "Xavfsiz yechimlar"
+msgstr "Digital Solutions"
+
+#: .\templates\services.html:138
+msgid "Qanday ishlaymiz"
+msgstr ""
+
+#: .\templates\services.html:140
+msgid "Loyihani boshidan oxirigacha professional tarzda olib boramiz"
+msgstr ""
+
+#: .\templates\services.html:149
+#| msgid "Bepul Konsultatsiya"
+msgid "Konsultatsiya"
+msgstr "Consultation"
+
+#: .\templates\services.html:150
+msgid "Ehtiyojlaringizni o'rganib, eng yaxshi yechimni tavsiya qilamiz"
+msgstr ""
+
+#: .\templates\services.html:159
+msgid "Zamonaviy va foydalanuvchi uchun qulay dizayn yaratamiz"
+msgstr ""
+
+#: .\templates\services.html:167
+msgid "Dasturlash"
+msgstr ""
+
+#: .\templates\services.html:168
+#, fuzzy
+#| msgid "Zamonaviy Texnologiyalar"
+msgid "Eng zamonaviy texnologiyalar yordamida kodlaymiz"
+msgstr "Modern Technologies"
+
+#: .\templates\services.html:176
+#, fuzzy
+#| msgid "Ariza topshirish"
+msgid "Ishga tushirish"
+msgstr "Apply"
+
+#: .\templates\services.html:177
+msgid "Loyihani sinab, ishga tushiramiz va qo'llab-quvvatlaymiz"
+msgstr ""
+
+#: .\templates\services.html:188
+#| msgid "Muammolaringizni muhokama qilishga tayyormisiz?"
+msgid "Loyihangizni muhokama qilishga tayyormisiz?"
+msgstr "Ready to discuss your project?"
+
+#: .\templates\services.html:190
+msgid "Biz bilan bog'laning va bepul konsultatsiya oling"
+msgstr ""
+
+#: .\templates\services.html:197
+#, fuzzy
+#| msgid "Loyihani ko'rish"
+msgid "Portfoliomizni ko'rish"
+msgstr "View Project"
+
+#~ msgid "Mobile app"
+#~ msgstr "Mobile app"
+
+#~ msgid "Web site"
+#~ msgstr "Web site"
+
+#~ msgid "O'zbekcha"
+#~ msgstr "Uzbek"
+
+#~ msgid "Русский"
+#~ msgstr "Russian"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "Loyihaga yoqdi deb belgilandingiz!"
+#~ msgstr "You liked the project!"
+
+#~ msgid "Loyihaga yoqdi belgisini olib tashladingiz!"
+#~ msgstr "You removed the like from the project!"
+
+#~ msgid "Xizmat so'rovi"
+#~ msgstr "Service Request"
+
+#~ msgid "Vakansiya uchun ariza"
+#~ msgstr "Job Application"
+
+#~ msgid "Aqlli o'zgarish muhandislari"
+#~ msgstr "Engineers of Smart Change"
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, "
+#~ "biznesingiz uchun innovatsion yechimlar yaratamiz"
+#~ msgstr ""
+#~ "Combining artificial intelligence, blockchain, and financial technologies, "
+#~ "we create innovative solutions for your business"
+
+#~ msgid "Qoniqarli mijozlar"
+#~ msgstr "Satisfied Clients"
+
+#~ msgid "Obunachilar"
+#~ msgstr "Subscribers"
+
+#~ msgid "Asosiy mutaxassisliklar"
+#~ msgstr "Key Expertise"
+
+#~ msgid ""
+#~ "Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab "
+#~ "chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
+#~ msgstr ""
+#~ "Experienced in developing neural networks, computer vision systems, and NLP "
+#~ "solutions, with production deployment experience."
+
+#~ msgid "Blokcheyn"
+#~ msgstr "Blockchain"
+
+#~ msgid ""
+#~ "DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga "
+#~ "oshirishda keng tajriba."
+#~ msgstr ""
+#~ "Extensive experience in implementing DeFi protocols, smart contracts, and "
+#~ "Web3 infrastructure."
+
+#~ msgid "Algoritmik Savdo"
+#~ msgstr "Algorithmic Trading"
+
+#~ msgid ""
+#~ "Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili "
+#~ "algoritmlariga ixtisoslashgan."
+#~ msgstr ""
+#~ "Specialized in high-frequency trading systems and ML-based market analysis "
+#~ "algorithms."
+
+#~ msgid "Kibersport boshqaruvi"
+#~ msgstr "Esports Management"
+
+#~ msgid ""
+#~ "Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni "
+#~ "boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
+#~ msgstr ""
+#~ "Advancing data-driven approaches for team optimization and tournament "
+#~ "management in competitive gaming."
+
+#~ msgid "Bizning natijalarimiz"
+#~ msgstr "Our Results"
+
+#~ msgid "AI va ML rivojlanish yillari"
+#~ msgstr "Years of AI and ML Development"
+
+#~ msgid ""
+#~ "Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va "
+#~ "joriy qilish"
+#~ msgstr "Creating and deploying production-level ML systems and AI solutions"
+
+#~ msgid "Sinovdan o'tgan savdo hajmi"
+#~ msgstr "Tested Trading Volume"
+
+#~ msgid "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
+#~ msgstr "Through our tested algorithmic trading systems"
+
+#~ msgid "Blokcheyn loyihalari auditi"
+#~ msgstr "Blockchain Projects Audited"
+
+#~ msgid "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
+#~ msgstr "Including DeFi protocols and smart contracts"
+
+#~ msgid "Kibersport jamoalari auditi"
+#~ msgstr "Esports Teams Audited"
+
+#~ msgid "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
+#~ msgstr "With data-driven performance optimization"
+
+#~ msgid "Operatsion ta'sir"
+#~ msgstr "Operational Impact"
+
+#~ msgid "Tizimning ishlash vaqti"
+#~ msgstr "System Uptime"
+
+#~ msgid "AI va savdo infratuzilmasi uchun muhim"
+#~ msgstr "Critical for AI and trading infrastructure"
+
+#~ msgid "Xarajatlarni qisqartirish"
+#~ msgstr "Cost Reduction"
+
+#~ msgid "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
+#~ msgstr "Average operational cost savings for clients"
+
+#~ msgid "Avtomatlashtirish darajasi"
+#~ msgstr "Automation Level"
+
+#~ msgid "Mijoz ish jarayonlarini optimallashtirishda"
+#~ msgstr "In optimizing client workflows"
+
+#~ msgid "Natijadorlikni oshirish"
+#~ msgstr "Productivity Increase"
+
+#~ msgid "Tizim samaradorligini o'rtacha yaxshilash"
+#~ msgstr "Average system efficiency improvement"
+
+#~ msgid "Tayyor"
+#~ msgstr "Ready"
+
+#~ msgid "mahsulotingiz ehtiyojlarini"
+#~ msgstr "to discuss your product needs"
+
+#~ msgid "Biz bilan bog'laning"
+#~ msgstr "Contact Us"
+
+#~ msgid "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
+#~ msgstr "© 2025 PDP University. All rights reserved."
+
+#~ msgid "Kelajakni biz bilan yarating"
+#~ msgstr "Build the Future with Us"
+
+#~ msgid ""
+#~ "Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina "
+#~ "o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
+#~ msgstr ""
+#~ "We are a team that finds modern solutions to problems, combining artificial "
+#~ "intelligence, machine learning, and blockchain technologies."
+
+#~ msgid "Tajriba"
+#~ msgstr "Experience"
+
+#~ msgid "Ko'nikmalar"
+#~ msgstr "Skills"
+
+#~ msgid "Mahsulot ehtiyojlaringizni"
+#~ msgstr "Discuss your product needs"
+
+#~ msgid "mutaxassislari bilan muhokama qiling."
+#~ msgstr "with our experts."
+
+#~ msgid "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
+#~ msgstr "Project Information (PDF, optional)"
+
+#~ msgid "Fayl tanlash"
+#~ msgstr "Choose File"
+
+#~ msgid ""
+#~ "Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera "
+#~ "olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
+#~ msgstr ""
+#~ "Connect with our team and let's discuss how we can help your business. We're"
+#~ " happy to assist."
+
+#~ msgid "Hozir bog'lanish"
+#~ msgstr "Contact Now"
+
+#~ msgid "Yuborish"
+#~ msgstr "Submit"
+
+#~ msgid ""
+#~ "Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz "
+#~ "jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning "
+#~ "yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini tushunishga"
+#~ " yordam beramiz."
+#~ msgstr ""
+#~ "Want to discuss your project in detail? Schedule a free 30-minute "
+#~ "consultation with our team of experts. We'll help you understand how our "
+#~ "solutions can benefit your business."
+
+#~ msgid "Uchrashuvni rejalashtirish"
+#~ msgstr "Schedule a Meeting"
+
+#~ msgid "Ma'lumotlarni natijaga aylantiramiz"
+#~ msgstr "Turning Data into Results"
+
+#~ msgid ""
+#~ "Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, "
+#~ "biznesingiz uchun yangi ufqlarni ochamiz"
+#~ msgstr ""
+#~ "Leveraging artificial intelligence and machine learning capabilities to open"
+#~ " new horizons for your business"
+
+#~ msgid "Uchrashuvga yozilish"
+#~ msgstr "Schedule a Meeting"
+
+#~ msgid "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
+#~ msgstr "The Best Set of Services for Your Ideas"
+
+#~ msgid "Prognozli tahlil"
+#~ msgstr "Predictive Analytics"
+
+#~ msgid ""
+#~ "Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, to'g'ri "
+#~ "qarorlar qabul qiling."
+#~ msgstr ""
+#~ "Use our advanced ML models to predict trends in advance and make informed "
+#~ "decisions."
+
+#~ msgid "AI Konsalting"
+#~ msgstr "AI Consulting"
+
+#~ msgid ""
+#~ "Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda "
+#~ "ekspert maslahatlari."
+#~ msgstr ""
+#~ "Expert advice on implementing artificial intelligence solutions for your "
+#~ "business needs."
+
+#~ msgid "Ma'lumot muhandisligi"
+#~ msgstr "Data Engineering"
+
+#~ msgid ""
+#~ "ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini "
+#~ "yarating."
+#~ msgstr "Build robust data pipelines and infrastructure for ML operations."
+
+#~ msgid "Nega bizni tanlaysiz"
+#~ msgstr "Why Choose Us"
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, "
+#~ "ilg'or yechimlarni taqdim etamiz."
+#~ msgstr ""
+#~ "We provide cutting-edge solutions, unlocking new opportunities in artificial"
+#~ " intelligence, blockchain, and quantum trading."
+
+#~ msgid "Hamkorlik"
+#~ msgstr "Collaboration"
+
+#~ msgid ""
+#~ "Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga erishadigan "
+#~ "maxsus yechimlarni ishlab chiqamiz."
+#~ msgstr ""
+#~ "Working closely with clients to develop custom solutions that achieve "
+#~ "measurable success."
+
+#~ msgid "Mukammallik"
+#~ msgstr "Excellence"
+
+#~ msgid ""
+#~ "Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni "
+#~ "saqlaymiz."
+#~ msgstr ""
+#~ "We maintain the highest standards in code quality, system performance, and "
+#~ "client results."
+
+#~ msgid "Halollik"
+#~ msgstr "Integrity"
+
+#~ msgid ""
+#~ "Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa "
+#~ "qo'yamiz."
+#~ msgstr ""
+#~ "We prioritize transparency and ethical principles in all our decisions."
+
+#~ msgid "Nega biz boshladik"
+#~ msgstr "Why We Started"
+
+#~ msgid "Batafsil ma'lumot"
+#~ msgstr "Learn More"
+
+#~ msgid ""
+#~ "Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi xizmatlarni"
+#~ " taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab chiqish, "
+#~ "mobil ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab chiqish, "
+#~ "brending va identifikatsiya kabi sohalarda ixtisoslashganmiz."
+#~ msgstr ""
+#~ "Catalyst Analytics offers services such as design, engineering, and project "
+#~ "management. We specialize in user experience design, web development, mobile"
+#~ " app development, custom software development, branding, and identity."
+
+#~ msgid "Lorem Ipsum matni nima uchun ishlatiladi?"
+#~ msgstr "Why is Lorem Ipsum text used?"
+
+#~ msgid ""
+#~ "Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida "
+#~ "ishlatiladi. Bu 1500-yillardan beri mavjud."
+#~ msgstr ""
+#~ "Lorem Ipsum text is used as a standard placeholder in printing and "
+#~ "publishing. It has been around since the 1500s."
+
+#~ msgid "Nega biz undan foydalanamiz?"
+#~ msgstr "Why do we use it?"
+
+#~ msgid ""
+#~ "Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun "
+#~ "ishlatiladi."
+#~ msgstr ""
+#~ "This text is used to avoid distracting the reader when reviewing page "
+#~ "layout."
+
+#~ msgid ""
+#~ "Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning aksariyati "
+#~ "o'zgartirilgan."
+#~ msgstr ""
+#~ "There are many versions of Lorem Ipsum text available, but most have been "
+#~ "altered."
+
+#~ msgid "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
+#~ msgstr "Can I contact support?"
+
+#~ msgid ""
+#~ "Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz orqali"
+#~ " istalgan vaqtda biz bilan bog'lanishingiz mumkin."
+#~ msgstr "Yes, you can contact our support via email or phone at any time."
+
+#~ msgid "Bizning ishlar — Sizning kelajagingiz"
+#~ msgstr "Our Work — Your Future"
+
+#~ msgid ""
+#~ "Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy vositalar"
+#~ " — bu yerda biz amalga oshirgan zamonaviy va innovatsion loyihalar bilan "
+#~ "tanishing."
+#~ msgstr ""
+#~ "Machine learning platforms, blockchain protocols, and analytical tools — "
+#~ "explore the modern and innovative projects we've implemented here."
+
+#~ msgid "Bizning loyihalar"
+#~ msgstr "Our Projects"
+
+#~ msgid ""
+#~ "Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi "
+#~ "loyihalar bilan tanishishingiz mumkin."
+#~ msgstr ""
+#~ "Below, you can explore the best projects implemented by our team of "
+#~ "developers."
+
+#~ msgid "Bizning zamonaviy"
+#~ msgstr "Our Modern"
+
+#~ msgid ""
+#~ "Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish uchun "
+#~ "zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, ilg'or "
+#~ "texnologiyalar va innovatsion yondashuv bilan har bir loyihada yuqori "
+#~ "natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab IT "
+#~ "xizmatlar bizda."
+#~ msgstr ""
+#~ "The Aura Group team offers modern digital services to take your business to "
+#~ "the next level. With qualified specialists, advanced technologies, and an "
+#~ "innovative approach, we achieve high results in every project. Web design, "
+#~ "web programming, and many other IT services are available."
+
+#~ msgid "Bizning xizmatlar"
+#~ msgstr "Our Services"
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, "
+#~ "tajribali dasturchilar jamoasidan"
+#~ msgstr ""
+#~ "Artificial intelligence, blockchain, and analytical solutions — all in one "
+#~ "place, from an experienced team of developers"
+
+#~ msgid "Muloqotga yozilish"
+#~ msgstr "Schedule a Consultation"
+
+#~ msgid ""
+#~ "Mahsulotingiz ehtiyojlarini <b>%(company)s</b> mutaxassislari bilan muhokama"
+#~ " qilishga?"
+#~ msgstr ""
+#~ "Would you like to discuss your product needs with <b>%(company)s</b> "
+#~ "experts?"
+
+#~ msgid ""
+#~ "Mahsulot ehtiyojlaringizni <b>Catalyst Analytic</b> mutaxassislari bilan "
+#~ "muhokama qiling."
+#~ msgstr "Discuss your product needs with <b>Catalyst Analytic</b> experts."
+
+#~ msgid "Yillik Tajriba"
+#~ msgstr "Years Experience"
+
+#~ msgid "Kod Satrlari"
+#~ msgstr "Lines of Code"
+
+#~ msgid "AI / Sun'iy intellekt"
+#~ msgstr "AI / Artificial Intelligence"
+
+#~ msgid "Cloud xizmatlari"
+#~ msgstr "Cloud Services"
+
+#~ msgid "Kiberxavfsizlik"
+#~ msgstr "Cybersecurity"
+
+#~ msgid "Ma'lumotlar tahlili"
+#~ msgstr "Data Analytics"
+
+#~ msgid "Blockchain"
+#~ msgstr "Blockchain"
+
+#~ msgid "IoT"
+#~ msgstr "IoT"
+
+#~ msgid "DevOps"
+#~ msgstr "DevOps"
+
+#~ msgid "API integratsiya"
+#~ msgstr "API Integration"
+
+#~ msgid "Jamoadagi mutaxassislar"
+#~ msgstr "Specialists in the Team"
+
+#~ msgid "yillik tajriba"
+#~ msgstr "years experience"
+
+#~ msgid "Ish vaqti"
+#~ msgstr "Working Hours"
+
+#~ msgid "Dushanba - Juma"
+#~ msgstr "Monday - Friday"
+
+#~ msgid "Foydali havolalar"
+#~ msgstr "Useful Links"
+
+#~ msgid "Biz bilan ishlang"
+#~ msgstr "Work With Us"
+
+#~ msgid "Maosh"
+#~ msgstr "Salary"
+
+#~ msgid "Resume yuklash"
+#~ msgstr "Upload Resume"
+
+#~ msgid "Aloqa uchun ism"
+#~ msgstr "Contact person"
+
+#~ msgid "Loyiha tavsifi"
+#~ msgstr "Project Description"
+
+#~ msgid "Fayl yuklash"
+#~ msgstr "Upload File"
+
+#~ msgid "Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+#~ msgstr "Your message has been sent successfully! We will contact you soon."
+
+#~ msgid "So'rovingiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+#~ msgstr "Your request has been sent successfully! We will contact you soon."
+
+#~ msgid "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+#~ msgstr ""
+#~ "Your application has been submitted successfully! We will contact you soon."
+
+#~ msgid "Iltimos, formani to'g'ri to'ldiring."
+#~ msgstr "Please fill out the form correctly."
+
+#~ msgid "Loyihaga yoqdi deb belgiladingiz!"
+#~ msgstr "You marked the project as liked!"
+
+#~ msgid "Yoqdi belgisini olib tashladingiz!"
+#~ msgstr "You removed the like!"

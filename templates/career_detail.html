@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{{ career.position }} - {% trans "Ariza topshirish" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1 data-aos="fade-up">{{ career.position }}</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            {% trans "Bu lavozimga ariza topshirish uchun quyidagi formani to'ldiring" %}
+        </p>
+    </div>
+</section>
+
+<!-- Career Detail Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Job Details -->
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="contact-info-card h-100">
+                    <h4 class="mb-4">{% trans "Lavozim tafsilotlari" %}</h4>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="service-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-briefcase" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted">{% trans "Lavozim" %}</small>
+                                <h6 class="mb-0">{{ career.position }}</h6>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="service-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-map-marker-alt" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted">{% trans "Joylashuv" %}</small>
+                                <h6 class="mb-0">{{ career.location }}</h6>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="service-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-money-bill-wave" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted">{% trans "Ish haqi" %}</small>
+                                <h6 class="mb-0">{{ career.salary }}</h6>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="service-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user-tie" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted">{% trans "Tajriba darajasi" %}</small>
+                                <h6 class="mb-0">{{ career.experience_level }}</h6>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="service-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-calendar-alt" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <small class="text-muted">{% trans "Ariza muddati" %}</small>
+                                <h6 class="mb-0">{{ career.deadline|date:"d.m.Y" }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h5 class="mt-4 mb-3">{% trans "Tavsif" %}</h5>
+                    <p class="text-muted">{{ career.description }}</p>
+                    
+                    {% if career.requirements %}
+                    <h5 class="mt-4 mb-3">{% trans "Talablar" %}</h5>
+                    <p class="text-muted">{{ career.requirements }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Application Form -->
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="contact-info-card">
+                    <div class="text-center mb-4">
+                        <div class="service-icon mx-auto mb-3">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>{% trans "Ariza formasi" %}</h3>
+                        <p class="text-muted">{% trans "Barcha maydonlarni to'ldiring" %}</p>
+                    </div>
+                    
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "Telegram username" %} *</label>
+                                <input type="text" name="telegram" class="form-control" placeholder="@username" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "Telefon raqamingiz" %} *</label>
+                                <input type="tel" name="phone_number" class="form-control" placeholder="+998 90 123-45-67" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{% trans "To'liq ismingiz" %} *</label>
+                                <input type="text" name="full_name" class="form-control" placeholder="{% trans 'Ism familiyangiz' %}" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{% trans "O'zingiz haqingizda" %} *</label>
+                                <textarea name="message" class="form-control" rows="5" placeholder="{% trans 'Tajribangiz va motivatsiyangiz haqida yozing' %}" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{% trans "Rezume (PDF, DOC)" %}</label>
+                                <input type="file" name="file" class="form-control" accept=".pdf,.doc,.docx">
+                                <small class="text-muted">{% trans "Maksimum 10MB" %}</small>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>{% trans "Ariza yuborish" %}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Positions -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h3>{% trans "Boshqa bo'sh ish o'rinlari" %}</h3>
+            <p class="text-muted">{% trans "Sizga mos keladigan boshqa lavozimlarni ham ko'ring" %}</p>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'career' %}" class="btn btn-primary btn-lg">
+                <i class="fas fa-arrow-left me-2"></i>{% trans "Barcha vakansiyalar" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

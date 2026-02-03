@@ -1,0 +1,256 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AURA Group - Professional IT yechimlar. Veb-sayt, mobil ilova, CRM, Telegram bot va boshqa dasturiy xizmatlar.">
+    <meta name="keywords" content="IT kompaniya, veb-sayt, mobil ilova, telegram bot, CRM, e-tijorat, Toshkent, O'zbekiston">
+    <meta name="author" content="AURA Group">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'imgs/favicon.ico' %}">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>{% block title %}AURA Group{% endblock %} | IT Yechimlar</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'imgs/logo_image/tmpm29hi4hn.png' %}" alt="AURA Group" class="navbar-logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'index' %}">
+                            {% trans "Bosh sahifa" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}" href="{% url 'services' %}">
+                            {% trans "Xizmatlar" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}" href="{% url 'portfolio' %}">
+                            {% trans "Portfolio" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">
+                            {% trans "Biz haqimizda" %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'career' %}active{% endif %}" href="{% url 'career' %}">
+                            {% trans "Karyera" %}
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-right d-flex align-items-center gap-3">
+                    <!-- Language Selector - Sodda usul -->
+                    <div class="language-switcher">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <a href="/uz{{ request.resolver_match.kwargs|default:'' }}/" class="lang-link {% if LANGUAGE_CODE == 'uz' %}active{% endif %}">UZ</a>
+                        <a href="/ru{{ request.resolver_match.kwargs|default:'' }}/" class="lang-link {% if LANGUAGE_CODE == 'ru' %}active{% endif %}">RU</a>
+                        <a href="/en{{ request.resolver_match.kwargs|default:'' }}/" class="lang-link {% if LANGUAGE_CODE == 'en' %}active{% endif %}">EN</a>
+                    </div>
+                    
+                    <a href="{% url 'contact' %}" class="btn btn-primary btn-contact">
+                        <i class="fas fa-envelope me-2"></i>{% trans "Bog'lanish" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Messages -->
+    {% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-brand">
+                            <h3><strong>AURA</strong> Group</h3>
+                            <p>{% trans "Biznesingizni raqamli transformatsiya qiling. Professional IT yechimlar bilan kelajakka qadam qo'ying." %}</p>
+                            <div class="social-links">
+                                <a href="https://t.me/auragroup_uz" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="https://instagram.com/auragroup.uz" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://linkedin.com/company/auragroup" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/auragroup" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                        <h5>{% trans "Sahifalar" %}</h5>
+                        <ul class="footer-links">
+                            <li><a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "Xizmatlar" %}</a></li>
+                            <li><a href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a></li>
+                            <li><a href="{% url 'about' %}">{% trans "Biz haqimizda" %}</a></li>
+                            <li><a href="{% url 'career' %}">{% trans "Karyera" %}</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5>{% trans "Xizmatlar" %}</h5>
+                        <ul class="footer-links">
+                            <li><a href="{% url 'services' %}">{% trans "AI Yechimlar" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "Veb-saytlar" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "Telegram botlar" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "CRM tizimlari" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "E-tijorat" %}</a></li>
+                            <li><a href="{% url 'services' %}">{% trans "Mobil ilovalar" %}</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <h5>{% trans "Aloqa" %}</h5>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>{% trans "Toshkent, O'zbekiston" %}</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+998936658507">+998 (93) 665-85-07</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@auragroup.uz">info@auragroup.uz</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-telegram"></i>
+                                <a href="https://t.me/AuraGroupAdmin" target="_blank">@AuraGroupAdmin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 AURA Group. {% trans "Barcha huquqlar himoyalangan." %}</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-legal">
+                            <a href="#">{% trans "Maxfiylik siyosati" %}</a>
+                            <a href="#">{% trans "Foydalanish shartlari" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Language Switcher - tilni o'zgartirish
+        document.querySelectorAll('.lang-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const newLang = this.textContent.toLowerCase();
+                let currentPath = window.location.pathname;
+                
+                // Eski til prefixini olib tashlash
+                currentPath = currentPath.replace(/^\/(uz|ru|en)/, '');
+                if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
+                
+                // Yangi URL ga o'tish
+                window.location.href = '/' + newLang + currentPath;
+            });
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

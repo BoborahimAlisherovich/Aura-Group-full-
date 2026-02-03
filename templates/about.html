@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Biz haqimizda" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1 data-aos="fade-up">{% trans "Biz haqimizda" %}</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            {% trans "AURA Group - O'zbekistondagi yetakchi IT kompaniya. Biznesingiz uchun innovatsion raqamli yechimlar yaratamiz." %}
+        </p>
+    </div>
+</section>
+
+<!-- About Story Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <span class="section-badge">{% trans "Bizning hikoyamiz" %}</span>
+                <h2>{% trans "Texnologiya va innovatsiya bilan kelajakni bunyod etamiz" %}</h2>
+                <p class="mt-4">
+                    {% trans "AURA Group 2025-yil 1-iyunda tashkil topgan yosh va dinamik IT kompaniyadir. Qisqa vaqt ichida 20 dan ortiq muvaffaqiyatli loyihalarni amalga oshirdik." %}
+                </p>
+                <p>
+                    {% trans "Bizning jamoamiz tajribali dasturchilar, dizaynerlar va loyiha menejerlaridan tashkil topgan. Har bir loyihada eng yuqori sifat va mijozlar qoniqishini ta'minlashga intilamiz." %}
+                </p>
+                <p>
+                    {% trans "Biz zamonaviy texnologiyalar va innovatsion yondashuvlar orqali O'zbekistondagi bizneslarni raqamlashtirish bo'yicha yetakchi kompaniyaga aylanishni maqsad qilganmiz." %}
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <h3>20+</h3>
+                        <p>{% trans "Loyihalar" %}</p>
+                    </div>
+                    <div class="about-stat">
+                        <h3>100%</h3>
+                        <p>{% trans "Qoniqish" %}</p>
+                    </div>
+                    <div class="about-stat">
+                        <h3>2025</h3>
+                        <p>{% trans "Tashkil topgan" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>{% trans "Bizning maqsadimiz" %}</h4>
+                    <p>
+                        {% trans "Har bir mijozimizga eng yuqori sifatli IT yechimlarni taqdim etish va ularning biznesini raqamli transformatsiya qilishda ishonchli hamkor bo'lish." %}
+                    </p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Sifatli dasturiy mahsulotlar" %}</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Tezkor xizmat ko'rsatish" %}</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Hamyonbop narxlar" %}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4>{% trans "Bizning vizyonimiz" %}</h4>
+                    <p>
+                        {% trans "O'zbekistondagi eng ishonchli va innovatsion IT kompaniyaga aylanish, hamda xalqaro miqyosda tan olingan loyihalar yaratish." %}
+                    </p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Xalqaro standartlar" %}</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Zamonaviy texnologiyalar" %}</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "Innovatsion yondashuvlar" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">{% trans "Qadriyatlar" %}</span>
+            <h2 class="section-title">{% trans "Bizning asosiy qadriyatlarimiz" %}</h2>
+            <p class="section-description">
+                {% trans "Har bir loyihada quyidagi qadriyatlarimizga amal qilamiz" %}
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>{% trans "Ishonch" %}</h4>
+                    <p>{% trans "Mijozlar bilan ochiq va shaffof munosabatlar o'rnatamiz" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>{% trans "Sifat" %}</h4>
+                    <p>{% trans "Har bir loyihada eng yuqori sifat standartlarini ta'minlaymiz" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>{% trans "Innovatsiya" %}</h4>
+                    <p>{% trans "Doimo yangi texnologiyalar va yondashuvlarni o'rganamiz" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>{% trans "Jamoaviylik" %}</h4>
+                    <p>{% trans "Jamoa bo'lib ishlash orqali katta muvaffaqiyatlarga erishamiz" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+{% if team_members %}
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge"><i class="fas fa-users me-2"></i>{% trans "Jamoamiz" %}</span>
+            <h2 class="section-title">{% trans "Professional" %} <span class="text-gradient">{% trans "jamoamiz" %}</span></h2>
+            <p class="section-description">
+                {% trans "Tajribali mutaxassislardan tashkil topgan professional jamoamiz bilan tanishing" %}
+            </p>
+        </div>
+        <div class="team-grid-compact">
+            {% for member in team_members %}
+            <div class="team-card-compact" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
+                <div class="team-image-compact">
+                    {% if member.image %}
+                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                    {% else %}
+                    <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text={{ member.name|first }}" alt="{{ member.name }}">
+                    {% endif %}
+                    <div class="team-overlay-compact">
+                        <div class="team-socials-compact">
+                            {% if member.telegram %}
+                            <a href="https://t.me/{{ member.telegram }}" target="_blank" title="Telegram">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.linkedin %}
+                            <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.github %}
+                            <a href="{{ member.github }}" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content-compact">
+                    <h5>{{ member.name }}</h5>
+                    <span class="team-position-compact">{{ member.position }}</span>
+                    {% if member.description %}
+                    <p class="team-bio-compact">{{ member.description|truncatewords:12 }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Bizning jamoamizga qo'shilmoqchimisiz?" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Iste'dodli mutaxassislarni har doim kutib qolamiz!" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'career' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-briefcase me-2"></i>{% trans "Bo'sh ish o'rinlari" %}
+                </a>
+                <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-envelope me-2"></i>{% trans "Bog'lanish" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

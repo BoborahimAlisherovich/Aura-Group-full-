@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Karyera" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1 data-aos="fade-up">{% trans "Karyera" %}</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            {% trans "AURA Group jamoasiga qo'shiling va kelajakni birga yarating!" %}
+        </p>
+    </div>
+</section>
+
+<!-- Why Join Us -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <span class="section-badge">{% trans "Bizga qo'shiling" %}</span>
+                <h2>{% trans "Nega AURA Group da ishlash kerak?" %}</h2>
+                <p class="mt-4">
+                    {% trans "Biz jamoamizning rivojlanishi va qulayligi uchun eng yaxshi sharoitlarni yaratamiz. AURA Group da siz nafaqat ishlaymiz, balki birga o'sib, rivojlanasiz." %}
+                </p>
+                <div class="row g-4 mt-3">
+                    <div class="col-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="service-icon" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-laptop-house" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <h6>{% trans "Moslashuvchan grafik" %}</h6>
+                                <small class="text-muted">{% trans "Remote yoki office" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="service-icon" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-chart-line" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <h6>{% trans "Karyera o'sishi" %}</h6>
+                                <small class="text-muted">{% trans "Tez rivojlanish" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="service-icon" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-graduation-cap" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <h6>{% trans "O'qish imkoniyati" %}</h6>
+                                <small class="text-muted">{% trans "Kurslar va treninglar" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="service-icon" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-users" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <h6>{% trans "Do'stona jamoa" %}</h6>
+                                <small class="text-muted">{% trans "Professional muhit" %}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="stats-grid" style="background: var(--gray-100); padding: 40px; border-radius: var(--border-radius-lg);">
+                    <div class="stat-card" style="background: var(--white);">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 style="color: var(--dark);">10+</h3>
+                        <p style="color: var(--gray-600);">{% trans "Jamoa a'zolari" %}</p>
+                    </div>
+                    <div class="stat-card" style="background: var(--white);">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 style="color: var(--dark);">20+</h3>
+                        <p style="color: var(--gray-600);">{% trans "Loyihalar" %}</p>
+                    </div>
+                    <div class="stat-card" style="background: var(--white);">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 style="color: var(--dark);">100%</h3>
+                        <p style="color: var(--gray-600);">{% trans "Ishdan qoniqish" %}</p>
+                    </div>
+                    <div class="stat-card" style="background: var(--white);">
+                        <div class="stat-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 style="color: var(--dark);">2025</h3>
+                        <p style="color: var(--gray-600);">{% trans "Tashkil topgan" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Open Positions -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">{% trans "Vakansiyalar" %}</span>
+            <h2 class="section-title">{% trans "Bo'sh ish o'rinlari" %}</h2>
+            <p class="section-description">
+                {% trans "O'zingizga mos lavozimni toping va bizga qo'shiling" %}
+            </p>
+        </div>
+        
+        <div class="row g-4">
+            {% for c in careers %}
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                <div class="career-card">
+                    <div class="career-header">
+                        <h5>{{ c.position }}</h5>
+                        <span class="career-salary">{{ c.salary }}</span>
+                    </div>
+                    <div class="career-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> {{ c.location }}</span>
+                        <span><i class="fas fa-briefcase"></i> {{ c.experience_level }}</span>
+                        <span><i class="fas fa-calendar-alt"></i> {% trans "Muddat:" %} {{ c.deadline|date:"d.m.Y" }}</span>
+                    </div>
+                    <p class="text-muted">{{ c.description|truncatechars:150 }}</p>
+                    <a href="{% url 'career_detail' c.id %}" class="btn btn-primary w-100">
+                        <i class="fas fa-paper-plane me-2"></i>{% trans "Ariza topshirish" %}
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <!-- Placeholder if no careers -->
+            <div class="col-12 text-center" data-aos="fade-up">
+                <div class="service-card">
+                    <div class="service-icon mx-auto">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h4>{% trans "Hozircha bo'sh ish o'rinlari yo'q" %}</h4>
+                    <p>{% trans "Lekin siz o'z rezumyeingizni yuborishingiz mumkin, biz sizni ma'lum qilamiz." %}</p>
+                    <a href="{% url 'contact' %}" class="btn btn-primary">
+                        <i class="fas fa-envelope me-2"></i>{% trans "Bog'lanish" %}
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Application Process -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">{% trans "Jarayon" %}</span>
+            <h2 class="section-title">{% trans "Qanday qo'shilish mumkin?" %}</h2>
+            <p class="section-description">
+                {% trans "To'rtta oddiy qadam orqali jamoamizga qo'shiling" %}
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto" style="background: #10b981;">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>1. {% trans "Ariza" %}</h4>
+                    <p>{% trans "Bo'sh ish o'rnini tanlang va ariza yuboring" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto" style="background: #0ea5e9;">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>2. {% trans "Suhbat" %}</h4>
+                    <p>{% trans "HR bilan telefon orqali dastlabki suhbat" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto" style="background: #f59e0b;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>3. {% trans "Test" %}</h4>
+                    <p>{% trans "Texnik ko'nikmalarni baholash" %}</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mx-auto" style="background: #ef4444;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>4. {% trans "Taklif" %}</h4>
+                    <p>{% trans "Rasmiy taklif va shartnoma imzolash" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Savollaringiz bormi?" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Biz bilan bog'laning, barcha savollaringizga javob beramiz" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-envelope me-2"></i>{% trans "Bog'lanish" %}
+                </a>
+                <a href="https://t.me/auragroup_uz" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="fab fa-telegram-plane me-2"></i>Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

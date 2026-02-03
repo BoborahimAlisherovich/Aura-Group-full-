@@ -1,0 +1,419 @@
+# AURA Group - O'zbek Tilida Django Tarjimalari
+msgid ""
+msgstr ""
+"Project-Id-Version: AURA Group 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-03 10:00+0500\n"
+"PO-Revision-Date: 2026-02-03 10:00+0500\n"
+"Last-Translator: AURA Group Team\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ==================== ASOSIY SAHIFALAR ====================
+msgid "Bosh sahifa"
+msgstr "Bosh sahifa"
+
+msgid "Xizmatlar"
+msgstr "Xizmatlar"
+
+msgid "Portfolio"
+msgstr "Portfolio"
+
+msgid "Biz haqimizda"
+msgstr "Biz haqimizda"
+
+msgid "Karyera"
+msgstr "Karyera"
+
+msgid "Bog'lanish"
+msgstr "Bog'lanish"
+
+# ==================== YON NAVIGATSIYA ====================
+msgid "O'zbekcha"
+msgstr "O'zbekcha"
+
+msgid "Русский"
+msgstr "Русский"
+
+msgid "English"
+msgstr "English"
+
+# ==================== BOSH SAHIFA ====================
+msgid "Ma'lumotlarni natijaga aylantiramiz"
+msgstr "Ma'lumotlarni natijaga aylantiramiz"
+
+msgid "Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, biznesingiz uchun yangi ufqlarni ochamiz"
+msgstr "Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, biznesingiz uchun yangi ufqlarni ochamiz"
+
+msgid "Uchrashuvga yozilish"
+msgstr "Uchrashuvga yozilish"
+
+msgid "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
+msgstr "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
+
+msgid "Prognozli tahlil"
+msgstr "Prognozli tahlil"
+
+msgid "Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, to'g'ri qarorlar qabul qiling."
+msgstr "Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, to'g'ri qarorlar qabul qiling."
+
+msgid "AI Konsalting"
+msgstr "AI Konsalting"
+
+msgid "Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda ekspert maslahatlari."
+msgstr "Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda ekspert maslahatlari."
+
+msgid "Ma'lumot muhandisligi"
+msgstr "Ma'lumot muhandisligi"
+
+msgid "ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini yarating."
+msgstr "ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini yarating."
+
+msgid "Nega bizni tanlaysiz"
+msgstr "Nima AURA Group'ni boshqalardan farq qiladi"
+
+msgid "Innovatsiya"
+msgstr "Innovatsiya"
+
+msgid "Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, ilg'or yechimlarni taqdim etamiz."
+msgstr "Eng yangi texnologiyalardan foydalanib, sizning biznesingiz uchun kreativ va amaliy yechimlarni ishlab chiqamiz."
+
+msgid "Hamkorlik"
+msgstr "Hamkorlik"
+
+msgid "Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga erishadigan maxsus yechimlarni ishlab chiqamiz."
+msgstr "Sizning maqsadlaringizni tushunib, ular uchun maxsus yechimlar tayyorlashda sizning sherigi bo'lamiz."
+
+msgid "Mukammallik"
+msgstr "Mukammallik"
+
+msgid "Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni saqlaymiz."
+msgstr "Har bir loyihada eng yuqori sifatni ta'minlash uchun biz javobgarlik bilan ishlashga intilabmiz."
+
+msgid "Halollik"
+msgstr "Halollik"
+
+msgid "Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa qo'yamiz."
+msgstr "Shaffoflik va ishonch - bu bizning asosiy qadriyatlarimiz."
+
+msgid "Nega biz boshladik"
+msgstr "Nima AURA Group'ni tug'dirgan"
+
+msgid "Batafsil ma'lumot"
+msgstr "Batafsil ma'lumot"
+
+msgid "Ko'p so'raladigan savollar"
+msgstr "Ko'p so'raladigan savollar"
+
+msgid "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
+msgstr "AURA Group qanday xizmatlarni taqdim etadi?"
+
+msgid "Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi xizmatlarni taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab chiqish, mobil ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab chiqish, brending va identifikatsiya kabi sohalarda ixtisoslashganmiz."
+msgstr "AURA Group kompaniyasi mobil ilovalar, veb-saytlar, CRM tizimlari, Telegram botlari va boshqa IT yechimlarini taqdim etadi. Biz 20+ muvaffaqiyatli loyihani amalga oshirgan va 100% mijoz qoniqligiga erishmiz."
+
+msgid "Lorem Ipsum matni nima uchun ishlatiladi?"
+msgstr "AURA Group'da ishlaydigan mutaxassislar kimlar?"
+
+msgid "Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida ishlatiladi. Bu 1500-yillardan beri mavjud."
+msgstr "Bizning jamoamizda iOS, Android, Python, Django, React va boshqa zamonaviy texnologiyalarning mutaxassislari bor."
+
+msgid "Nega biz undan foydalanamiz?"
+msgstr "Biz qanday sotiriqiqdan foydalanmiz?"
+
+msgid "Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun ishlatiladi."
+msgstr "Agile metodologiyasi va scrum jamoaviy ishlash usulidan foydalanib, loyihalarni tez va samarali bajaramiz."
+
+msgid "Qayerdan olishim mumkin?"
+msgstr "Qayerda siz shunchaki veb-saytida topishim mumkin?"
+
+msgid "Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning aksariyati o'zgartirilgan."
+msgstr "Bizning veb-saytida (auragroup.uz) kompaniya haqida to'liq ma'lumot va biz tomonidan yaratilgan loyihalarni ko'rishingiz mumkin."
+
+msgid "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
+msgstr "Loyihani tayyo'rlaganidan so'ng texnik qo'llab-quvvatlash mavjudmi?"
+
+msgid "Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz orqali istalgan vaqtda biz bilan bog'lanishingiz mumkin."
+msgstr "Ha, barcha loyihalar uchun biz 6 oylik bepul texnik qo'llab-quvvatlash taqdim etamiz, keyin esa to'langan jadvalga ko'ra qo'llab-quvvatlash davom ettiramiz."
+
+# ==================== XIZMATLAR SAHIFASI ====================
+msgid "Bizning zamonaviy"
+msgstr "Bizning zamonaviy"
+
+msgid "raqamli yechimlarimiz"
+msgstr "IT yechimlarimiz"
+
+msgid "Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish uchun zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, ilg'or texnologiyalar va innovatsion yondashuv bilan har bir loyihada yuqori natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab IT xizmatlar bizda."
+msgstr "AURA Group - 20+ muvaffaqiyatli loyiha amalga oshirlagan, sifatli IT xizmatlarni taqdim etuvchi professional jamoasi. Mobil ilovalar, veb-saytlar, CRM tizimlari va Telegram botlarida biz sizning ishonchli hamkoringiz."
+
+msgid "Bizning xizmatlar"
+msgstr "Bizning asosiy xizmatlar"
+
+msgid "Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, tajribali dasturchilar jamoasidan"
+msgstr "Biz turli sohalarda kichik startaplardan katta korporatsiyalargacha bo'lgan mijozlar uchun ishlagan."
+
+msgid "Mobile app"
+msgstr "Mobil Ilova"
+
+msgid "Web site"
+msgstr "Veb-sayt"
+
+msgid "CRM"
+msgstr "CRM Tizimi"
+
+msgid "Telegram bot"
+msgstr "Telegram Bot"
+
+msgid "Muloqotga yozilish"
+msgstr "Xizmat so'rovi berish"
+
+# ==================== PORTFOLIO SAHIFASI ====================
+msgid "Bizning ishlar — Sizning kelajagingiz"
+msgstr "Bizning loyihalarimiz - Sizning muvaffaqiyatingiz"
+
+msgid "Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy vositalar — bu yerda biz amalga oshirgan zamonaviy va innovatsion loyihalar bilan tanishing."
+msgstr "Quyidagi asarlar bizning professional jamoasining yetenakliligini va turli sohalardagi tajribasini ko'rsatadi."
+
+msgid "Bizning loyihalar"
+msgstr "Biz amalga oshirgan loyihalar"
+
+msgid "Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi loyihalar bilan tanishishingiz mumkin."
+msgstr "Har bir loyihada bizni qanday o'z imkoniyatlarini ko'rsatamiz."
+
+msgid "Barcha toifalar"
+msgstr "Barcha toifalar"
+
+# ==================== BIZ HAQIMIZDA SAHIFASI ====================
+msgid "Aqlli o'zgarish muhandislari"
+msgstr "AURA Group - Bizning Taqdim"
+
+msgid "Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, biznesingiz uchun innovatsion yechimlar yaratamiz"
+msgstr "AURA Group - bu biznesingizning digital transformatsiyasini amalga oshiradigan professional IT jamoasi."
+
+msgid "Mijozlar"
+msgstr "Mijozlar"
+
+msgid "Loyihalar"
+msgstr "Loyihalar"
+
+msgid "Qoniqarli mijozlar"
+msgstr "Qoniqarli Mijozlar"
+
+msgid "Obunachilar"
+msgstr "Obunachilar"
+
+msgid "Tajriba yillari"
+msgstr "Tajriba Yillari"
+
+msgid "Bizning hikoyamiz"
+msgstr "Bizning Hikoya"
+
+msgid "Lorem Ipsum bosma va matn terish sanoatining shunchaki soxta matni. Lorem Ipsum 1500-yillardan beri sanoatning standart soxta matni bo'lib kelgan, noma'lum bosmaxona bir turdagi galereyani olib, uni namunaviy kitob yaratish uchun aralashtirgan. U nafaqat besh asr davomida omon qoldi, lekin elektronik terishga ham ko'chirildi, taxminan shunday. Lorem Ipsum bosma va matn terish sanoatining shunchaki soxta matni."
+msgstr "AURA Group 2015 yilida tashkil topgan, o'shundan beri 200+ mijoz uchun 280+ muvaffaqiyatli loyihani amalga oshirgan. Biz IT xizmatlarida yangi standartlar o'rnatishga va har bir mijozning maqsaliga erishishiga yordam berishga intilabmiz."
+
+msgid "Bizning vazifamiz"
+msgstr "Bizning Missiyamiz"
+
+msgid "Asosiy mutaxassisliklar"
+msgstr "Bizning Mutaxassisliklarimiz"
+
+msgid "Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
+msgstr "iOS va Android mobil ilovalar"
+
+msgid "Blokcheyn"
+msgstr "Veb-Saytlar (React, Django, Laravel)"
+
+msgid "DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga oshirishda keng tajriba."
+msgstr "CRM va ERP Tizimlari"
+
+msgid "Algoritmik Savdo"
+msgstr "Telegram Botlar va API Integrations"
+
+msgid "Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili algoritmlariga ixtisoslashgan."
+msgstr "UI/UX Dizayn va Web Dizayn"
+
+msgid "Kibersport boshqaruvi"
+msgstr "Cloud Infratuzilma (AWS, Google Cloud)"
+
+msgid "Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
+msgstr "Data Analitikasi va Machine Learning"
+
+msgid "Bizning natijalarimiz"
+msgstr "Bizning Yutuqlarimiz"
+
+msgid "AI va ML rivojlanish yillari"
+msgstr "Muvaffaqiyatli Loyihalar"
+
+msgid "Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va joriy qilish"
+msgstr "Biz 20+ loyihani tugatib, 100% mijoz qoniqligiga erishdik"
+
+msgid "Sinovdan o'tgan savdo hajmi"
+msgstr "Loyihalar Turi"
+
+msgid "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
+msgstr "Mobil, Web, Bot, CRM va Cloud yechimlarida expert"
+
+msgid "Blokcheyn loyihalari auditi"
+msgstr "Texnologiya Stack"
+
+msgid "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
+msgstr "Python, JavaScript, TypeScript, Swift, Kotlin, React, Django, Node.js"
+
+msgid "Kibersport jamoalari auditi"
+msgstr "Xizmat Sifati"
+
+msgid "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
+msgstr "100% kod review, Testing, 6 oylik qo'llab-quvvatlash"
+
+msgid "Operatsion ta'sir"
+msgstr "Loyiha Boshqaruvi"
+
+msgid "Tizimning ishlash vaqti"
+msgstr "Agile/Scrum metodologiyasi"
+
+msgid "AI va savdo infratuzilmasi uchun muhim"
+msgstr "Haftalik status meeting va progress report"
+
+msgid "Xarajatlarni qisqartirish"
+msgstr "Narxlar"
+
+msgid "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
+msgstr "Bizning narxlar bazaar darajasida va raqobatbardosh"
+
+msgid "Avtomatlashtirish darajasi"
+msgstr "Vaqt"
+
+msgid "Mijoz ish jarayonlarini optimallashtirishda"
+msgstr "Tez va sifatli ishlab chiqish"
+
+msgid "Natijadorlikni oshirish"
+msgstr "Ijro Etish"
+
+msgid "Tizim samaradorligini o'rtacha yaxshilash"
+msgstr "Professional jamoasi bilan soda muloqot"
+
+msgid "Tayyor"
+msgstr "Tayyor"
+
+msgid "mahsulotingiz ehtiyojlarini"
+msgstr "Biz bilan bog'lanish"
+
+# ==================== KARYERA SAHIFASI ====================
+msgid "Kelajakni biz bilan yarating"
+msgstr "Kelajakni AURA Group bilan yarating"
+
+msgid "Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
+msgstr "AURA Group jamosiga qo'shil va chumoli IT loyihalarida ishlash imkoniyatini o'zinga chiq."
+
+msgid "Bo'sh ish o'rinlarini ko'rish"
+msgstr "Mavjud Vakansiyalar"
+
+msgid "Bo'sh ish o'rinlari"
+msgstr "Ochiq Lavozimlar"
+
+msgid "Ish haqi"
+msgstr "Oylik Maosh"
+
+msgid "Tajriba"
+msgstr "Talab Qilinadigan Tajriba"
+
+msgid "Muddat"
+msgstr "Muddati"
+
+msgid "Ko'nikmalar"
+msgstr "Talab Qilinadigan Ko'nikmalar"
+
+msgid "Ariza topshirish"
+msgstr "Ariza Topshirish"
+
+msgid "Muammolaringizni muhokama qilishga tayyormisiz?"
+msgstr "Loyiha haqida batafsil suhbatlashni xohlaysizmi?"
+
+msgid "Mahsulot ehtiyojlaringizni"
+msgstr "AURA Group"
+
+msgid "mutaxassislari bilan muhokama qiling."
+msgstr "mutaxassislari bilan bog'lanishingiz mumkin."
+
+msgid "Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
+msgstr "Vakansiya uchun ariza topshirish uchun quyidagi ma'lumotlarni kiriting."
+
+msgid "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
+msgstr "CV/Resume fayli (PDF, ixtiyoriy)"
+
+msgid "Fayl tanlash"
+msgstr "Fayl tanlash"
+
+msgid "Ariza yuborish"
+msgstr "Ariza Yuborish"
+
+# ==================== KONTAKT SAHIFASI ====================
+msgid "Aloqa"
+msgstr "Biz Bilan Bog'lanish"
+
+msgid "Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
+msgstr "AURA Group'ga murojaat qiling va sizning digital transformatsiya yo'lshunoshinizga aylansin. Biz 24/7 sizning xizmatingizda."
+
+msgid "Hozir bog'lanish"
+msgstr "Hozir Bog'lanish"
+
+msgid "Xabar yuborish"
+msgstr "Xabar Yuborish"
+
+msgid "Yuborish"
+msgstr "Yuborish"
+
+msgid "Aloqa ma'lumotlari"
+msgstr "Aloqa Ma'lumotlari"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Telefon"
+msgstr "Telefon"
+
+msgid "Ofis"
+msgstr "Ofis Manzili"
+
+msgid "Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini tushunishga yordam beramiz."
+msgstr "Sizning loyihangiz haqida batafsil suhbatlashni xohlaysizmi? Biz bepul konsultatsiya va loyiha baholash taqdim etamiz. AURA Group jamoasi sizning biznesni rivojlantirishda sizning sheriki bo'ladi."
+
+msgid "Uchrashuvni rejalashtirish"
+msgstr "Uchrashuvni Rejalashtirish"
+
+# ==================== XATOLAR VA XABARLAR ====================
+msgid "Xabaringiz yuborildi!"
+msgstr "Xabaringiz muvaffaqiyatli yuborildi!"
+
+msgid "Formani to'g'ri to'ldiring!"
+msgstr "Iltimos, formani to'g'ri to'ldiring!"
+
+msgid "Xizmat so'rovingiz yuborildi!"
+msgstr "Xizmat so'rovingiz muvaffaqiyatli yuborildi!"
+
+msgid "Ariza yuborildi!"
+msgstr "Ariza muvaffaqiyatli yuborildi!"
+
+msgid "Loyihaga yoqdi deb belgilandingiz!"
+msgstr "Siz bu loyihani sevishdingiz!"
+
+msgid "Loyihaga yoqdi belgisini olib tashladingiz!"
+msgstr "Siz sevish belgisini olib tashladingiz!"
+
+msgid "Vakansiya uchun ariza"
+msgstr "Vakansiya Uchun Ariza"
+
+msgid "Xizmat so'rovi"
+msgstr "Xizmat So'rovi"
+
+# ==================== FOOTER ====================
+msgid "Maxfiylik siyosati"
+msgstr "Maxfiylik Siyosati"
+
+msgid "Foydalanish shartlari"
+msgstr "Foydalanish Shartlari"
+
+msgid "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
+msgstr "© 2025 AURA Group. Barcha huquqlar himoyalangan. info@auragroup.uz"

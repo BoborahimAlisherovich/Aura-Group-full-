@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Bog'lanish" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1 data-aos="fade-up">{% trans "Bog'lanish" %}</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            {% trans "Loyihangiz haqida gaplashish uchun biz bilan bog'laning" %}
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="contact-info-card">
+                    <h3 class="mb-4">{% trans "Xabar yuborish" %}</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "To'liq ismingiz" %}</label>
+                                {{ form.full_name }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{% trans "Telefon raqamingiz" %}</label>
+                                {{ form.phone_number }}
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{% trans "Email manzilingiz" %}</label>
+                                {{ form.email }}
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">{% trans "Xabaringiz" %}</label>
+                                {{ form.message }}
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>{% trans "Xabar yuborish" %}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="contact-info-card h-100">
+                    <h3 class="mb-4">{% trans "Aloqa ma'lumotlari" %}</h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h5>{% trans "Email" %}</h5>
+                            <p><a href="mailto:info@auragroup.uz">info@auragroup.uz</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h5>{% trans "Telefon" %}</h5>
+                            <p><a href="tel:+998936658507">+998 (93) 665-85-07</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h5>{% trans "Manzil" %}</h5>
+                            <p>{% trans "PDP University, Toshkent, O'zbekiston" %}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h5>Telegram</h5>
+                            <p><a href="https://t.me/AuraGroupAdmin" target="_blank">@AuraGroupAdmin</a></p>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <h5 class="mb-3">{% trans "Ijtimoiy tarmoqlar" %}</h5>
+                    <div class="social-links">
+                        <a href="https://t.me/auragroup_uz" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section" style="padding-bottom: 0;">
+    <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+            <span class="section-badge"><i class="fas fa-map-marker-alt me-2"></i>{% trans "Manzil" %}</span>
+            <h2 class="section-title">{% trans "Bizning" %} <span class="text-gradient">{% trans "Ofisimiz" %}</span></h2>
+            <p class="section-description">{% trans "PDP University binosi, Toshkent shahri" %}</p>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.0747046716!2d69.28418831533897!3d41.31115100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b534c41e593%3A0x8dfebe4b99a7aa89!2sPDP%20University!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                width="100%" 
+                height="500" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Bepul konsultatsiya oling!" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Loyihangiz haqida gaplashish uchun 30 daqiqalik bepul konsultatsiya" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="tel:+998936658507" class="btn btn-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>{% trans "Hozir qo'ng'iroq qiling" %}
+                </a>
+                <a href="https://t.me/AuraGroupAdmin" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="fab fa-telegram-plane me-2"></i>Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

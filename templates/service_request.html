@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{{ service.name }} - {% trans "Buyurtma" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <nav class="breadcrumb" data-aos="fade-up">
+            <a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a>
+            <span>/</span>
+            <a href="{% url 'services' %}">{% trans "Xizmatlar" %}</a>
+            <span>/</span>
+            <span class="current">{{ service.name }}</span>
+        </nav>
+        <h1 data-aos="fade-up" data-aos-delay="100">{{ service.name }}</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+            {% trans "Xizmat buyurtma qilish uchun quyidagi formani to'ldiring" %}
+        </p>
+    </div>
+</section>
+
+<!-- Service Request Form -->
+<section class="section">
+    <div class="container">
+        <div class="service-request-wrapper" data-aos="fade-up">
+            <div class="service-request-card">
+                <!-- Service Info Card -->
+                <div class="service-info-card">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="service-icon" style="width: 60px; height: 60px; flex-shrink: 0;">
+                            <i class="fas fa-{{ service.icon|default:'cog' }}"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">{{ service.name }}</h5>
+                            <p class="text-muted mb-0">{{ service.description|truncatewords:15 }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Request Header -->
+                <div class="service-request-header">
+                    <h2>{% trans "Buyurtma formasi" %}</h2>
+                    <p>{% trans "Barcha maydonlarni to'ldiring, biz siz bilan tez orada bog'lanamiz va Telegram orqali xabar beramiz" %}</p>
+                </div>
+                
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <!-- Kompaniya nomi -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-building me-2 text-primary"></i>{% trans "Kompaniya nomi" %} <span class="text-danger">*</span>
+                        </label>
+                        {{ form.company_name }}
+                        {% if form.company_name.errors %}
+                        <small class="text-danger">{{ form.company_name.errors.0 }}</small>
+                        {% endif %}
+                    </div>
+
+                    <!-- Ism familiya va Telefon -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-user me-2 text-primary"></i>{% trans "Ism familiya" %} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.contact_name }}
+                            {% if form.contact_name.errors %}
+                            <small class="text-danger">{{ form.contact_name.errors.0 }}</small>
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-phone me-2 text-primary"></i>{% trans "Telefon raqam" %} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.phone_number }}
+                            {% if form.phone_number.errors %}
+                            <small class="text-danger">{{ form.phone_number.errors.0 }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Email va Telegram -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-envelope me-2 text-primary"></i>{% trans "Email" %}
+                            </label>
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fab fa-telegram-plane me-2 text-primary"></i>{% trans "Telegram username" %} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.telegram }}
+                            <small class="text-muted">{% trans "@username formatida kiriting" %}</small>
+                            {% if form.telegram.errors %}
+                            <small class="text-danger">{{ form.telegram.errors.0 }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Loyiha haqida -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-file-alt me-2 text-primary"></i>{% trans "Loyiha haqida" %} <span class="text-danger">*</span>
+                        </label>
+                        {{ form.description }}
+                        <small class="text-muted">{% trans "Loyihangiz haqida qisqacha ma'lumot bering: maqsad, funksiyalar, muddat va boshqalar" %}</small>
+                        {% if form.description.errors %}
+                        <small class="text-danger">{{ form.description.errors.0 }}</small>
+                        {% endif %}
+                    </div>
+
+                    <!-- Fayl biriktirish -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <i class="fas fa-paperclip me-2 text-primary"></i>{% trans "Fayl biriktirish (ixtiyoriy)" %}
+                        </label>
+                        {{ form.file }}
+                        <small class="text-muted">{% trans "PDF, DOC, DOCX, ZIP - maksimum 10MB" %}</small>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+                        <i class="fas fa-paper-plane me-2"></i>{% trans "Buyurtma yuborish" %}
+                    </button>
+                </form>
+
+                <!-- Note -->
+                <div class="text-center mt-4">
+                    <p class="text-muted mb-0">
+                        <i class="fas fa-shield-alt me-2"></i>
+                        {% trans "Ma'lumotlaringiz xavfsiz saqlanadi va faqat siz bilan bog'lanish uchun ishlatiladi" %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="text-center mt-5" data-aos="fade-up">
+            <p class="text-muted mb-4">{% trans "Savollaringiz bormi? Biz bilan bevosita bog'laning:" %}</p>
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <a href="tel:+998950015050" class="btn btn-outline btn-lg">
+                    <i class="fas fa-phone me-2"></i>+998 (95) 001-50-50
+                </a>
+                <a href="https://t.me/auragroup_uz" target="_blank" class="btn btn-dark btn-lg">
+                    <i class="fab fa-telegram-plane me-2"></i>@auragroup_uz
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Boshqa xizmatlarimizni ham ko'ring" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Bizning barcha IT xizmatlarimiz bilan tanishing" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'services' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-cog me-2"></i>{% trans "Barcha xizmatlar" %}
+                </a>
+                <a href="{% url 'portfolio' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-folder-open me-2"></i>{% trans "Portfolio" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

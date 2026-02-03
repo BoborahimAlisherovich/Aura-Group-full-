@@ -1,0 +1,391 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Bosh sahifa" %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="hero-content">
+                    
+                    <h1 class="hero-title">
+                        {% trans "Biznesingizni" %} <span class="gradient-text">{% trans "Raqamli" %}</span> {% trans "Transformatsiya Qiling" %}
+                    </h1>
+                    <p class="hero-description">
+                        {% blocktrans %}AURA Group - sizning biznesingizni yangi bosqichga olib chiqadi. Veb-sayt, mobil ilova, CRM, Telegram bot va boshqa dasturiy yechimlar bilan professional jamoamiz har qanday loyihani muvaffaqiyatli amalga oshiradi.{% endblocktrans %}
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-comments me-2"></i>{% trans "Bepul Konsultatsiya" %}
+                        </a>
+                        <a href="{% url 'portfolio' %}" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-folder-open me-2"></i>{% trans "Ishlarimizni Ko'ring" %}
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">{% trans "Loyihalar" %}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">{% trans "Qoniqish" %}</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">{% trans "Qo'llab-quvvatlash" %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="hero-image">
+                    <img src="{% static 'imgs/hero-illustration.svg' %}" alt="IT Solutions" class="img-fluid">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile Apps</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram Bots</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section section-padding" id="services">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-badge">{% trans "Xizmatlar" %}</span>
+            <h2 class="section-title">{% trans "Har Qanday Biznes Uchun" %} <span class="gradient-text">{% trans "IT Yechimlar" %}</span></h2>
+            <p class="section-description">
+                {% trans "E-tijorat, logistika, ta'lim, sog'liqni saqlash yoki boshqa turdagi biznesni avtomatlashtiring" %}
+            </p>
+        </div>
+        
+        <div class="row g-4">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
+                <div class="service-card">
+                    <div class="service-icon {% if 'brain' in service.icon or 'robot' in service.icon %}service-icon-ai{% endif %}">
+                        <i class="{{ service.icon|default:'fas fa-cogs' }}"></i>
+                    </div>
+                    <h4>{{ service.get_name_display }}</h4>
+                    <p>{{ service.description|truncatewords:20 }}</p>
+                    <a href="{% url 'service_request' service.id %}" class="service-link">
+                        {% trans "Batafsil" %} <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-muted">{% trans "Xizmatlar tez orada qo'shiladi..." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{% url 'services' %}" class="btn btn-outline-primary btn-lg">
+                {% trans "Barcha xizmatlarni ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-us-section section-padding bg-dark-gradient">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="why-us-content">
+                    <span class="section-badge">{% trans "Afzalliklar" %}</span>
+                    <h2 class="section-title text-white">{% trans "Nima Uchun" %} <span class="gradient-text">AURA Group</span>{% trans "'ni Tanlaysiz?" %}</h2>
+                    
+                    <div class="why-us-list">
+                        <div class="why-us-item">
+                            <div class="why-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>{% trans "Tajriba va Professionallik" %}</h5>
+                                <p>{% trans "2025-yildan beri 20+ muvaffaqiyatli loyihani amalga oshirgan tajribali jamoamiz." %}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-us-item">
+                            <div class="why-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>{% trans "Zamonaviy Texnologiyalar" %}</h5>
+                                <p>{% trans "React, Django, Flutter, Node.js va boshqa zamonaviy texnologiyalar bilan ishlaymiz." %}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-us-item">
+                            <div class="why-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>{% trans "Sifat Kafolati" %}</h5>
+                                <p>{% trans "Eng yuqori sifat standartlari va 6 oylik bepul texnik qo'llab-quvvatlash." %}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="why-us-item">
+                            <div class="why-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="why-content">
+                                <h5>{% trans "Shaffof Narxlar" %}</h5>
+                                <p>{% trans "Aniq smeta va shaffof ish jarayoni. Yashirin to'lovlar yo'q." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>20+</h3>
+                        <p>{% trans "Tugallangan Loyihalar" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                        <h3>100%</h3>
+                        <p>{% trans "Mijoz Qoniqishi" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <h3>15+</h3>
+                        <p>{% trans "Texnologiyalar" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-headset"></i></div>
+                        <h3>24/7</h3>
+                        <p>{% trans "Qo'llab-quvvatlash" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Preview Section -->
+{% if portfolios %}
+<section class="portfolio-section section-padding">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-badge">{% trans "Portfolio" %}</span>
+            <h2 class="section-title">{% trans "So'nggi" %} <span class="gradient-text">{% trans "Loyihalarimiz" %}</span></h2>
+            <p class="section-description">
+                {% trans "Biz amalga oshirgan muvaffaqiyatli loyihalar bilan tanishing" %}
+            </p>
+        </div>
+        
+        <div class="row g-4">
+            {% for portfolio in portfolios %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:100 }}">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        {% if portfolio.image %}
+                        <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
+                        {% else %}
+                        <img src="{% static 'imgs/portfolio-placeholder.jpg' %}" alt="{{ portfolio.name }}">
+                        {% endif %}
+                        <div class="portfolio-overlay">
+                            <a href="{% url 'portfolio_detail' portfolio.pk %}" class="portfolio-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">{{ portfolio.project_type.get_name_display }}</span>
+                        <h5>{{ portfolio.name }}</h5>
+                        <div class="portfolio-stats">
+                            <span><i class="fas fa-eye"></i> {{ portfolio.view_count }}</span>
+                            <span><i class="fas fa-heart"></i> {{ portfolio.like_count }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{% url 'portfolio' %}" class="btn btn-primary btn-lg">
+                {% trans "Barcha Loyihalarni Ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Team Section - Index Page -->
+{% if team_members %}
+<section class="team-section section-padding">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-badge"><i class="fas fa-users me-2"></i>{% trans "Jamoamiz" %}</span>
+            <h2 class="section-title">{% trans "Bizning" %} <span class="gradient-text">{% trans "Professional Jamoamiz" %}</span></h2>
+            <p class="section-description">
+                {% trans "Tajribali mutaxassislardan tashkil topgan professional jamoamiz bilan tanishing" %}
+            </p>
+        </div>
+        
+        <div class="team-grid-compact">
+            {% for member in team_members|slice:":4" %}
+            <div class="team-card-compact" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
+                <div class="team-image-compact">
+                    {% if member.image %}
+                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                    {% else %}
+                    <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text={{ member.name|first }}" alt="{{ member.name }}">
+                    {% endif %}
+                    <div class="team-overlay-compact">
+                        <div class="team-socials-compact">
+                            {% if member.telegram %}
+                            <a href="https://t.me/{{ member.telegram }}" target="_blank" title="Telegram">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.linkedin %}
+                            <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            {% endif %}
+                            {% if member.github %}
+                            <a href="{{ member.github }}" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="team-content-compact">
+                    <h5>{{ member.name }}</h5>
+                    <span class="team-position-compact">{{ member.position }}</span>
+                    {% if member.description %}
+                    <p class="team-bio-compact">{{ member.description|truncatewords:15 }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg">
+                {% trans "Barcha jamoani ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- FAQ Section -->
+<section class="faq-section section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <span class="section-badge">{% trans "FAQ" %}</span>
+            <h2 class="section-title">{% trans "Ko'p So'raladigan" %} <span class="gradient-text">{% trans "Savollar" %}</span></h2>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion" data-aos="fade-up">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                {% trans "AURA Group qanday xizmatlarni taklif etadi?" %}
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {% trans "Biz veb-sayt, mobil ilova, CRM, Telegram bot, e-tijorat yechimi, API integratsiya va boshqa dasturiy xizmatlarni taklif etamiz. Har qanday turdagi biznes uchun maxsus yechimlarni yaratamiz." %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                {% trans "Loyiha qancha vaqt davom etadi?" %}
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {% trans "Loyihaning murakkabligiga qarab 2 haftadan 3-4 oygacha vaqt sarflanadi. Biz har bir loyiha uchun alohida vaqt tahmini beramiz va mijoz bilan kelishib ishlaymiz." %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                {% trans "Loyiha yakunlanganidan keyin qo'llab-quvvatlash bormi?" %}
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {% trans "Ha, loyiha yakunlanganidan keyin 6 oyga qadar bepul texnik qo'llab-quvvatlash va yangilashlar bilan sizga yordam beramiz. Keyin ham aloqada qolamiz." %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                {% trans "Narxlar qanday belgilanadi?" %}
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {% trans "Narx loyihaning murakkabligi, funksiyalari va muddatiga qarab belgilanadi. Bepul konsultatsiya orqali loyihangizni tahlil qilamiz va aniq smeta beramiz. Yashirin to'lovlar yo'q." %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center" data-aos="zoom-in">
+            <h2>{% trans "Loyihangizni Muhokama Qilishga Tayyormisiz?" %}</h2>
+            <p>{% trans "Bepul konsultatsiya orqali g'oyangizni amalga oshirishni boshlang" %}</p>
+            <div class="cta-buttons">
+                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>{% trans "Bog'lanish" %}
+                </a>
+                <a href="tel:+998936658507" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>+998 (93) 665-85-07
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

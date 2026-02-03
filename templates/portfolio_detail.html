@@ -1,0 +1,387 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{{ portfolio.name }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <nav class="breadcrumb" data-aos="fade-up">
+            <a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a>
+            <span>/</span>
+            <a href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a>
+            <span>/</span>
+            <span class="current">{{ portfolio.name }}</span>
+        </nav>
+        <h1 data-aos="fade-up" data-aos-delay="100">{{ portfolio.name }}</h1>
+        <p data-aos="fade-up" data-aos-delay="200">
+            {{ portfolio.project_type }}
+        </p>
+    </div>
+</section>
+
+<!-- Portfolio Detail -->
+<section class="portfolio-detail section">
+    <div class="container">
+        <!-- Portfolio Header Info -->
+        <div class="portfolio-detail-header" data-aos="fade-up">
+            <div class="portfolio-detail-meta">
+                {% if portfolio.client_name %}
+                <div class="portfolio-detail-meta-item">
+                    <i class="fas fa-building"></i>
+                    <span>{{ portfolio.client_name }}</span>
+                </div>
+                {% endif %}
+                <div class="portfolio-detail-meta-item">
+                    <i class="fas fa-tag"></i>
+                    <span>{{ portfolio.project_type }}</span>
+                </div>
+                {% if portfolio.completion_date %}
+                <div class="portfolio-detail-meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>{{ portfolio.completion_date|date:"F Y" }}</span>
+                </div>
+                {% endif %}
+                <div class="portfolio-detail-meta-item">
+                    <i class="fas fa-eye"></i>
+                    <span>{{ portfolio.view_count }} {% trans "ko'rish" %}</span>
+                </div>
+                <div class="portfolio-detail-meta-item">
+                    <i class="fas fa-heart"></i>
+                    <span>{{ portfolio.like_count }} {% trans "yoqtirish" %}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Image -->
+        <div class="portfolio-main-image" data-aos="fade-up" data-aos-delay="100">
+            {% if portfolio.image %}
+            <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
+            {% else %}
+            <img src="https://via.placeholder.com/1200x600/5046e5/ffffff?text={{ portfolio.name }}" alt="{{ portfolio.name }}">
+            {% endif %}
+            {% if portfolio.is_featured %}
+            <span class="portfolio-featured"><i class="fas fa-star me-1"></i>{% trans "Tanlangan loyiha" %}</span>
+            {% endif %}
+        </div>
+
+        <!-- Info Grid -->
+        <div class="portfolio-info-grid">
+            <!-- Main Content -->
+            <div class="portfolio-detail-main" data-aos="fade-right">
+                <!-- Description -->
+                <h3 class="portfolio-features-title">{% trans "Loyiha haqida" %}</h3>
+                <p class="portfolio-description">
+                    {% if portfolio.full_description %}
+                        {{ portfolio.full_description|linebreaks }}
+                    {% else %}
+                        {{ portfolio.description|linebreaks }}
+                    {% endif %}
+                </p>
+
+                <!-- Features List -->
+                {% if portfolio.get_features_list %}
+                <h3 class="portfolio-features-title">{% trans "Asosiy xususiyatlar" %}</h3>
+                <ul class="portfolio-features-list">
+                    {% for feature in portfolio.get_features_list %}
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>{{ feature }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-3 flex-wrap mt-4">
+                    {% if portfolio.project_link %}
+                    <a href="{{ portfolio.project_link }}" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fas fa-external-link-alt me-2"></i>{% trans "Loyihani ko'rish" %}
+                    </a>
+                    {% endif %}
+                    <button type="button" class="btn btn-outline btn-lg like-btn" id="likeBtn" data-project-id="{{ portfolio.id }}">
+                        <i class="fas fa-heart me-2"></i>
+                        <span id="likeText">{% trans "Yoqtirish" %}</span>
+                        <span class="like-count" id="likeCount">{{ portfolio.like_count }}</span>
+                    </button>
+                    <a href="{% url 'contact' %}" class="btn btn-dark btn-lg">
+                        <i class="fas fa-comments me-2"></i>{% trans "Shunday loyiha buyurtma qilish" %}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="portfolio-sidebar" data-aos="fade-left">
+                <!-- Client Info -->
+                {% if portfolio.client_name %}
+                <div class="portfolio-sidebar-section">
+                    <h5><i class="fas fa-user-tie me-2 text-primary"></i>{% trans "Mijoz" %}</h5>
+                    <p class="mb-0">{{ portfolio.client_name }}</p>
+                </div>
+                {% endif %}
+
+                <!-- Category -->
+                <div class="portfolio-sidebar-section">
+                    <h5><i class="fas fa-layer-group me-2 text-primary"></i>{% trans "Toifa" %}</h5>
+                    <p class="mb-0">{{ portfolio.project_type }}</p>
+                </div>
+
+                <!-- Completion Date -->
+                {% if portfolio.completion_date %}
+                <div class="portfolio-sidebar-section">
+                    <h5><i class="fas fa-calendar-check me-2 text-primary"></i>{% trans "Tugallangan sana" %}</h5>
+                    <p class="mb-0">{{ portfolio.completion_date|date:"d F, Y" }}</p>
+                </div>
+                {% endif %}
+
+                <!-- Technologies -->
+                {% if portfolio.get_technologies_list %}
+                <div class="portfolio-sidebar-section">
+                    <h5><i class="fas fa-code me-2 text-primary"></i>{% trans "Texnologiyalar" %}</h5>
+                    <div class="tech-tags">
+                        {% for tech in portfolio.get_technologies_list %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Website Link -->
+                {% if portfolio.website %}
+                <div class="portfolio-sidebar-section">
+                    <h5><i class="fas fa-globe me-2 text-primary"></i>{% trans "Sayt manzili" %}</h5>
+                    <a href="{{ portfolio.website }}" target="_blank" class="text-primary">
+                        {{ portfolio.website|truncatechars:40 }} <i class="fas fa-external-link-alt ms-1"></i>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Image Gallery with Swiper Slider -->
+        {% if portfolio.images.all %}
+        <div class="portfolio-slider-container" data-aos="fade-up">
+            <h3 class="portfolio-gallery-title"><i class="fas fa-images me-2"></i>{% trans "Loyiha rasmlari" %}</h3>
+            
+            <!-- Swiper Slider -->
+            <div class="swiper portfolio-swiper">
+                <div class="swiper-wrapper">
+                    {% for img in portfolio.images.all %}
+                    <div class="swiper-slide">
+                        <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}" onclick="openLightbox({{ forloop.counter0 }})">
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <!-- Thumbnails Grid -->
+            <div class="portfolio-gallery-grid mt-4">
+                {% for img in portfolio.images.all %}
+                <div class="portfolio-gallery-item" onclick="openLightbox({{ forloop.counter0 }})">
+                    <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Shunga o'xshash loyiha kerakmi?" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Biz sizning loyihangizni ham shu darajada sifatli bajaramiz!" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>{% trans "Bog'lanish" %}
+                </a>
+                <a href="{% url 'portfolio' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-arrow-left me-2"></i>{% trans "Barcha loyihalar" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+{% if portfolio.images.all %}
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="lightbox-content">
+        <img src="" alt="Portfolio image" id="lightbox-image">
+    </div>
+    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)"><i class="fas fa-chevron-right"></i></button>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<!-- Like Button AJAX Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const likeBtn = document.getElementById('likeBtn');
+    if (likeBtn) {
+        likeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectId = this.dataset.projectId;
+            const likeCount = document.getElementById('likeCount');
+            const likeText = document.getElementById('likeText');
+            
+            // Disable button temporarily
+            likeBtn.disabled = true;
+            
+            fetch(`/like/${projectId}/`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update like count
+                likeCount.textContent = data.like_count;
+                
+                // Update button appearance
+                if (data.liked) {
+                    likeBtn.classList.add('liked');
+                    likeBtn.classList.remove('btn-outline');
+                    likeBtn.classList.add('btn-danger');
+                    likeText.textContent = '{% trans "Yoqdi" %}';
+                } else {
+                    likeBtn.classList.remove('liked');
+                    likeBtn.classList.add('btn-outline');
+                    likeBtn.classList.remove('btn-danger');
+                    likeText.textContent = '{% trans "Yoqtirish" %}';
+                }
+                
+                // Show toast notification
+                showToast(data.message, data.liked ? 'success' : 'info');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showToast('{% trans "Xatolik yuz berdi" %}', 'error');
+            })
+            .finally(() => {
+                likeBtn.disabled = false;
+            });
+        });
+    }
+});
+
+// Toast notification function
+function showToast(message, type = 'info') {
+    // Remove existing toasts
+    document.querySelectorAll('.toast-notification').forEach(t => t.remove());
+    
+    const toast = document.createElement('div');
+    toast.className = `toast-notification ${type}`;
+    toast.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+        ${message}
+    `;
+    document.body.appendChild(toast);
+    
+    // Auto remove after animation
+    setTimeout(() => toast.remove(), 3500);
+}
+</script>
+
+{% if portfolio.images.all %}
+<script>
+    // ===== Swiper Slider Initialization =====
+    const portfolioSwiper = new Swiper('.portfolio-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        effect: 'slide',
+        speed: 600,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 1,
+            },
+        },
+    });
+    
+    // ===== Lightbox Functionality =====
+    const images = [
+        {% for img in portfolio.images.all %}
+        "{{ img.image.url }}"{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    ];
+    let currentIndex = 0;
+    
+    function openLightbox(index) {
+        currentIndex = index;
+        document.getElementById('lightbox-image').src = images[currentIndex];
+        document.getElementById('lightbox').classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('show');
+        document.body.style.overflow = '';
+    }
+    
+    function changeLightboxImage(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        if (currentIndex >= images.length) currentIndex = 0;
+        document.getElementById('lightbox-image').src = images[currentIndex];
+    }
+    
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) closeLightbox();
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (!document.getElementById('lightbox').classList.contains('show')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+        if (e.key === 'ArrowRight') changeLightboxImage(1);
+    });
+    
+    // Touch swipe support for lightbox
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.getElementById('lightbox').addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) changeLightboxImage(1);
+            else changeLightboxImage(-1);
+        }
+    });
+</script>
+{% endif %}
+{% endblock %}

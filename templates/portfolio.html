@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}{% trans "Portfolio" %}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1 data-aos="fade-up">{% trans "Bizning loyihalarimiz" %}</h1>
+        <p data-aos="fade-up" data-aos-delay="100">
+            {% trans "20 dan ortiq muvaffaqiyatli loyihalar bilan tanishing" %}
+        </p>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">{% trans "Portfolio" %}</span>
+            <h2 class="section-title">{% trans "Bajarilgan loyihalar" %}</h2>
+            <p class="section-description">
+                {% trans "Har bir loyiha bizning professional yondashuvimiz va sifatimizning dalilidir" %}
+            </p>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="portfolio-filter" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th-large me-2"></i>{% trans "Barchasi" %}
+            </button>
+            <button class="filter-btn" data-filter="web">
+                <i class="fas fa-globe me-2"></i>{% trans "Web sayt" %}
+            </button>
+            <button class="filter-btn" data-filter="mobile">
+                <i class="fas fa-mobile-alt me-2"></i>{% trans "Mobil ilova" %}
+            </button>
+            <button class="filter-btn" data-filter="telegram">
+                <i class="fab fa-telegram me-2"></i>{% trans "Telegram bot" %}
+            </button>
+            <button class="filter-btn" data-filter="ai">
+                <i class="fas fa-brain me-2"></i>{% trans "AI" %}
+            </button>
+            <button class="filter-btn" data-filter="crm">
+                <i class="fas fa-users-cog me-2"></i>{% trans "CRM" %}
+            </button>
+            <button class="filter-btn" data-filter="ecommerce">
+                <i class="fas fa-shopping-cart me-2"></i>{% trans "E-commerce" %}
+            </button>
+            <button class="filter-btn" data-filter="desktop">
+                <i class="fas fa-desktop me-2"></i>{% trans "Desktop" %}
+            </button>
+            <button class="filter-btn" data-filter="design">
+                <i class="fas fa-palette me-2"></i>{% trans "Dizayn" %}
+            </button>
+        </div>
+        
+        <div class="row g-4" id="portfolioGrid">
+            {% for portfolio in portfolios %}
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="{{ portfolio.project_type.name }}" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        {% if portfolio.image %}
+                        <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
+                        {% else %}
+                        <img src="https://via.placeholder.com/600x450/6366f1/ffffff?text=AURA+Group" alt="{{ portfolio.name }}">
+                        {% endif %}
+                        <div class="portfolio-overlay">
+                            <a href="{% url 'portfolio_detail' portfolio.id %}" class="portfolio-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">{{ portfolio.project_type.get_name_display }}</span>
+                        <h5>{{ portfolio.name }}</h5>
+                        <p class="text-muted">{{ portfolio.description|truncatechars:100 }}</p>
+                        <div class="portfolio-stats">
+                            <span><i class="fas fa-heart"></i> {{ portfolio.like_count }}</span>
+                            <span><i class="fas fa-eye"></i> {{ portfolio.view_count }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center" id="noPortfolios">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    {% trans "Hozircha portfolio loyihalar mavjud emas. Admin paneldan loyihalar qo'shing." %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- No results message (hidden by default) -->
+        <div class="text-center mt-4 d-none" id="noFilterResults">
+            <div class="alert alert-warning">
+                <i class="fas fa-search me-2"></i>
+                {% trans "Bu kategoriyada loyihalar topilmadi" %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="section-padding bg-dark-gradient">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <span class="section-badge">{% trans "Statistika" %}</span>
+                <h2 class="text-white">{% trans "Raqamlarda AURA Group" %}</h2>
+                <p class="text-white-50 mt-4">
+                    {% trans "2025-yil 1-iyunda tashkil topgan kompaniyamiz qisqa vaqt ichida katta yutuqlarga erishdi. Mijozlarimizning ishonchi bizning eng katta yutuqimizdir." %}
+                </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>20+</h3>
+                        <p>{% trans "Loyihalar" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>15+</h3>
+                        <p>{% trans "Mijozlar" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>100%</h3>
+                        <p>{% trans "Qoniqish" %}</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>50K+</h3>
+                        <p>{% trans "Kod satrlari" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 data-aos="fade-up">{% trans "Loyihangizni biz bilan amalga oshiring!" %}</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                {% trans "Bizning tajribamiz sizning g'oyangizni haqiqatga aylantiradi" %}
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
+                    <i class="fas fa-phone me-2"></i>{% trans "Bog'lanish" %}
+                </a>
+                <a href="{% url 'services' %}" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-cog me-2"></i>{% trans "Xizmatlarimiz" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Portfolio Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const noResults = document.getElementById('noFilterResults');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            let visibleCount = 0;
+            
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeInUp 0.5s ease forwards';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0 && portfolioItems.length > 0) {
+                noResults.classList.remove('d-none');
+            } else {
+                noResults.classList.add('d-none');
+            }
+        });
+    });
+});
+</script>
+
+<style>
+/* Portfolio Filter Styles */
+.portfolio-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--gray-200);
+    background: var(--white);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--gradient);
+    border-color: transparent;
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.filter-btn i {
+    font-size: 16px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-filter {
+        gap: 8px;
+    }
+    
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .filter-btn i {
+        font-size: 14px;
+    }
+}
+</style>
+{% endblock %}
