@@ -12,7 +12,7 @@
 
 - 🌐 **Ko'p tilli** - O'zbek, Rus, Ingliz tillarida to'liq tarjima
 - 📱 **Responsive dizayn** - Barcha qurilmalarda mukammal ko'rinish
-- 🎨 **Zamonaviy UI** - UIC.group uslubidagi professional navbar
+- 🎨 **Zamonaviy UI** -  professional navbar
 - 📧 **Aloqa formasi** - Telegram bot integratsiyasi
 - 💼 **Portfolio** - Loyihalar galereyasi
 - 👥 **Jamoa** - Xodimlar haqida ma'lumot
@@ -86,7 +86,7 @@ AURA Group/
 ### 1. Repozitoriyani klonlash
 
 ```bash
-git clone https://github.com/auragroup/website.git
+https://github.com/BoborahimAlisherovich/Aura-Group-full-.git
 cd website
 ```
 
@@ -297,9 +297,9 @@ MIT License - batafsil [LICENSE](LICENSE) faylida.
 
 ## 📞 Aloqa
 
-- 🌐 Sayt: [auragroup.uz](https://auragroup.uz)
+- 🌐 Sayt: [auragroup.uz](https://myaura.uz)
 - 📧 Email: info@auragroup.uz
-- 📱 Telegram: [@auragroup](https://t.me/auragroup)
+- 📱 Telegram: [@auragroup](https://t.me/AuraGroupAdmin)
 - 📍 Manzil: Toshkent, O'zbekiston
 
 ---
