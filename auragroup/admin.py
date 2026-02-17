@@ -166,11 +166,13 @@ class ServicesDetailsAdmin(admin.ModelAdmin):
 # ============================================
 # PORTFOLIO ADMIN
 # ============================================
-class PortfolioImageInline(admin.TabularInline):
+class PortfolioImageInline(admin.StackedInline):
     """Portfolio rasmlari inline"""
     model = PortfolioImage
-    extra = 1
-    classes = ['collapse']
+    extra = 4
+    min_num = 0
+    verbose_name = "Portfolio rasmi"
+    verbose_name_plural = "Portfolio rasmlari (bir nechta rasm yuklang)"
 
 
 @admin.register(Portfolio)

@@ -237,3 +237,8 @@ def like_project_view(request, pk):
         'message': str(message)
     })
 
+
+def custom_404_view(request, exception):
+    """Custom 404 error handler"""
+    return render(request, '404.html', status=404)
+

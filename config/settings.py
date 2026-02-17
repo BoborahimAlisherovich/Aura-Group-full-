@@ -19,7 +19,13 @@ SECRET_KEY = 'django-insecure-9t*^^qi)nln5&uh@#ssxn70t_3zk3ob#0qq&4yhvc*3$owqa6w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+raw_allowed_hosts = os.getenv("ALLOWED_HOSTS", "")
+if raw_allowed_hosts.strip():
+    ALLOWED_HOSTS = [h.strip() for h in raw_allowed_hosts.split(",") if h.strip()]
+else:
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "0.0.0.0"]
+    if DEBUG:
+        ALLOWED_HOSTS.append("*")
 
 
 # Application definition
@@ -141,8 +147,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LANGUAGES = [
-    ('uz', 'Oʻzbekcha'),
-    ('ru', 'Русский'),
+    ('uz', "O'zbekcha"),
+    ('ru', '???????'),
     ('en', 'English'),
 ]
 

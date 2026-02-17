@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -41,7 +41,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{% url 'index' %}">
-                <img src="{% static 'imgs/logo_image/tmpm29hi4hn.png' %}" alt="AURA Group" class="navbar-logo">
+                <img src="{% static 'imgs/logo_image/tmpm29hi4hn.png' %}" alt="AURA Group" class="navbar-logo" width="160" height="44" fetchpriority="high" decoding="async">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -198,55 +198,55 @@
     </button>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="{% static 'js/script.js' %}"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="{% static 'js/script.js' %}"></script>
     
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 700,
+                    easing: 'ease-out',
+                    once: true
+                });
             }
-        });
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
+
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                });
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+            if (navbar) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
             }
-        });
-        
-        // Language Switcher - tilni o'zgartirish
-        document.querySelectorAll('.lang-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const newLang = this.textContent.toLowerCase();
-                let currentPath = window.location.pathname;
-                
-                // Eski til prefixini olib tashlash
-                currentPath = currentPath.replace(/^\/(uz|ru|en)/, '');
-                if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
-                
-                // Yangi URL ga o'tish
-                window.location.href = '/' + newLang + currentPath;
+
+            document.querySelectorAll('.lang-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const newLang = this.textContent.toLowerCase();
+                    let currentPath = window.location.pathname;
+                    currentPath = currentPath.replace(/^\/(uz|ru|en)/, '');
+                    if (!currentPath.startsWith('/')) currentPath = '/' + currentPath;
+                    window.location.href = '/' + newLang + currentPath;
+                });
             });
         });
     </script>

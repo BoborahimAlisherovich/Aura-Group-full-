@@ -3,9 +3,10 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 from django.contrib import admin
+from auragroup.views import custom_404_view
 
 urlpatterns = [
-    path('i18n/', include('django.conf.urls.i18n')),
+    path('i18n/', include('django.conf.urls.i18n')),    
 ]
 
 urlpatterns += i18n_patterns(
@@ -15,6 +16,9 @@ urlpatterns += i18n_patterns(
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Custom 404 handler
+handler404 = custom_404_view
 
 
 

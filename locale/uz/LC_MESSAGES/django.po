@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-24 06:52+0300\n"
+"POT-Creation-Date: 2026-02-17 15:18+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,1525 +11,1812 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-#: .\auragroup\models.py:37
-msgid "Mobile app"
-msgstr "Mobil ilova"
-#: .\auragroup\models.py:38
-msgid "Web site"
-msgstr "Veb-sayt"
-#: .\auragroup\models.py:39
-msgid "CRM"
-msgstr "CRM"
-#: .\auragroup\models.py:40
-msgid "Telegram bot"
+
+#: .\auragroup\forms.py:14 .\auragroup\forms.py:92
+#: .\templates\career_detail.html:113 .\templates\contact.html:29
+msgid "To'liq ismingiz"
+msgstr ""
+
+#: .\auragroup\forms.py:18 .\auragroup\forms.py:109
+#: .\templates\career_detail.html:109 .\templates\contact.html:33
+msgid "Telefon raqamingiz"
+msgstr ""
+
+#: .\auragroup\forms.py:22 .\templates\contact.html:37
+msgid "Email manzilingiz"
+msgstr ""
+
+#: .\auragroup\forms.py:26
+msgid "Xabaringizni yozing..."
+msgstr ""
+
+#: .\auragroup\forms.py:48 .\auragroup\models.py:120
+#: .\templates\service_request.html:54
+msgid "Kompaniya nomi"
+msgstr ""
+
+#: .\auragroup\forms.py:52
+msgid "Telefon raqam (+998...)"
+msgstr ""
+
+#: .\auragroup\forms.py:56 .\auragroup\models.py:123
+msgid "Aloqa uchun ism"
+msgstr ""
+
+#: .\auragroup\forms.py:60
+#, fuzzy
+#| msgid "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
+msgid "Loyiha haqida qisqacha ma'lumot..."
+msgstr "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
+
+#: .\auragroup\forms.py:65
+msgid "Email (ixtiyoriy)"
+msgstr ""
+
+#: .\auragroup\forms.py:69
+msgid "Telegram username (ixtiyoriy)"
+msgstr ""
+
+#: .\auragroup\forms.py:96
+msgid "O'zingiz haqingizda qisqacha..."
+msgstr ""
+
+#: .\auragroup\forms.py:105 .\templates\career_detail.html:105
+#: .\templates\service_request.html:94
+#, fuzzy
+#| msgid "Telegram bot"
+msgid "Telegram username"
 msgstr "Telegram bot"
-#: .\auragroup\views.py:87 .\auragroup\views.py:285 .\auragroup\views.py:399
-#: .\auragroup\views.py:468
-msgid "O'zbekcha"
-msgstr "O'zbekcha"
-#: .\auragroup\views.py:89 .\auragroup\views.py:286 .\auragroup\views.py:400
-#: .\auragroup\views.py:469
-msgid "Русский"
-msgstr "Русский"
-#: .\auragroup\views.py:91 .\auragroup\views.py:287 .\auragroup\views.py:401
-#: .\auragroup\views.py:470
-msgid "English"
-msgstr "English"
-#: .\auragroup\views.py:130 .\templates\base.html:51 .\templates\base.html:71
-#: .\templates\base.html:115 .\templates\index.html:4
-msgid "Bosh sahifa"
-msgstr "Bosh sahifa"
-#: .\auragroup\views.py:153 .\templates\base.html:54 .\templates\base.html:74
-#: .\templates\base.html:118 .\templates\services.html:4
-msgid "Xizmatlar"
-msgstr "Xizmatlar"
-#: .\auragroup\views.py:189 .\templates\base.html:57 .\templates\base.html:77
-#: .\templates\base.html:121 .\templates\portfolio.html:4
-msgid "Portfolio"
-msgstr "Portfolio"
-#: .\auragroup\views.py:214 .\templates\about.html:3 .\templates\base.html:60
-#: .\templates\base.html:80 .\templates\base.html:124
-msgid "Biz haqimizda"
-msgstr "Biz haqimizda"
-#: .\auragroup\views.py:243
-msgid "Vakansiyalar"
-msgstr "Vakansiyalar"
-#: .\auragroup\views.py:283 .\templates\about.html:16
-#: .\templates\about.html:194 .\templates\career.html:74
-msgid "Bog'lanish"
-msgstr "Bog'lanish"
-#: .\auragroup\views.py:339
-msgid "Loyihaga yoqdi deb belgilandingiz!"
-msgstr "Loyihaga yoqdi deb belgilandingiz!"
-#: .\auragroup\views.py:344
-msgid "Loyihaga yoqdi belgisini olib tashladingiz!"
-msgstr "Loyihaga yoqdi belgisini olib tashladingiz!"
-#: .\auragroup\views.py:397
-msgid "Xizmat so'rovi"
-msgstr "Xizmat so'rovi"
-#: .\auragroup\views.py:466
-msgid "Vakansiya uchun ariza"
-msgstr "Vakansiya uchun ariza"
-#: .\templates\about.html:12
-msgid "Aqlli o'zgarish muhandislari"
-msgstr "Aqlli o'zgarish muhandislari"
-#: .\templates\about.html:14
-msgid ""
-"Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, "
-"biznesingiz uchun innovatsion yechimlar yaratamiz"
+
+#: .\auragroup\models.py:8
+msgid "Ism"
 msgstr ""
-"Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, "
-"biznesingiz uchun innovatsion yechimlar yaratamiz"
-#: .\templates\about.html:37
-msgid "Mijozlar"
-msgstr "Mijozlar"
-#: .\templates\about.html:41
-msgid "Loyihalar"
-msgstr "Loyihalar"
-#: .\templates\about.html:45
-msgid "Qoniqarli mijozlar"
-msgstr "Qoniqarli mijozlar"
-#: .\templates\about.html:49
-msgid "Obunachilar"
-msgstr "Obunachilar"
-#: .\templates\about.html:53
-msgid "Tajriba yillari"
+
+#: .\auragroup\models.py:9 .\auragroup\models.py:93 .\auragroup\models.py:180
+msgid "Rasm"
+msgstr ""
+
+#: .\auragroup\models.py:10 .\auragroup\models.py:192
+#: .\templates\career_detail.html:32
+msgid "Lavozim"
+msgstr ""
+
+#: .\auragroup\models.py:11
+#, fuzzy
+#| msgid "Tajriba yillari"
+msgid "Tajriba (yil)"
 msgstr "Tajriba yillari"
-#: .\templates\about.html:63
-msgid "Bizning hikoyamiz"
-msgstr "Bizning hikoyamiz"
-#: .\templates\about.html:80
-msgid "Bizning vazifamiz"
-msgstr "Bizning vazifamiz"
-#: .\templates\about.html:93
-msgid "Asosiy mutaxassisliklar"
-msgstr "Asosiy mutaxassisliklar"
-#: .\templates\about.html:99
-msgid ""
-"Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab "
-"chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
-msgstr ""
-"Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab "
-"chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
-#: .\templates\about.html:103
-msgid "Blokcheyn"
-msgstr "Blokcheyn"
-#: .\templates\about.html:106
-msgid ""
-"DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga "
-"oshirishda keng tajriba."
-msgstr ""
-"DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga "
-"oshirishda keng tajriba."
-#: .\templates\about.html:110
-msgid "Algoritmik Savdo"
-msgstr "Algoritmik Savdo"
-#: .\templates\about.html:113
-msgid ""
-"Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili "
-"algoritmlariga ixtisoslashgan."
-msgstr ""
-"Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili "
-"algoritmlariga ixtisoslashgan."
-#: .\templates\about.html:117
-msgid "Kibersport boshqaruvi"
-msgstr "Kibersport boshqaruvi"
-#: .\templates\about.html:120
-msgid ""
-"Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni "
-"boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
-msgstr ""
-"Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni "
-"boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
-#: .\templates\about.html:129
-msgid "Bizning natijalarimiz"
-msgstr "Bizning natijalarimiz"
-#: .\templates\about.html:135
-msgid "AI va ML rivojlanish yillari"
-msgstr "AI va ML rivojlanish yillari"
-#: .\templates\about.html:137
-msgid ""
-"Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va "
-"joriy qilish"
-msgstr ""
-"Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va "
-"joriy qilish"
-#: .\templates\about.html:142
-msgid "Sinovdan o'tgan savdo hajmi"
-msgstr "Sinovdan o'tgan savdo hajmi"
-#: .\templates\about.html:143
-msgid "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
-msgstr "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
-#: .\templates\about.html:147
-msgid "Blokcheyn loyihalari auditi"
-msgstr "Blokcheyn loyihalari auditi"
-#: .\templates\about.html:148
-msgid "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
-msgstr "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
-#: .\templates\about.html:152
-msgid "Kibersport jamoalari auditi"
-msgstr "Kibersport jamoalari auditi"
-#: .\templates\about.html:153
-msgid "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
-msgstr "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
-#: .\templates\about.html:161
-msgid "Operatsion ta'sir"
-msgstr "Operatsion ta'sir"
-#: .\templates\about.html:167
-msgid "Tizimning ishlash vaqti"
-msgstr "Tizimning ishlash vaqti"
-#: .\templates\about.html:168
-msgid "AI va savdo infratuzilmasi uchun muhim"
-msgstr "AI va savdo infratuzilmasi uchun muhim"
-#: .\templates\about.html:172
-msgid "Xarajatlarni qisqartirish"
-msgstr "Xarajatlarni qisqartirish"
-#: .\templates\about.html:173
-msgid "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
-msgstr "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
-#: .\templates\about.html:177
-msgid "Avtomatlashtirish darajasi"
-msgstr "Avtomatlashtirish darajasi"
-#: .\templates\about.html:178
-msgid "Mijoz ish jarayonlarini optimallashtirishda"
-msgstr "Mijoz ish jarayonlarini optimallashtirishda"
-#: .\templates\about.html:182
-msgid "Natijadorlikni oshirish"
-msgstr "Natijadorlikni oshirish"
-#: .\templates\about.html:183
-msgid "Tizim samaradorligini o'rtacha yaxshilash"
-msgstr "Tizim samaradorligini o'rtacha yaxshilash"
-#: .\templates\about.html:192
-msgid "Tayyor"
-msgstr "Tayyor"
-#: .\templates\about.html:193
-msgid "mahsulotingiz ehtiyojlarini"
-msgstr "mahsulotingiz ehtiyojlarini"
-#: .\templates\base.html:63 .\templates\base.html:83 .\templates\base.html:127
-#: .\templates\career.html:4
-msgid "Karyera"
-msgstr "Karyera"
-#: .\templates\base.html:89 .\templates\contact.html:13
-msgid "Biz bilan bog'laning"
-msgstr "Biz bilan bog'laning"
-#: .\templates\base.html:150
-msgid "Maxfiylik siyosati"
-msgstr "Maxfiylik siyosati"
-#: .\templates\base.html:151
-msgid "Foydalanish shartlari"
-msgstr "Foydalanish shartlari"
-#: .\templates\base.html:155
-msgid "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
-msgstr "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
-#: .\templates\career.html:13
-msgid "Kelajakni biz bilan yarating"
-msgstr "Kelajakni biz bilan yarating"
-#: .\templates\career.html:15
-msgid ""
-"Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina "
-"o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
-msgstr ""
-"Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina "
-"o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
-#: .\templates\career.html:18
-msgid "Bo'sh ish o'rinlarini ko'rish"
-msgstr "Bo'sh ish o'rinlarini ko'rish"
-#: .\templates\career.html:35
-msgid "Bo'sh ish o'rinlari"
-msgstr "Bo'sh ish o'rinlari"
-#: .\templates\career.html:45
-msgid "Ish haqi"
-msgstr "Ish haqi"
-#: .\templates\career.html:49
-msgid "Tajriba"
-msgstr "Tajriba"
-#: .\templates\career.html:53
-msgid "Muddat"
-msgstr "Muddat"
-#: .\templates\career.html:56
+
+#: .\auragroup\models.py:12
 msgid "Ko'nikmalar"
 msgstr "Ko'nikmalar"
-#: .\templates\career.html:60
-msgid "Ariza topshirish"
-msgstr "Ariza topshirish"
-#: .\templates\career.html:72
-msgid "Muammolaringizni muhokama qilishga tayyormisiz?"
-msgstr "Muammolaringizni muhokama qilishga tayyormisiz?"
-#: .\templates\career.html:73
-msgid "Mahsulot ehtiyojlaringizni"
-msgstr "Mahsulot ehtiyojlaringizni"
-#: .\templates\career.html:73
-msgid "mutaxassislari bilan muhokama qiling."
-msgstr "mutaxassislari bilan muhokama qiling."
-#: .\templates\career_detail.html:12
-msgid ""
-"Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
+
+#: .\auragroup\models.py:13 .\auragroup\models.py:94 .\auragroup\models.py:143
+#: .\auragroup\models.py:194 .\templates\career_detail.html:80
+msgid "Tavsif"
 msgstr ""
-"Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
-#: .\templates\career_detail.html:26 .\templates\service_request.html:32
-msgid "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
-msgstr "Loyiha haqida ma'lumot (PDF, ixtiyoriy)"
-#: .\templates\career_detail.html:27
-msgid "Fayl tanlash"
-msgstr "Fayl tanlash"
-#: .\templates\career_detail.html:32
-msgid "Ariza yuborish"
-msgstr "Ariza yuborish"
-#: .\templates\contact.html:4
-msgid "Aloqa"
-msgstr "Aloqa"
-#: .\templates\contact.html:15
-msgid ""
-"Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera "
-"olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
+
+#: .\auragroup\models.py:14
+msgid "Hikoya"
 msgstr ""
-"Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera "
-"olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
-#: .\templates\contact.html:20
-msgid "Hozir bog'lanish"
-msgstr "Hozir bog'lanish"
-#: .\templates\contact.html:42
-msgid "Xabar yuborish"
-msgstr "Xabar yuborish"
-#: .\templates\contact.html:50
-msgid "Yuborish"
-msgstr "Yuborish"
-#: .\templates\contact.html:57 .\templates\contact.html:73
-msgid "Aloqa ma'lumotlari"
+
+#: .\auragroup\models.py:15 .\auragroup\models.py:126 .\auragroup\models.py:217
+#, fuzzy
+#| msgid "Telegram bot"
+msgid "Telegram"
+msgstr "Telegram bot"
+
+#: .\auragroup\models.py:16
+msgid "LinkedIn"
+msgstr ""
+
+#: .\auragroup\models.py:17
+msgid "GitHub"
+msgstr ""
+
+#: .\auragroup\models.py:18 .\auragroup\models.py:96
+msgid "Tartib"
+msgstr ""
+
+#: .\auragroup\models.py:21
+msgid "Jamoa a'zosi"
+msgstr ""
+
+#: .\auragroup\models.py:22 .\templates\career.html:81
+#, fuzzy
+#| msgid "Aloqa ma'lumotlari"
+msgid "Jamoa a'zolari"
 msgstr "Aloqa ma'lumotlari"
-#: .\templates\contact.html:59
+
+#: .\auragroup\models.py:37 .\auragroup\models.py:214
+msgid "To'liq ism"
+msgstr ""
+
+#: .\auragroup\models.py:38 .\auragroup\models.py:121 .\auragroup\models.py:218
+#: .\templates\service_request.html:75
+#, fuzzy
+#| msgid "Telefon"
+msgid "Telefon raqam"
+msgstr "Telefon"
+
+#: .\auragroup\models.py:39 .\auragroup\models.py:125
+#: .\templates\contact.html:64 .\templates\service_request.html:88
 msgid "Email"
 msgstr "Email"
-#: .\templates\contact.html:62
-msgid "Telefon"
-msgstr "Telefon"
-#: .\templates\contact.html:65
-msgid "Ofis"
-msgstr "Ofis"
-#: .\templates\contact.html:75
-msgid ""
-"Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz "
-"jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning "
-"yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini tushunishga "
-"yordam beramiz."
+
+#: .\auragroup\models.py:40 .\auragroup\models.py:215
+msgid "Xabar"
 msgstr ""
-"Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz "
-"jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning "
-"yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini tushunishga "
-"yordam beramiz."
-#: .\templates\contact.html:77
-msgid "Uchrashuvni rejalashtirish"
-msgstr "Uchrashuvni rejalashtirish"
-#: .\templates\index.html:11
-msgid "Ma'lumotlarni natijaga aylantiramiz"
-msgstr "Ma'lumotlarni natijaga aylantiramiz"
-#: .\templates\index.html:13
-msgid ""
-"Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, "
-"biznesingiz uchun yangi ufqlarni ochamiz"
+
+#: .\auragroup\models.py:41 .\auragroup\models.py:128 .\auragroup\models.py:154
+#: .\auragroup\models.py:219
+msgid "Yaratilgan vaqt"
 msgstr ""
-"Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, "
-"biznesingiz uchun yangi ufqlarni ochamiz"
-#: .\templates\index.html:15
-msgid "Uchrashuvga yozilish"
-msgstr "Uchrashuvga yozilish"
-#: .\templates\index.html:30
-msgid "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
-msgstr "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
-#: .\templates\index.html:41
-msgid "Prognozli tahlil"
-msgstr "Prognozli tahlil"
-#: .\templates\index.html:43
-msgid ""
-"Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, to'g'ri "
-"qarorlar qabul qiling."
+
+#: .\auragroup\models.py:44
+#, fuzzy
+#| msgid "Xizmat so'rovi"
+msgid "Aloqa so'rovi"
+msgstr "Xizmat so'rovi"
+
+#: .\auragroup\models.py:45
+#, fuzzy
+#| msgid "Aloqa ma'lumotlari"
+msgid "Aloqa so'rovlari"
+msgstr "Aloqa ma'lumotlari"
+
+#: .\auragroup\models.py:56 .\templates\portfolio.html:34
+#, fuzzy
+#| msgid "Web site"
+msgid "Web sayt"
+msgstr "Veb-sayt"
+
+#: .\auragroup\models.py:57 .\templates\portfolio.html:37
+#, fuzzy
+#| msgid "Mobile app"
+msgid "Mobil ilova"
+msgstr "Mobil ilova"
+
+#: .\auragroup\models.py:58 .\templates\portfolio.html:40
+msgid "Telegram bot"
+msgstr "Telegram bot"
+
+#: .\auragroup\models.py:59
+msgid "AI / Sun'iy intellekt"
 msgstr ""
-"Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, to'g'ri "
-"qarorlar qabul qiling."
-#: .\templates\index.html:56
-msgid "AI Konsalting"
-msgstr "AI Konsalting"
-#: .\templates\index.html:58
-msgid ""
-"Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda "
-"ekspert maslahatlari."
+
+#: .\auragroup\models.py:60
+msgid "CRM tizimi"
 msgstr ""
-"Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda "
-"ekspert maslahatlari."
-#: .\templates\index.html:71
-msgid "Ma'lumot muhandisligi"
+
+#: .\auragroup\models.py:61 .\templates\portfolio.html:49
+msgid "E-commerce"
+msgstr ""
+
+#: .\auragroup\models.py:62
+msgid "Desktop dastur"
+msgstr ""
+
+#: .\auragroup\models.py:63
+#, fuzzy
+#| msgid "Xizmatlar"
+msgid "Cloud xizmatlari"
+msgstr "Xizmatlar"
+
+#: .\auragroup\models.py:64
+msgid "Kiberxavfsizlik"
+msgstr ""
+
+#: .\auragroup\models.py:65
+#, fuzzy
+#| msgid "Ma'lumot muhandisligi"
+msgid "Ma'lumotlar tahlili"
 msgstr "Ma'lumot muhandisligi"
-#: .\templates\index.html:73
-msgid ""
-"ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini "
-"yarating."
+
+#: .\auragroup\models.py:66
+msgid "Blockchain"
 msgstr ""
-"ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini "
-"yarating."
-#: .\templates\index.html:83
-msgid "Nega bizni tanlaysiz"
-msgstr "Nega bizni tanlaysiz"
-#: .\templates\index.html:88
+
+#: .\auragroup\models.py:67
+msgid "IoT"
+msgstr ""
+
+#: .\auragroup\models.py:68
+msgid "UX/UI Dizayn"
+msgstr ""
+
+#: .\auragroup\models.py:69
+msgid "DevOps"
+msgstr ""
+
+#: .\auragroup\models.py:70
+msgid "API integratsiya"
+msgstr ""
+
+#: .\auragroup\models.py:92 .\auragroup\models.py:122
+#, fuzzy
+#| msgid "Xizmat so'rovi"
+msgid "Xizmat turi"
+msgstr "Xizmat so'rovi"
+
+#: .\auragroup\models.py:95
+msgid "Ikon klassi"
+msgstr ""
+
+#: .\auragroup\models.py:97 .\auragroup\models.py:200
+msgid "Faol"
+msgstr ""
+
+#: .\auragroup\models.py:100
+#, fuzzy
+#| msgid "Xizmatlar"
+msgid "Xizmat"
+msgstr "Xizmatlar"
+
+#: .\auragroup\models.py:101 .\auragroup\views.py:36 .\templates\base.html:60
+#: .\templates\base.html:136 .\templates\base.html:144
+#: .\templates\index.html:61 .\templates\service_request.html:13
+#: .\templates\services.html:4 .\templates\services.html:21
+msgid "Xizmatlar"
+msgstr "Xizmatlar"
+
+#: .\auragroup\models.py:124
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha tavsifi"
+msgstr "Loyihalar"
+
+#: .\auragroup\models.py:127
+msgid "Fayl"
+msgstr ""
+
+#: .\auragroup\models.py:131 .\auragroup\views.py:166
+msgid "Xizmat so'rovi"
+msgstr "Xizmat so'rovi"
+
+#: .\auragroup\models.py:132
+#, fuzzy
+#| msgid "Xizmat so'rovi"
+msgid "Xizmat so'rovlari"
+msgstr "Xizmat so'rovi"
+
+#: .\auragroup\models.py:141
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha nomi"
+msgstr "Loyihalar"
+
+#: .\auragroup\models.py:142 .\templates\portfolio_detail.html:74
+#: .\templates\portfolio_detail.html:75
+msgid "Asosiy rasm"
+msgstr "Asosiy rasm"
+
+#: .\auragroup\models.py:144
+msgid "To'liq tavsif"
+msgstr ""
+
+#: .\auragroup\models.py:145
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha turi"
+msgstr "Loyihalar"
+
+#: .\auragroup\models.py:146
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha havolasi"
+msgstr "Loyihalar"
+
+#: .\auragroup\models.py:147
+msgid "Mijoz nomi"
+msgstr ""
+
+#: .\auragroup\models.py:148
+msgid "Tugatilgan sana"
+msgstr ""
+
+#: .\auragroup\models.py:149 .\templates\portfolio_detail.html:163
+msgid "Texnologiyalar"
+msgstr ""
+
+#: .\auragroup\models.py:150
+#, fuzzy
+#| msgid "Xizmatlar"
+msgid "Xususiyatlar"
+msgstr "Xizmatlar"
+
+#: .\auragroup\models.py:151
+msgid "Ko'rishlar soni"
+msgstr ""
+
+#: .\auragroup\models.py:152
+msgid "Yoqtirishlar soni"
+msgstr ""
+
+#: .\auragroup\models.py:153
+msgid "Tanlangan"
+msgstr ""
+
+#: .\auragroup\models.py:157 .\auragroup\models.py:179 .\auragroup\views.py:49
+#: .\templates\base.html:65 .\templates\base.html:137
+#: .\templates\portfolio.html:4 .\templates\portfolio.html:21
+#: .\templates\portfolio_detail.html:13 .\templates\service_request.html:169
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: .\auragroup\models.py:158
+#, fuzzy
+#| msgid "Portfolio"
+msgid "Portfoliolar"
+msgstr "Portfolio"
+
+#: .\auragroup\models.py:183
+#, fuzzy
+#| msgid "Portfolio"
+msgid "Portfolio rasmi"
+msgstr "Portfolio"
+
+#: .\auragroup\models.py:184
+#, fuzzy
+#| msgid "Portfolio"
+msgid "Portfolio rasmlari"
+msgstr "Portfolio"
+
+#: .\auragroup\models.py:193 .\templates\career_detail.html:42
+msgid "Joylashuv"
+msgstr ""
+
+#: .\auragroup\models.py:195 .\templates\career_detail.html:84
+msgid "Talablar"
+msgstr ""
+
+#: .\auragroup\models.py:196
+msgid "E'lon qilingan sana"
+msgstr ""
+
+#: .\auragroup\models.py:197 .\templates\career_detail.html:62
+#, fuzzy
+#| msgid "Tajriba yillari"
+msgid "Tajriba darajasi"
+msgstr "Tajriba yillari"
+
+#: .\auragroup\models.py:198
+msgid "Oxirgi muddat"
+msgstr ""
+
+#: .\auragroup\models.py:199 .\templates\career_detail.html:52
+msgid "Ish haqi"
+msgstr "Ish haqi"
+
+#: .\auragroup\models.py:203 .\auragroup\models.py:213
+#, fuzzy
+#| msgid "Vakansiyalar"
+msgid "Vakansiya"
+msgstr "Vakansiyalar"
+
+#: .\auragroup\models.py:204 .\templates\career.html:114
+msgid "Vakansiyalar"
+msgstr "Vakansiyalar"
+
+#: .\auragroup\models.py:216
+msgid "Rezyume"
+msgstr ""
+
+#: .\auragroup\models.py:222
+#, fuzzy
+#| msgid "Vakansiya uchun ariza"
+msgid "Vakansiya arizasi"
+msgstr "Vakansiya uchun ariza"
+
+#: .\auragroup\models.py:223
+#, fuzzy
+#| msgid "Vakansiyalar"
+msgid "Vakansiya arizalari"
+msgstr "Vakansiyalar"
+
+#: .\auragroup\views.py:24 .\templates\base.html:55 .\templates\base.html:135
+#: .\templates\index.html:4 .\templates\portfolio_detail.html:11
+#: .\templates\service_request.html:11
+msgid "Bosh sahifa"
+msgstr "Bosh sahifa"
+
+#: .\auragroup\views.py:79 .\templates\about.html:4 .\templates\about.html:10
+#: .\templates\base.html:70 .\templates\base.html:138
+msgid "Biz haqimizda"
+msgstr "Biz haqimizda"
+
+#: .\auragroup\views.py:95 .\templates\base.html:75 .\templates\base.html:139
+#: .\templates\career.html:4 .\templates\career.html:10
+msgid "Karyera"
+msgstr "Karyera"
+
+#: .\auragroup\views.py:114
+msgid "Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+msgstr ""
+
+#: .\auragroup\views.py:117 .\auragroup\views.py:159 .\auragroup\views.py:202
+msgid "Iltimos, formani to'g'ri to'ldiring."
+msgstr ""
+
+#: .\auragroup\views.py:123 .\templates\about.html:212 .\templates\base.html:90
+#: .\templates\career.html:150 .\templates\career.html:220
+#: .\templates\contact.html:4 .\templates\contact.html:10
+#: .\templates\index.html:104 .\templates\portfolio.html:163
+#: .\templates\portfolio_detail.html:196 .\templates\services.html:194
+msgid "Bog'lanish"
+msgstr "Bog'lanish"
+
+#: .\auragroup\views.py:156
+msgid "So'rovingiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+msgstr ""
+
+#: .\auragroup\views.py:199
+msgid "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanamiz."
+msgstr ""
+
+#: .\auragroup\views.py:225
+#, fuzzy
+#| msgid "Loyihaga yoqdi deb belgilandingiz!"
+msgid "Loyihaga yoqdi deb belgiladingiz!"
+msgstr "Loyihaga yoqdi deb belgilandingiz!"
+
+#: .\auragroup\views.py:230
+#, fuzzy
+#| msgid "Loyihaga yoqdi belgisini olib tashladingiz!"
+msgid "Yoqdi belgisini olib tashladingiz!"
+msgstr "Loyihaga yoqdi belgisini olib tashladingiz!"
+
+#: .\templates\about.html:12
+msgid ""
+"AURA Group - 2025-yil 1-iyulda tashkil etilgan, bizneslar uchun ishonchli va "
+"natijador IT hamkor."
+msgstr "AURA Group - 2025-yil 1-iyulda tashkil etilgan, bizneslar uchun ishonchli va natijador IT hamkor."
+
+#: .\templates\about.html:22
+msgid "Bizning hikoyamiz"
+msgstr "Bizning hikoyamiz"
+
+#: .\templates\about.html:23
+msgid "Texnologiya va innovatsiya bilan kelajakni bunyod etamiz"
+msgstr ""
+
+#: .\templates\about.html:25
+msgid ""
+"AURA Group 2025-yil 1-iyulda Boborahim Rustamqulov rahbarligida tashkil "
+"etilgan. Kompaniya qisqa muddat ichida bizneslar uchun zamonaviy IT "
+"xizmatlarni taqdim etuvchi ishonchli jamoaga aylandi."
+msgstr "AURA Group 2025-yil 1-iyulda Boborahim Rustamqulov rahbarligida tashkil etilgan. Kompaniya qisqa muddat ichida bizneslar uchun zamonaviy IT xizmatlarni taqdim etuvchi ishonchli jamoaga aylandi."
+
+#: .\templates\about.html:28
+msgid ""
+"Kompaniyamiz falsafasi O'zbekiston IT bozorida xalqaro standartlarga javob "
+"beradigan kuchli jamoani shakllantirishga asoslanadi."
+msgstr "Kompaniyamiz falsafasi O'zbekiston IT bozorida xalqaro standartlarga javob beradigan kuchli jamoani shakllantirishga asoslanadi."
+
+#: .\templates\about.html:31
+msgid ""
+"Biz yosh dasturchilar uchun o'sish va rasmiy ishga joylashish imkoniyatini "
+"yaratamiz, bizneslar IT infratuzilmasini rivojlantiramiz va AURA Group'ni IT "
+"jahon sahnasida tanilgan kompaniyaga aylantirishni maqsad qilganmiz."
+msgstr "Biz yosh dasturchilar uchun o'sish va rasmiy ishga joylashish imkoniyatini yaratamiz, bizneslar IT infratuzilmasini rivojlantiramiz va AURA Group'ni IT jahon sahnasida tanilgan kompaniyaga aylantirishni maqsad qilganmiz."
+
+#: .\templates\about.html:38 .\templates\career.html:88
+#: .\templates\portfolio.html:124
+msgid "Loyihalar"
+msgstr "Loyihalar"
+
+#: .\templates\about.html:42 .\templates\portfolio.html:138
+msgid "Qoniqish"
+msgstr ""
+
+#: .\templates\about.html:46 .\templates\career.html:102
+msgid "Tashkil topgan"
+msgstr ""
+
+#: .\templates\about.html:63
+#, fuzzy
+#| msgid "Bizning hikoyamiz"
+msgid "Bizning missiyamiz"
+msgstr "Bizning missiyamiz"
+
+#: .\templates\about.html:65
+msgid ""
+"AURA Group missiyasi sifatli xizmatlar va ilg'or IT yechimlar orqali "
+"bizneslarga barqaror o'sish berish, O'zbekiston kompaniyalarining IT "
+"infratuzilmasini kuchaytirish hamda yosh mutaxassislar uchun real ish "
+"imkoniyatlarini kengaytirishdir."
+msgstr "AURA Group missiyasi sifatli xizmatlar va ilg'or IT yechimlar orqali bizneslarga barqaror o'sish berish, O'zbekiston kompaniyalarining IT infratuzilmasini kuchaytirish hamda yosh mutaxassislar uchun real ish imkoniyatlarini kengaytirishdir."
+
+#: .\templates\about.html:68
+msgid "Xalqaro standartlarga yaqin sifat"
+msgstr "Xalqaro standartlarga yaqin sifat"
+
+#: .\templates\about.html:69
+msgid "Biznes uchun kuchli raqamli tayanch"
+msgstr "Biznes uchun kuchli raqamli tayanch"
+
+#: .\templates\about.html:70
+msgid "Yoshlar bandligi va professional o'sish"
+msgstr "Yoshlar bandligi va professional o'sish"
+
+#: .\templates\about.html:79
+#, fuzzy
+#| msgid "Bizning vazifamiz"
+msgid "Bizning vizyonimiz"
+msgstr "Bizning vazifamiz"
+
+#: .\templates\about.html:81
+msgid ""
+"Vizionimiz AURA Group'ni O'zbekistonning eng ishonchli IT kompaniyalari "
+"qatoriga olib chiqish, mintaqaviy bozorda tanilish va kelajakda global IT "
+"maydonda munosib o'rin egallashdir."
+msgstr "Vizionimiz AURA Group'ni O'zbekistonning eng ishonchli IT kompaniyalari qatoriga olib chiqish, mintaqaviy bozorda tanilish va kelajakda global IT maydonda munosib o'rin egallashdir."
+
+#: .\templates\about.html:84
+msgid "IT jahon sahnasiga chiqish"
+msgstr "IT jahon sahnasiga chiqish"
+
+#: .\templates\about.html:85
+msgid "Yuqori malakali jamoani kengaytirish"
+msgstr "Yuqori malakali jamoani kengaytirish"
+
+#: .\templates\about.html:86
+msgid "Doimiy ishonchga asoslangan hamkorlik"
+msgstr "Doimiy ishonchga asoslangan hamkorlik"
+
+#: .\templates\about.html:98
+#, fuzzy
+#| msgid "Xizmatlar"
+msgid "Qadriyatlar"
+msgstr "Xizmatlar"
+
+#: .\templates\about.html:99
+#, fuzzy
+#| msgid "Bizning natijalarimiz"
+msgid "Bizning asosiy qadriyatlarimiz"
+msgstr "Bizning natijalarimiz"
+
+#: .\templates\about.html:101
+msgid "Har bir loyihada quyidagi qadriyatlarimizga amal qilamiz"
+msgstr ""
+
+#: .\templates\about.html:110
+msgid "Ishonch"
+msgstr ""
+
+#: .\templates\about.html:111
+msgid "Mijozlar bilan ochiq va shaffof munosabatlar o'rnatamiz"
+msgstr ""
+
+#: .\templates\about.html:119
+msgid "Sifat"
+msgstr ""
+
+#: .\templates\about.html:120
+msgid "Har bir loyihada eng yuqori sifat standartlarini ta'minlaymiz"
+msgstr ""
+
+#: .\templates\about.html:128
 msgid "Innovatsiya"
 msgstr "Innovatsiya"
-#: .\templates\index.html:90
-msgid ""
-"Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, "
-"ilg'or yechimlarni taqdim etamiz."
+
+#: .\templates\about.html:129
+msgid "Doimo yangi texnologiyalar va yondashuvlarni o'rganamiz"
 msgstr ""
-"Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, "
-"ilg'or yechimlarni taqdim etamiz."
-#: .\templates\index.html:97
-msgid "Hamkorlik"
-msgstr "Hamkorlik"
-#: .\templates\index.html:99
-msgid ""
-"Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga erishadigan "
-"maxsus yechimlarni ishlab chiqamiz."
+
+#: .\templates\about.html:137
+msgid "Jamoaviylik"
 msgstr ""
-"Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga erishadigan "
-"maxsus yechimlarni ishlab chiqamiz."
-#: .\templates\index.html:106
-msgid "Mukammallik"
-msgstr "Mukammallik"
-#: .\templates\index.html:108
-msgid ""
-"Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni "
-"saqlaymiz."
+
+#: .\templates\about.html:138
+msgid "Jamoa bo'lib ishlash orqali katta muvaffaqiyatlarga erishamiz"
 msgstr ""
-"Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni "
-"saqlaymiz."
-#: .\templates\index.html:115
-msgid "Halollik"
-msgstr "Halollik"
-#: .\templates\index.html:117
-msgid ""
-"Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa "
-"qo'yamiz."
+
+#: .\templates\about.html:150
+msgid "Jamoamiz"
 msgstr ""
-"Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa "
-"qo'yamiz."
-#: .\templates\index.html:127
-msgid "Nega biz boshladik"
-msgstr "Nega biz boshladik"
-#: .\templates\index.html:150
-msgid "Batafsil ma'lumot"
-msgstr "Batafsil ma'lumot"
-#: .\templates\index.html:156
-msgid "Ko'p so'raladigan savollar"
-msgstr "Ko'p so'raladigan savollar"
-#: .\templates\index.html:162
-msgid "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
-msgstr "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
-#: .\templates\index.html:167
-msgid ""
-"Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi xizmatlarni "
-"taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab chiqish, mobil "
-"ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab chiqish, brending "
-"va identifikatsiya kabi sohalarda ixtisoslashganmiz."
+
+#: .\templates\about.html:151
+msgid "Professional"
 msgstr ""
-"Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi xizmatlarni "
-"taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab chiqish, mobil "
-"ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab chiqish, brending "
-"va identifikatsiya kabi sohalarda ixtisoslashganmiz."
-#: .\templates\index.html:175
-msgid "Lorem Ipsum matni nima uchun ishlatiladi?"
-msgstr "Lorem Ipsum matni nima uchun ishlatiladi?"
-#: .\templates\index.html:180
-msgid ""
-"Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida "
-"ishlatiladi. Bu 1500-yillardan beri mavjud."
+
+#: .\templates\about.html:151
+msgid "jamoamiz"
 msgstr ""
-"Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida "
-"ishlatiladi. Bu 1500-yillardan beri mavjud."
-#: .\templates\index.html:187
-msgid "Nega biz undan foydalanamiz?"
-msgstr "Nega biz undan foydalanamiz?"
-#: .\templates\index.html:191
+
+#: .\templates\about.html:153
 msgid ""
-"Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun "
-"ishlatiladi."
+"Tajribali mutaxassislardan tashkil topgan professional jamoamiz bilan "
+"tanishing"
 msgstr ""
-"Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun "
-"ishlatiladi."
-#: .\templates\index.html:198
-msgid "Qayerdan olishim mumkin?"
-msgstr "Qayerdan olishim mumkin?"
-#: .\templates\index.html:202
+
+#: .\templates\about.html:203
+msgid "Bizning jamoamizga qo'shilmoqchimisiz?"
+msgstr ""
+
+#: .\templates\about.html:205
+msgid "Iste'dodli mutaxassislarni har doim kutib qolamiz!"
+msgstr ""
+
+#: .\templates\about.html:209 .\templates\career.html:115
+msgid "Bo'sh ish o'rinlari"
+msgstr "Bo'sh ish o'rinlari"
+
+#: .\templates\base.html:122
 msgid ""
-"Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning aksariyati "
-"o'zgartirilgan."
+"Biznesingizni raqamli transformatsiya qiling. Professional IT yechimlar "
+"bilan kelajakka qadam qo'ying."
 msgstr ""
-"Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning aksariyati "
-"o'zgartirilgan."
-#: .\templates\index.html:209
-msgid "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
-msgstr "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
-#: .\templates\index.html:213
-msgid ""
-"Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz orqali "
-"istalgan vaqtda biz bilan bog'lanishingiz mumkin."
-msgstr ""
-"Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz orqali "
-"istalgan vaqtda biz bilan bog'lanishingiz mumkin."
-#: .\templates\portfolio.html:14
-msgid "Bizning ishlar — Sizning kelajagingiz"
-msgstr "Bizning ishlar — Sizning kelajagingiz"
-#: .\templates\portfolio.html:16
-msgid ""
-"Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy vositalar "
-"— bu yerda biz amalga oshirgan zamonaviy va innovatsion loyihalar bilan "
-"tanishing."
-msgstr ""
-"Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy vositalar "
-"— bu yerda biz amalga oshirgan zamonaviy va innovatsion loyihalar bilan "
-"tanishing."
-#: .\templates\portfolio.html:34
-msgid "Bizning loyihalar"
-msgstr "Bizning loyihalar"
-#: .\templates\portfolio.html:36
-msgid ""
-"Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi "
-"loyihalar bilan tanishishingiz mumkin."
-msgstr ""
-"Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi "
-"loyihalar bilan tanishishingiz mumkin."
-#: .\templates\portfolio.html:46
-msgid "Barcha toifalar"
+
+#: .\templates\base.html:133
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Sahifalar"
 msgstr "Barcha toifalar"
-#: .\templates\service_request.html:10
+
+#: .\templates\base.html:146
+msgid "AI Yechimlar"
+msgstr ""
+
+#: .\templates\base.html:147
+msgid "Veb-saytlar"
+msgstr ""
+
+#: .\templates\base.html:148
+#, fuzzy
+#| msgid "Telegram bot"
+msgid "Telegram botlar"
+msgstr "Telegram bot"
+
+#: .\templates\base.html:149
+msgid "CRM tizimlari"
+msgstr ""
+
+#: .\templates\base.html:150
+msgid "E-tijorat"
+msgstr ""
+
+#: .\templates\base.html:151
+msgid "Mobil ilovalar"
+msgstr ""
+
+#: .\templates\base.html:156
+msgid "Aloqa"
+msgstr "Aloqa"
+
+#: .\templates\base.html:160
+msgid "Toshkent, O'zbekiston"
+msgstr ""
+
+#: .\templates\base.html:182
+#, fuzzy
+#| msgid "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
+msgid "Barcha huquqlar himoyalangan."
+msgstr "© 2025 PDP Universiteti. Barcha huquqlar himoyalangan."
+
+#: .\templates\base.html:186
+msgid "Maxfiylik siyosati"
+msgstr "Maxfiylik siyosati"
+
+#: .\templates\base.html:187
+msgid "Foydalanish shartlari"
+msgstr "Foydalanish shartlari"
+
+#: .\templates\career.html:12
+msgid "AURA Group jamoasiga qo'shiling va kelajakni birga yarating!"
+msgstr ""
+
+#: .\templates\career.html:22
+msgid "Bizga qo'shiling"
+msgstr ""
+
+#: .\templates\career.html:23
+msgid "Nega AURA Group da ishlash kerak?"
+msgstr ""
+
+#: .\templates\career.html:25
 msgid ""
-"Batafsil ma'lumot va xizmat buyurtma berish uchun quyidagi formani "
-"to'ldiring."
+"Biz jamoamizning rivojlanishi va qulayligi uchun eng yaxshi sharoitlarni "
+"yaratamiz. AURA Group da siz nafaqat ishlaymiz, balki birga o'sib, "
+"rivojlanasiz."
+msgstr ""
+
+#: .\templates\career.html:34
+msgid "Moslashuvchan grafik"
+msgstr ""
+
+#: .\templates\career.html:35
+msgid "Remote yoki office"
+msgstr ""
+
+#: .\templates\career.html:45
+#, fuzzy
+#| msgid "Karyera"
+msgid "Karyera o'sishi"
+msgstr "Karyera"
+
+#: .\templates\career.html:46
+msgid "Tez rivojlanish"
+msgstr ""
+
+#: .\templates\career.html:56
+msgid "O'qish imkoniyati"
+msgstr ""
+
+#: .\templates\career.html:57
+msgid "Kurslar va treninglar"
+msgstr ""
+
+#: .\templates\career.html:67
+msgid "Do'stona jamoa"
+msgstr ""
+
+#: .\templates\career.html:68
+msgid "Professional muhit"
+msgstr ""
+
+#: .\templates\career.html:95
+msgid "Ishdan qoniqish"
+msgstr ""
+
+#: .\templates\career.html:117
+msgid "O'zingizga mos lavozimni toping va bizga qo'shiling"
+msgstr ""
+
+#: .\templates\career.html:132
+#, fuzzy
+#| msgid "Muddat"
+msgid "Muddat:"
+msgstr "Muddat"
+
+#: .\templates\career.html:136 .\templates\career_detail.html:4
+msgid "Ariza topshirish"
+msgstr "Ariza topshirish"
+
+#: .\templates\career.html:147
+#, fuzzy
+#| msgid "Bo'sh ish o'rinlari"
+msgid "Hozircha bo'sh ish o'rinlari yo'q"
+msgstr "Bo'sh ish o'rinlari"
+
+#: .\templates\career.html:148
+msgid ""
+"Lekin siz o'z rezumyeingizni yuborishingiz mumkin, biz sizni ma'lum qilamiz."
+msgstr ""
+
+#: .\templates\career.html:163 .\templates\services.html:137
+msgid "Jarayon"
+msgstr ""
+
+#: .\templates\career.html:164
+#, fuzzy
+#| msgid "Qayerdan olishim mumkin?"
+msgid "Qanday qo'shilish mumkin?"
+msgstr "Qayerdan olishim mumkin?"
+
+#: .\templates\career.html:166
+msgid "To'rtta oddiy qadam orqali jamoamizga qo'shiling"
+msgstr ""
+
+#: .\templates\career.html:175
+msgid "Ariza"
+msgstr ""
+
+#: .\templates\career.html:176
+#, fuzzy
+#| msgid "Bo'sh ish o'rinlarini ko'rish"
+msgid "Bo'sh ish o'rnini tanlang va ariza yuboring"
+msgstr "Bo'sh ish o'rinlarini ko'rish"
+
+#: .\templates\career.html:184
+msgid "Suhbat"
+msgstr ""
+
+#: .\templates\career.html:185
+msgid "HR bilan telefon orqali dastlabki suhbat"
+msgstr ""
+
+#: .\templates\career.html:193
+msgid "Test"
+msgstr ""
+
+#: .\templates\career.html:194
+msgid "Texnik ko'nikmalarni baholash"
+msgstr ""
+
+#: .\templates\career.html:202
+msgid "Taklif"
+msgstr ""
+
+#: .\templates\career.html:203
+msgid "Rasmiy taklif va shartnoma imzolash"
+msgstr ""
+
+#: .\templates\career.html:214
+msgid "Savollaringiz bormi?"
+msgstr ""
+
+#: .\templates\career.html:216
+msgid "Biz bilan bog'laning, barcha savollaringizga javob beramiz"
+msgstr ""
+
+#: .\templates\career_detail.html:12
+#, fuzzy
+#| msgid ""
+#| "Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
+msgid "Bu lavozimga ariza topshirish uchun quyidagi formani to'ldiring"
+msgstr ""
+"Batafsil ma'lumot va ariza topshirish uchun quyidagi formani to'ldiring."
+
+#: .\templates\career_detail.html:24
+msgid "Lavozim tafsilotlari"
+msgstr ""
+
+#: .\templates\career_detail.html:72
+msgid "Ariza muddati"
+msgstr ""
+
+#: .\templates\career_detail.html:97
+#, fuzzy
+#| msgid "Ariza yuborish"
+msgid "Ariza formasi"
+msgstr "Ariza yuborish"
+
+#: .\templates\career_detail.html:98
+msgid "Barcha maydonlarni to'ldiring"
+msgstr ""
+
+#: .\templates\career_detail.html:114
+msgid "Ism familiyangiz"
+msgstr ""
+
+#: .\templates\career_detail.html:117
+#, fuzzy
+#| msgid "Biz haqimizda"
+msgid "O'zingiz haqingizda"
+msgstr "Biz haqimizda"
+
+#: .\templates\career_detail.html:118
+msgid "Tajribangiz va motivatsiyangiz haqida yozing"
+msgstr ""
+
+#: .\templates\career_detail.html:121
+msgid "Rezume (PDF, DOC)"
+msgstr ""
+
+#: .\templates\career_detail.html:123
+msgid "Maksimum 10MB"
+msgstr ""
+
+#: .\templates\career_detail.html:127
+msgid "Ariza yuborish"
+msgstr "Ariza yuborish"
+
+#: .\templates\career_detail.html:142
+#, fuzzy
+#| msgid "Bo'sh ish o'rinlari"
+msgid "Boshqa bo'sh ish o'rinlari"
+msgstr "Bo'sh ish o'rinlari"
+
+#: .\templates\career_detail.html:143
+msgid "Sizga mos keladigan boshqa lavozimlarni ham ko'ring"
+msgstr ""
+
+#: .\templates\career_detail.html:147
+#, fuzzy
+#| msgid "Vakansiyalar"
+msgid "Barcha vakansiyalar"
+msgstr "Vakansiyalar"
+
+#: .\templates\contact.html:12
+msgid "Loyihangiz haqida gaplashish uchun biz bilan bog'laning"
+msgstr ""
+
+#: .\templates\contact.html:24 .\templates\contact.html:46
+msgid "Xabar yuborish"
+msgstr "Xabar yuborish"
+
+#: .\templates\contact.html:41
+msgid "Xabaringiz"
+msgstr ""
+
+#: .\templates\contact.html:57
+msgid "Aloqa ma'lumotlari"
+msgstr "Aloqa ma'lumotlari"
+
+#: .\templates\contact.html:74
+msgid "Telefon"
+msgstr "Telefon"
+
+#: .\templates\contact.html:84 .\templates\contact.html:118
+msgid "Manzil"
+msgstr ""
+
+#: .\templates\contact.html:85
+msgid "PDP University, Toshkent, O'zbekiston"
+msgstr ""
+
+#: .\templates\contact.html:101
+msgid "Ijtimoiy tarmoqlar"
+msgstr ""
+
+#: .\templates\contact.html:119
+msgid "Bizning"
+msgstr ""
+
+#: .\templates\contact.html:119
+#, fuzzy
+#| msgid "Ofis"
+msgid "Ofisimiz"
+msgstr "Ofis"
+
+#: .\templates\contact.html:120
+msgid "PDP University binosi, Toshkent shahri"
+msgstr ""
+
+#: .\templates\contact.html:142
+msgid "Bepul konsultatsiya oling!"
+msgstr ""
+
+#: .\templates\contact.html:144
+msgid "Loyihangiz haqida gaplashish uchun 30 daqiqalik bepul konsultatsiya"
+msgstr ""
+
+#: .\templates\contact.html:148
+msgid "Hozir qo'ng'iroq qiling"
+msgstr ""
+
+#: .\templates\index.html:13
+msgid "Ishonchli IT hamkor"
+msgstr "Ishonchli IT hamkor"
+
+#: .\templates\index.html:16
+msgid "Biznesingiz uchun"
+msgstr "Biznesingiz uchun"
+
+#: .\templates\index.html:16
+msgid "aniq va kuchli"
+msgstr "aniq va kuchli"
+
+#: .\templates\index.html:16
+#, fuzzy
+#| msgid "raqamli yechimlarimiz"
+msgid "raqamli yechimlar"
+msgstr "raqamli yechimlar"
+
+#: .\templates\index.html:19
+msgid ""
+"AURA Group kompaniyangizga veb-platforma, CRM, mobil ilova va "
+"avtomatlashtirish yechimlarini tez, sifatli va biznes natijaga "
+"yo'naltirilgan tarzda ishlab beradi."
+msgstr ""
+
+#: .\templates\index.html:23
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyihani boshlash"
+msgstr "Loyihani boshlash"
+
+#: .\templates\index.html:26
+#, fuzzy
+#| msgid "Xizmat so'rovi"
+msgid "Xizmatlarni ko'rish"
+msgstr "Xizmatlarni ko'rish"
+
+#: .\templates\index.html:30
+msgid "Shaffof jarayon"
+msgstr "Shaffof jarayon"
+
+#: .\templates\index.html:31
+msgid "Sifat nazorati"
+msgstr "Sifat nazorati"
+
+#: .\templates\index.html:32
+msgid "Doimiy qo'llab-quvvatlash"
+msgstr "Doimiy qo'llab-quvvatlash"
+
+#: .\templates\index.html:41
+msgid "Web va CRM"
+msgstr "Web va CRM"
+
+#: .\templates\index.html:45
+#, fuzzy
+#| msgid "raqamli yechimlarimiz"
+msgid "Mobil yechimlar"
+msgstr "Mobil yechimlar"
+
+#: .\templates\index.html:62
+#, fuzzy
+#| msgid "Bizning xizmatlar"
+msgid "Asosiy xizmatlar"
+msgstr "Asosiy xizmatlar"
+
+#: .\templates\index.html:64
+msgid "Biznesingizga kerakli eng muhim xizmatlar bir joyda"
+msgstr "Biznesingizga kerakli eng muhim xizmatlar bir joyda"
+
+#: .\templates\index.html:78
+#, fuzzy
+#| msgid "Batafsil ma'lumot"
+msgid "Batafsil"
+msgstr "Batafsil ma'lumot"
+
+#: .\templates\index.html:84
+msgid "Xizmatlar tez orada qo'shiladi..."
+msgstr ""
+
+#: .\templates\index.html:91 .\templates\service_request.html:166
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Barcha xizmatlar"
+msgstr "Barcha xizmatlar"
+
+#: .\templates\index.html:100
+msgid "Loyihangizni tez va sifatli ishga tushiramiz"
+msgstr "Loyihangizni tez va sifatli ishga tushiramiz"
+
+#: .\templates\index.html:101
+msgid "Maqsadni ayting, texnik yechimni biz qilamiz."
+msgstr "Maqsadni ayting, texnik yechimni biz qilamiz."
+
+#: .\templates\portfolio.html:10
+#, fuzzy
+#| msgid "Bizning loyihalar"
+msgid "Bizning loyihalarimiz"
+msgstr "Bizning loyihalar"
+
+#: .\templates\portfolio.html:12
+msgid "20 dan ortiq muvaffaqiyatli loyihalar bilan tanishing"
+msgstr ""
+
+#: .\templates\portfolio.html:22
+#, fuzzy
+#| msgid "Bizning loyihalar"
+msgid "Bajarilgan loyihalar"
+msgstr "Bizning loyihalar"
+
+#: .\templates\portfolio.html:24
+msgid ""
+"Har bir loyiha bizning professional yondashuvimiz va sifatimizning dalilidir"
+msgstr ""
+
+#: .\templates\portfolio.html:31
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Barchasi"
+msgstr "Barcha toifalar"
+
+#: .\templates\portfolio.html:43
+msgid "AI"
+msgstr ""
+
+#: .\templates\portfolio.html:46
+msgid "CRM"
+msgstr "CRM"
+
+#: .\templates\portfolio.html:52
+msgid "Desktop"
+msgstr ""
+
+#: .\templates\portfolio.html:55 .\templates\services.html:158
+msgid "Dizayn"
+msgstr ""
+
+#: .\templates\portfolio.html:90
+msgid ""
+"Hozircha portfolio loyihalar mavjud emas. Admin paneldan loyihalar qo'shing."
+msgstr ""
+
+#: .\templates\portfolio.html:100
+msgid "Bu kategoriyada loyihalar topilmadi"
+msgstr ""
+
+#: .\templates\portfolio.html:111
+msgid "Statistika"
+msgstr ""
+
+#: .\templates\portfolio.html:112
+msgid "Raqamlarda AURA Group"
+msgstr ""
+
+#: .\templates\portfolio.html:114
+msgid ""
+"2025-yil 1-iyunda tashkil topgan kompaniyamiz qisqa vaqt ichida katta "
+"yutuqlarga erishdi. Mijozlarimizning ishonchi bizning eng katta yutuqimizdir."
+msgstr ""
+
+#: .\templates\portfolio.html:131
+msgid "Mijozlar"
+msgstr "Mijozlar"
+
+#: .\templates\portfolio.html:145
+#, fuzzy
+#| msgid "Foydalanish shartlari"
+msgid "Kod satrlari"
+msgstr "Foydalanish shartlari"
+
+#: .\templates\portfolio.html:157
+msgid "Loyihangizni biz bilan amalga oshiring!"
+msgstr ""
+
+#: .\templates\portfolio.html:159
+msgid "Bizning tajribamiz sizning g'oyangizni haqiqatga aylantiradi"
+msgstr ""
+
+#: .\templates\portfolio.html:166
+#, fuzzy
+#| msgid "Xizmatlar"
+msgid "Xizmatlarimiz"
+msgstr "Xizmatlar"
+
+#: .\templates\portfolio_detail.html:48
+#, fuzzy
+#| msgid "Yuborish"
+msgid "ko'rish"
+msgstr "Yuborish"
+
+#: .\templates\portfolio_detail.html:52
+msgid "yoqtirish"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:68
+#, fuzzy
+#| msgid "Bizning loyihalar"
+msgid "Tanlangan loyiha"
+msgstr "Bizning loyihalar"
+
+#: .\templates\portfolio_detail.html:79 .\templates\portfolio_detail.html:80
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha rasmi"
+msgstr "Loyihalar"
+
+#: .\templates\portfolio_detail.html:92 .\templates\service_request.html:107
+#, fuzzy
+#| msgid "Loyihalar"
+msgid "Loyiha haqida"
+msgstr "Loyihalar"
+
+#: .\templates\portfolio_detail.html:103
+#, fuzzy
+#| msgid "Asosiy mutaxassisliklar"
+msgid "Asosiy xususiyatlar"
+msgstr "Asosiy mutaxassisliklar"
+
+#: .\templates\portfolio_detail.html:118
+#, fuzzy
+#| msgid "Bo'sh ish o'rinlarini ko'rish"
+msgid "Loyihani ko'rish"
+msgstr "Bo'sh ish o'rinlarini ko'rish"
+
+#: .\templates\portfolio_detail.html:122
+msgid "Loyiha rasmlar orqali taqdim etilgan"
+msgstr "Loyiha rasmlar orqali taqdim etilgan"
+
+#: .\templates\portfolio_detail.html:127 .\templates\portfolio_detail.html:255
+#, fuzzy
+#| msgid "Yuborish"
+msgid "Yoqtirish"
+msgstr "Yuborish"
+
+#: .\templates\portfolio_detail.html:131
+msgid "Shunday loyiha buyurtma qilish"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:141
+#, fuzzy
+#| msgid "Mijozlar"
+msgid "Mijoz"
+msgstr "Mijozlar"
+
+#: .\templates\portfolio_detail.html:148
+msgid "Toifa"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:155
+msgid "Tugallangan sana"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:175
+msgid "Sayt manzili"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:190
+msgid "Shunga o'xshash loyiha kerakmi?"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:192
+msgid "Biz sizning loyihangizni ham shu darajada sifatli bajaramiz!"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:199
+#, fuzzy
+#| msgid "Barcha toifalar"
+msgid "Barcha loyihalar"
+msgstr "Barcha toifalar"
+
+#: .\templates\portfolio_detail.html:250
+msgid "Yoqdi"
+msgstr ""
+
+#: .\templates\portfolio_detail.html:263
+msgid "Xatolik yuz berdi"
+msgstr ""
+
+#: .\templates\service_request.html:4
+#, fuzzy
+#| msgid "Buyurtma yuborish"
+msgid "Buyurtma"
+msgstr "Buyurtma yuborish"
+
+#: .\templates\service_request.html:19
+#, fuzzy
+#| msgid ""
+#| "Batafsil ma'lumot va xizmat buyurtma berish uchun quyidagi formani "
+#| "to'ldiring."
+msgid "Xizmat buyurtma qilish uchun quyidagi formani to'ldiring"
 msgstr ""
 "Batafsil ma'lumot va xizmat buyurtma berish uchun quyidagi formani "
 "to'ldiring."
-#: .\templates\service_request.html:38
+
+#: .\templates\service_request.html:44
+#, fuzzy
+#| msgid "Buyurtma yuborish"
+msgid "Buyurtma formasi"
+msgstr "Buyurtma yuborish"
+
+#: .\templates\service_request.html:45
+msgid ""
+"Barcha maydonlarni to'ldiring, biz siz bilan tez orada bog'lanamiz va "
+"Telegram orqali xabar beramiz"
+msgstr ""
+
+#: .\templates\service_request.html:66
+msgid "Ism familiya"
+msgstr ""
+
+#: .\templates\service_request.html:97
+msgid "@username formatida kiriting"
+msgstr ""
+
+#: .\templates\service_request.html:110
+msgid ""
+"Loyihangiz haqida qisqacha ma'lumot bering: maqsad, funksiyalar, muddat va "
+"boshqalar"
+msgstr ""
+
+#: .\templates\service_request.html:119
+msgid "Fayl biriktirish (ixtiyoriy)"
+msgstr ""
+
+#: .\templates\service_request.html:122
+msgid "PDF, DOC, DOCX, ZIP - maksimum 10MB"
+msgstr ""
+
+#: .\templates\service_request.html:127
 msgid "Buyurtma yuborish"
 msgstr "Buyurtma yuborish"
-#: .\templates\services.html:13
-msgid "Bizning zamonaviy"
-msgstr "Bizning zamonaviy"
-#: .\templates\services.html:13
-msgid "raqamli yechimlarimiz"
-msgstr "raqamli yechimlarimiz"
-#: .\templates\services.html:15
+
+#: .\templates\service_request.html:135
 msgid ""
-"Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish uchun "
-"zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, ilg'or "
-"texnologiyalar va innovatsion yondashuv bilan har bir loyihada yuqori "
-"natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab IT "
-"xizmatlar bizda."
+"Ma'lumotlaringiz xavfsiz saqlanadi va faqat siz bilan bog'lanish uchun "
+"ishlatiladi"
 msgstr ""
-"Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish uchun "
-"zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, ilg'or "
-"texnologiyalar va innovatsion yondashuv bilan har bir loyihada yuqori "
-"natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab IT "
-"xizmatlar bizda."
-#: .\templates\services.html:33
-msgid "Bizning xizmatlar"
+
+#: .\templates\service_request.html:143
+msgid "Savollaringiz bormi? Biz bilan bevosita bog'laning:"
+msgstr ""
+
+#: .\templates\service_request.html:160
+msgid "Boshqa xizmatlarimizni ham ko'ring"
+msgstr ""
+
+#: .\templates\service_request.html:162
+msgid "Bizning barcha IT xizmatlarimiz bilan tanishing"
+msgstr ""
+
+#: .\templates\services.html:10
+#, fuzzy
+#| msgid "Bizning xizmatlar"
+msgid "Bizning xizmatlarimiz"
 msgstr "Bizning xizmatlar"
-#: .\templates\services.html:35
-msgid ""
-"Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, "
-"tajribali dasturchilar jamoasidan"
-msgstr ""
-"Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, "
-"tajribali dasturchilar jamoasidan"
-#: .\templates\services.html:50
-msgid "Muloqotga yozilish"
-msgstr "Muloqotga yozilish"
-#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
-msgid "Messages"
-msgstr ""
-#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
-msgid "Site Maps"
-msgstr ""
-#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
-msgid "Static Files"
-msgstr ""
-#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
-msgid "Syndication"
-msgstr ""
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: .\venv\Lib\site-packages\django\core\paginator.py:30
-msgid "…"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\paginator.py:32
-msgid "That page number is not an integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\paginator.py:33
-msgid "That page number is less than 1"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\paginator.py:34
-msgid "That page contains no results"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:22
-msgid "Enter a valid value."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:70
-msgid "Enter a valid domain name."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:153
-#: .\venv\Lib\site-packages\django\forms\fields.py:775
-msgid "Enter a valid URL."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:200
-msgid "Enter a valid integer."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:211
-msgid "Enter a valid email address."
-msgstr ""
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: .\venv\Lib\site-packages\django\core\validators.py:289
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:297
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:309
-#: .\venv\Lib\site-packages\django\core\validators.py:318
-#: .\venv\Lib\site-packages\django\core\validators.py:332
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2220
-#, python-format
-msgid "Enter a valid %(protocol)s address."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:311
-msgid "IPv4"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:320
-#: .\venv\Lib\site-packages\django\utils\ipv6.py:43
-msgid "IPv6"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:334
-msgid "IPv4 or IPv6"
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:375
-msgid "Enter only digits separated by commas."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:381
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:416
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:425
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:434
-#, python-format
-msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:441
-#, python-format
-msgid ""
-"Ensure this value is a multiple of step size %(limit_value)s, starting from "
-"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:473
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\core\validators.py:491
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\core\validators.py:514
-#: .\venv\Lib\site-packages\django\forms\fields.py:366
-#: .\venv\Lib\site-packages\django\forms\fields.py:405
-msgid "Enter a number."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:516
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\core\validators.py:521
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\core\validators.py:526
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\core\validators.py:597
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\core\validators.py:659
-msgid "Null characters are not allowed."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\base.py:1600
-#: .\venv\Lib\site-packages\django\forms\models.py:908
-msgid "and"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\base.py:1602
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\constraints.py:22
-#, python-format
-msgid "Constraint “%(name)s” is violated."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:134
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:135
-msgid "This field cannot be null."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:136
-msgid "This field cannot be blank."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:137
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-#. Translators: The 'lookup_type' is one of 'date', 'year' or
-#. 'month'. Eg: "Title must be unique for pub_date year"
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:141
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:180
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1162
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1163
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1165
-msgid "Boolean (Either True or False)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1215
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1217
-msgid "String (unlimited)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1326
-msgid "Comma-separated integers"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1427
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1431
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1566
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1435
-msgid "Date (without time)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1562
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1570
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1575
-msgid "Date (with time)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1702
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1704
-msgid "Decimal number"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1864
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1868
-msgid "Duration"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1920
-msgid "Email address"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:1945
-msgid "File path"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2023
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2025
-msgid "Floating point number"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2065
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2067
-msgid "Integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2163
-msgid "Big (8 byte) integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2180
-msgid "Small integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2188
-msgid "IPv4 address"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2219
-msgid "IP address"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2310
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2311
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2313
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2364
-msgid "Positive big integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2379
-msgid "Positive integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2394
-msgid "Positive small integer"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2410
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2446
-msgid "Text"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2526
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2530
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2534
-msgid "Time"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2642
-msgid "URL"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2666
-msgid "Raw binary data"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2731
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields_init_.py:2733
-msgid "Universally unique identifier"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:244
-msgid "File"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
-msgid "Image"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
-msgid "A JSON object"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
-msgid "Value must be valid JSON."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:978
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:981
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1275
-msgid "One-to-one relationship"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1332
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1334
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1382
-msgid "Many-to-many relationship"
-msgstr ""
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: .\venv\Lib\site-packages\django\forms\boundfield.py:185
-msgid ":?.!"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:95
-msgid "This field is required."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:315
-msgid "Enter a whole number."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:486
-#: .\venv\Lib\site-packages\django\forms\fields.py:1267
-msgid "Enter a valid date."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:509
-#: .\venv\Lib\site-packages\django\forms\fields.py:1268
-msgid "Enter a valid time."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:536
-msgid "Enter a valid date/time."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:570
-msgid "Enter a valid duration."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:571
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:640
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:641
-msgid "No file was submitted."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:642
-msgid "The submitted file is empty."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:644
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:649
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:717
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:889
-#: .\venv\Lib\site-packages\django\forms\fields.py:975
-#: .\venv\Lib\site-packages\django\forms\models.py:1592
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:977
-#: .\venv\Lib\site-packages\django\forms\fields.py:1096
-#: .\venv\Lib\site-packages\django\forms\models.py:1590
-msgid "Enter a list of values."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:1097
-msgid "Enter a complete value."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:1339
-msgid "Enter a valid UUID."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\fields.py:1369
-msgid "Enter a valid JSON."
-msgstr ""
-#. Translators: This is the default suffix added to form field labels
-#: .\venv\Lib\site-packages\django\forms\forms.py:97
-msgid ":"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\forms.py:239
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\formsets.py:65
-#, python-format
-msgid "Please submit at most %(num)d form."
-msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\forms\formsets.py:70
-#, python-format
-msgid "Please submit at least %(num)d form."
-msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\forms\formsets.py:484
-#: .\venv\Lib\site-packages\django\forms\formsets.py:491
-msgid "Order"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\formsets.py:499
-msgid "Delete"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:901
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:906
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:913
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:922
-msgid "Please correct the duplicate values below."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:1359
-msgid "The inline value did not match the parent instance."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:1450
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\models.py:1594
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\utils.py:229
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:527
-msgid "Clear"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:528
-msgid "Currently"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:529
-msgid "Change"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:866
-msgid "Unknown"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:867
-msgid "Yes"
-msgstr ""
-#: .\venv\Lib\site-packages\django\forms\widgets.py:868
-msgid "No"
-msgstr ""
-#. Translators: Please do not add spaces around commas.
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:873
-msgid "yes,no,maybe"
-msgstr ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:903
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:920
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:922
-#, python-format
-msgid "%s KB"
-msgstr ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:924
-#, python-format
-msgid "%s MB"
-msgstr ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:926
-#, python-format
-msgid "%s GB"
-msgstr ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:928
-#, python-format
-msgid "%s TB"
-msgstr ""
-#: .\venv\Lib\site-packages\django\template\defaultfilters.py:930
-#, python-format
-msgid "%s PB"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
-msgid "p.m."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:75
-msgid "a.m."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
-msgid "PM"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:81
-msgid "AM"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:153
-msgid "midnight"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dateformat.py:155
-msgid "noon"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:7
-msgid "Monday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:8
-msgid "Tuesday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:9
-msgid "Wednesday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:10
-msgid "Thursday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:11
-msgid "Friday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:12
-msgid "Saturday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:13
-msgid "Sunday"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:16
-msgid "Mon"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:17
-msgid "Tue"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:18
-msgid "Wed"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:19
-msgid "Thu"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:20
-msgid "Fri"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:21
-msgid "Sat"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:22
-msgid "Sun"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:25
-msgid "January"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:26
-msgid "February"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:27
-msgid "March"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:28
-msgid "April"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:29
-msgid "May"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:30
-msgid "June"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:31
-msgid "July"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:32
-msgid "August"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:33
-msgid "September"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:34
-msgid "October"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:35
-msgid "November"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:36
-msgid "December"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:39
-msgid "jan"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:40
-msgid "feb"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:41
-msgid "mar"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:42
-msgid "apr"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:43
-msgid "may"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:44
-msgid "jun"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:45
-msgid "jul"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:46
-msgid "aug"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:47
-msgid "sep"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:48
-msgid "oct"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:49
-msgid "nov"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:50
-msgid "dec"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:53
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:54
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:55
-msgctxt "abbrev. month"
-msgid "March"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:56
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:57
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:58
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:59
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:60
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:61
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:62
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:63
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:64
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:67
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:68
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:69
-msgctxt "alt. month"
-msgid "March"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:70
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:71
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:72
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:73
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:74
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:75
-msgctxt "alt. month"
-msgid "September"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:76
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:77
-msgctxt "alt. month"
-msgid "November"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\dates.py:78
-msgctxt "alt. month"
-msgid "December"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\ipv6.py:20
-msgid "This is not a valid IPv6 address."
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\text.py:76
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\text.py:287
-msgid "or"
-msgstr ""
-#. Translators: This string is used as a separator between list elements
-#: .\venv\Lib\site-packages\django\utils\text.py:306
-#: .\venv\Lib\site-packages\django\utils\timesince.py:135
-msgid ", "
-msgstr ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:8
-#, python-format
-msgid "%(num)d year"
-msgid_plural "%(num)d years"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:9
-#, python-format
-msgid "%(num)d month"
-msgid_plural "%(num)d months"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:10
-#, python-format
-msgid "%(num)d week"
-msgid_plural "%(num)d weeks"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:11
-#, python-format
-msgid "%(num)d day"
-msgid_plural "%(num)d days"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:12
-#, python-format
-msgid "%(num)d hour"
-msgid_plural "%(num)d hours"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\utils\timesince.py:13
-#, python-format
-msgid "%(num)d minute"
-msgid_plural "%(num)d minutes"
-msgstr[0] ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:29
-msgid "Forbidden"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:30
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:34
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:40
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
+
+#: .\templates\services.html:12
+msgid "Biznesingiz uchun zamonaviy raqamli yechimlar yaratamiz"
 msgstr ""
 
+#: .\templates\services.html:22
+msgid "Professional IT xizmatlar"
+msgstr ""
 
-#: .\venv\Lib\site-packages\django\views\csrf.py:54
+#: .\templates\services.html:24
 msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:60
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\csrf.py:66
-msgid "More information is available with DEBUG=True."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:44
-msgid "No year specified"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:64
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:115
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:214
-msgid "Date out of range"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:94
-msgid "No month specified"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:147
-msgid "No day specified"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:194
-msgid "No week specified"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:353
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:384
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:680
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\dates.py:720
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\detail.py:56
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\list.py:70
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\list.py:77
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\generic\list.py:173
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\static.py:49
-msgid "Directory indexes are not allowed here."
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\static.py:51
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\static.py:68
-#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:8
-#: .\venv\Lib\site-packages\django\views\templates\directory_index.html:11
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:204
-
-
-
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:217
-msgid "Django Documentation"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:218
-msgid "Topics, references, & how-to’s"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:226
-msgid "Tutorial: A Polling App"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:227
-msgid "Get started with Django"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:235
-msgid "Django Community"
-msgstr ""
-#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:236
-msgid "Connect, get help, or contribute"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:14
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:53
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:61
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:71
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:81
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:85
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:117
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:136
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:363
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:368
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:378
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:398
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:415
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:434
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:440
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:457
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:469
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:477
-msgid "title"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:18
-msgid "password"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:244
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:263
-msgid "title a"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:248
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:274
-msgid "title b"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:252
-msgid "title c"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:256
-msgid "title d"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\models.py:379
-msgid "visits"
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\tests\translation.py:62
-msgid "Sorry, translation is not available."
-msgstr ""
-#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
-msgid "None"
+"Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda "
+"ishlab chiqamiz"
 msgstr ""
 
-msgid "Mahsulotingiz ehtiyojlarini <b>%(company)s</b> mutaxassislari bilan muhokama qilishga?"
-msgstr "Mahsulotingiz ehtiyojlarini <b>%(company)s</b> mutaxassislari bilan muhokama qilishga?"
+#: .\templates\services.html:43
+#, fuzzy
+#| msgid "Buyurtma yuborish"
+msgid "Buyurtma berish"
+msgstr "Buyurtma yuborish"
 
-msgid "Mahsulot ehtiyojlaringizni <b>Catalyst Analytic</b> mutaxassislari bilan muhokama qiling."
-msgstr "Mahsulot ehtiyojlaringizni <b>Catalyst Analytic</b> mutaxassislari bilan muhokama qiling."
+#: .\templates\services.html:52
+msgid "Hozircha xizmatlar mavjud emas. Admin paneldan xizmatlar qo'shing."
+msgstr ""
 
+#: .\templates\services.html:65
+msgid "Afzalliklar"
+msgstr ""
+
+#: .\templates\services.html:66
+#, fuzzy
+#| msgid "Nega bizni tanlaysiz"
+msgid "Nega aynan bizni tanlash kerak?"
+msgstr "Nega bizni tanlaysiz"
+
+#: .\templates\services.html:73
+msgid "Professional jamoa"
+msgstr ""
+
+#: .\templates\services.html:74
+msgid "Tajribali dasturchilar va dizaynerlardan iborat kuchli jamoa"
+msgstr ""
+
+#: .\templates\services.html:82
+msgid "Zamonaviy texnologiyalar"
+msgstr ""
+
+#: .\templates\services.html:83
+msgid "Eng so'nggi va samarali texnologiyalardan foydalanamiz"
+msgstr ""
+
+#: .\templates\services.html:91
+msgid "24/7 qo'llab-quvvatlash"
+msgstr ""
+
+#: .\templates\services.html:92
+msgid "Loyihadan keyin ham doimiy texnik yordam beramiz"
+msgstr ""
+
+#: .\templates\services.html:104
+#, fuzzy
+#| msgid "Bizning loyihalar"
+msgid "Yakunlangan loyihalar"
+msgstr "Bizning loyihalar"
+
+#: .\templates\services.html:111
+#, fuzzy
+#| msgid "Mijozlar"
+msgid "Mijozlar qoniqishi"
+msgstr "Mijozlar"
+
+#: .\templates\services.html:118
+msgid "Qo'llab-quvvatlash"
+msgstr ""
+
+#: .\templates\services.html:125
+#, fuzzy
+#| msgid "raqamli yechimlarimiz"
+msgid "Xavfsiz yechimlar"
+msgstr "raqamli yechimlarimiz"
+
+#: .\templates\services.html:138
+msgid "Qanday ishlaymiz"
+msgstr ""
+
+#: .\templates\services.html:140
+msgid "Loyihani boshidan oxirigacha professional tarzda olib boramiz"
+msgstr ""
+
+#: .\templates\services.html:149
+msgid "Konsultatsiya"
+msgstr ""
+
+#: .\templates\services.html:150
+msgid "Ehtiyojlaringizni o'rganib, eng yaxshi yechimni tavsiya qilamiz"
+msgstr ""
+
+#: .\templates\services.html:159
+msgid "Zamonaviy va foydalanuvchi uchun qulay dizayn yaratamiz"
+msgstr ""
+
+#: .\templates\services.html:167
+msgid "Dasturlash"
+msgstr ""
+
+#: .\templates\services.html:168
+msgid "Eng zamonaviy texnologiyalar yordamida kodlaymiz"
+msgstr ""
+
+#: .\templates\services.html:176
+#, fuzzy
+#| msgid "Ariza topshirish"
+msgid "Ishga tushirish"
+msgstr "Ariza topshirish"
+
+#: .\templates\services.html:177
+msgid "Loyihani sinab, ishga tushiramiz va qo'llab-quvvatlaymiz"
+msgstr ""
+
+#: .\templates\services.html:188
+#, fuzzy
+#| msgid "Muammolaringizni muhokama qilishga tayyormisiz?"
+msgid "Loyihangizni muhokama qilishga tayyormisiz?"
+msgstr "Muammolaringizni muhokama qilishga tayyormisiz?"
+
+#: .\templates\services.html:190
+msgid "Biz bilan bog'laning va bepul konsultatsiya oling"
+msgstr ""
+
+#: .\templates\services.html:197
+msgid "Portfoliomizni ko'rish"
+msgstr ""
+
+#~ msgid "O'zbekcha"
+#~ msgstr "O'zbekcha"
+
+#~ msgid "Русский"
+#~ msgstr "Русский"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "Aqlli o'zgarish muhandislari"
+#~ msgstr "Aqlli o'zgarish muhandislari"
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, "
+#~ "biznesingiz uchun innovatsion yechimlar yaratamiz"
+#~ msgstr ""
+#~ "Sun'iy intellekt, blokcheyn va moliyaviy texnologiyalarni birlashtirib, "
+#~ "biznesingiz uchun innovatsion yechimlar yaratamiz"
+
+#~ msgid "Qoniqarli mijozlar"
+#~ msgstr "Qoniqarli mijozlar"
+
+#~ msgid "Obunachilar"
+#~ msgstr "Obunachilar"
+
+#~ msgid ""
+#~ "Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab "
+#~ "chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
+#~ msgstr ""
+#~ "Neyron tarmoqlar, kompyuter ko'rish tizimlari va NLP yechimlarini ishlab "
+#~ "chiqishda tajribali, ishlab chiqarishga joriy qilish tajribasiga ega."
+
+#~ msgid "Blokcheyn"
+#~ msgstr "Blokcheyn"
+
+#~ msgid ""
+#~ "DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga "
+#~ "oshirishda keng tajriba."
+#~ msgstr ""
+#~ "DeFi protokollari, aqlli shartnomalar va Web3 infratuzilmasini amalga "
+#~ "oshirishda keng tajriba."
+
+#~ msgid "Algoritmik Savdo"
+#~ msgstr "Algoritmik Savdo"
+
+#~ msgid ""
+#~ "Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili "
+#~ "algoritmlariga ixtisoslashgan."
+#~ msgstr ""
+#~ "Yuqori chastotali savdo tizimlari va ML asosidagi bozor tahlili "
+#~ "algoritmlariga ixtisoslashgan."
+
+#~ msgid "Kibersport boshqaruvi"
+#~ msgstr "Kibersport boshqaruvi"
+
+#~ msgid ""
+#~ "Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni "
+#~ "boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
+#~ msgstr ""
+#~ "Raqobatbardosh o'yinlarda jamoani optimallashtirish va turnirlarni "
+#~ "boshqarishda ma'lumotlarga asoslangan yondashuvlarni ilgari surish."
+
+#~ msgid "AI va ML rivojlanish yillari"
+#~ msgstr "AI va ML rivojlanish yillari"
+
+#~ msgid ""
+#~ "Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va "
+#~ "joriy qilish"
+#~ msgstr ""
+#~ "Ishlab chiqarish darajasidagi ML tizimlari va AI yechimlarini yaratish va "
+#~ "joriy qilish"
+
+#~ msgid "Sinovdan o'tgan savdo hajmi"
+#~ msgstr "Sinovdan o'tgan savdo hajmi"
+
+#~ msgid "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
+#~ msgstr "Bizning sinovdan o'tgan algoritmik savdo tizimlarimiz orqali"
+
+#~ msgid "Blokcheyn loyihalari auditi"
+#~ msgstr "Blokcheyn loyihalari auditi"
+
+#~ msgid "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
+#~ msgstr "DeFi protokollari va aqlli shartnomalarni o'z ichiga oladi"
+
+#~ msgid "Kibersport jamoalari auditi"
+#~ msgstr "Kibersport jamoalari auditi"
+
+#~ msgid "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
+#~ msgstr "Ma'lumotlarga asoslangan ishlashni optimallashtirish bilan"
+
+#~ msgid "Operatsion ta'sir"
+#~ msgstr "Operatsion ta'sir"
+
+#~ msgid "Tizimning ishlash vaqti"
+#~ msgstr "Tizimning ishlash vaqti"
+
+#~ msgid "AI va savdo infratuzilmasi uchun muhim"
+#~ msgstr "AI va savdo infratuzilmasi uchun muhim"
+
+#~ msgid "Xarajatlarni qisqartirish"
+#~ msgstr "Xarajatlarni qisqartirish"
+
+#~ msgid "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
+#~ msgstr "Mijozlar uchun o'rtacha operatsion xarajatlarni tejash"
+
+#~ msgid "Avtomatlashtirish darajasi"
+#~ msgstr "Avtomatlashtirish darajasi"
+
+#~ msgid "Mijoz ish jarayonlarini optimallashtirishda"
+#~ msgstr "Mijoz ish jarayonlarini optimallashtirishda"
+
+#~ msgid "Natijadorlikni oshirish"
+#~ msgstr "Natijadorlikni oshirish"
+
+#~ msgid "Tizim samaradorligini o'rtacha yaxshilash"
+#~ msgstr "Tizim samaradorligini o'rtacha yaxshilash"
+
+#~ msgid "Tayyor"
+#~ msgstr "Tayyor"
+
+#~ msgid "mahsulotingiz ehtiyojlarini"
+#~ msgstr "mahsulotingiz ehtiyojlarini"
+
+#~ msgid "Biz bilan bog'laning"
+#~ msgstr "Biz bilan bog'laning"
+
+#~ msgid "Kelajakni biz bilan yarating"
+#~ msgstr "Kelajakni biz bilan yarating"
+
+#~ msgid ""
+#~ "Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina "
+#~ "o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
+#~ msgstr ""
+#~ "Biz — muammolarga zamonaviy yechim topadigan, sun'iy intellekt, mashina "
+#~ "o'qitish va blokcheyn texnologiyalarini birlashtirgan jamoamiz."
+
+#~ msgid "Tajriba"
+#~ msgstr "Tajriba"
+
+#~ msgid "Mahsulot ehtiyojlaringizni"
+#~ msgstr "Mahsulot ehtiyojlaringizni"
+
+#~ msgid "mutaxassislari bilan muhokama qiling."
+#~ msgstr "mutaxassislari bilan muhokama qiling."
+
+#~ msgid "Fayl tanlash"
+#~ msgstr "Fayl tanlash"
+
+#~ msgid ""
+#~ "Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera "
+#~ "olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
+#~ msgstr ""
+#~ "Jamoamiz bilan bog'laning va biznesingiz uchun qanday yordam bera "
+#~ "olishimizni muhokama qilamiz. Sizga yordam berishdan mamnunmiz."
+
+#~ msgid "Hozir bog'lanish"
+#~ msgstr "Hozir bog'lanish"
+
+#~ msgid ""
+#~ "Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz "
+#~ "jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning "
+#~ "yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini "
+#~ "tushunishga yordam beramiz."
+#~ msgstr ""
+#~ "Loyihangizni batafsil muhokama qilishni xohlaysizmi? Mutaxassislarimiz "
+#~ "jamoasi bilan bepul 30 daqiqalik maslahatlashuvni rejalashtiring. Bizning "
+#~ "yechimlarimiz biznesingizga qanday foyda keltirishi mumkinligini "
+#~ "tushunishga yordam beramiz."
+
+#~ msgid "Uchrashuvni rejalashtirish"
+#~ msgstr "Uchrashuvni rejalashtirish"
+
+#~ msgid "Ma'lumotlarni natijaga aylantiramiz"
+#~ msgstr "Ma'lumotlarni natijaga aylantiramiz"
+
+#~ msgid ""
+#~ "Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, "
+#~ "biznesingiz uchun yangi ufqlarni ochamiz"
+#~ msgstr ""
+#~ "Sun'iy intellekt va mashina o'qitish imkoniyatlaridan foydalanib, "
+#~ "biznesingiz uchun yangi ufqlarni ochamiz"
+
+#~ msgid "Uchrashuvga yozilish"
+#~ msgstr "Uchrashuvga yozilish"
+
+#~ msgid "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
+#~ msgstr "Sizning g'oyalaringiz uchun eng yaxshi xizmatlar to'plami"
+
+#~ msgid "Prognozli tahlil"
+#~ msgstr "Prognozli tahlil"
+
+#~ msgid ""
+#~ "Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, "
+#~ "to'g'ri qarorlar qabul qiling."
+#~ msgstr ""
+#~ "Zamonaviy ML modellarimiz yordamida tendensiyalarni oldindan bilib, "
+#~ "to'g'ri qarorlar qabul qiling."
+
+#~ msgid "AI Konsalting"
+#~ msgstr "AI Konsalting"
+
+#~ msgid ""
+#~ "Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda "
+#~ "ekspert maslahatlari."
+#~ msgstr ""
+#~ "Biznesingiz ehtiyojlari uchun sun'iy intellekt yechimlarini joriy etishda "
+#~ "ekspert maslahatlari."
+
+#~ msgid ""
+#~ "ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini "
+#~ "yarating."
+#~ msgstr ""
+#~ "ML operatsiyalari uchun mustahkam ma'lumot quvurlari va infratuzilmasini "
+#~ "yarating."
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, "
+#~ "ilg'or yechimlarni taqdim etamiz."
+#~ msgstr ""
+#~ "Sun'iy intellekt, blokcheyn va kvant savdoda yangi imkoniyatlarni ochib, "
+#~ "ilg'or yechimlarni taqdim etamiz."
+
+#~ msgid "Hamkorlik"
+#~ msgstr "Hamkorlik"
+
+#~ msgid ""
+#~ "Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga "
+#~ "erishadigan maxsus yechimlarni ishlab chiqamiz."
+#~ msgstr ""
+#~ "Mijozlar bilan yaqindan ishlash orqali o'lchovli muvaffaqiyatga "
+#~ "erishadigan maxsus yechimlarni ishlab chiqamiz."
+
+#~ msgid "Mukammallik"
+#~ msgstr "Mukammallik"
+
+#~ msgid ""
+#~ "Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni "
+#~ "saqlaymiz."
+#~ msgstr ""
+#~ "Kod sifati, tizim ishlashi va mijoz natijalarida eng yuqori standartlarni "
+#~ "saqlaymiz."
+
+#~ msgid "Halollik"
+#~ msgstr "Halollik"
+
+#~ msgid ""
+#~ "Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa "
+#~ "qo'yamiz."
+#~ msgstr ""
+#~ "Barcha qarorlarimizda shaffoflik va axloqiy tamoyillarni birinchi o'ringa "
+#~ "qo'yamiz."
+
+#~ msgid "Nega biz boshladik"
+#~ msgstr "Nega biz boshladik"
+
+#~ msgid "Ko'p so'raladigan savollar"
+#~ msgstr "Ko'p so'raladigan savollar"
+
+#~ msgid "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
+#~ msgstr "Catalyst Analytics qanday xizmatlarni taqdim etadi?"
+
+#~ msgid ""
+#~ "Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi "
+#~ "xizmatlarni taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab "
+#~ "chiqish, mobil ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab "
+#~ "chiqish, brending va identifikatsiya kabi sohalarda ixtisoslashganmiz."
+#~ msgstr ""
+#~ "Catalyst Analytics dizayn, muhandislik va loyiha boshqaruvi kabi "
+#~ "xizmatlarni taklif etadi. Biz foydalanuvchi tajribasi dizayni, veb-ishlab "
+#~ "chiqish, mobil ilovalar ishlab chiqish, maxsus dasturiy ta'minot ishlab "
+#~ "chiqish, brending va identifikatsiya kabi sohalarda ixtisoslashganmiz."
+
+#~ msgid "Lorem Ipsum matni nima uchun ishlatiladi?"
+#~ msgstr "Lorem Ipsum matni nima uchun ishlatiladi?"
+
+#~ msgid ""
+#~ "Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida "
+#~ "ishlatiladi. Bu 1500-yillardan beri mavjud."
+#~ msgstr ""
+#~ "Lorem Ipsum matni bosma va nashriyot sohasida standart matn sifatida "
+#~ "ishlatiladi. Bu 1500-yillardan beri mavjud."
+
+#~ msgid "Nega biz undan foydalanamiz?"
+#~ msgstr "Nega biz undan foydalanamiz?"
+
+#~ msgid ""
+#~ "Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun "
+#~ "ishlatiladi."
+#~ msgstr ""
+#~ "Bu matn sahifa tartibini ko'rib chiqishda o'quvchini chalg'itmaslik uchun "
+#~ "ishlatiladi."
+
+#~ msgid ""
+#~ "Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning "
+#~ "aksariyati o'zgartirilgan."
+#~ msgstr ""
+#~ "Lorem Ipsum matnining ko'plab versiyalari mavjud, lekin ularning "
+#~ "aksariyati o'zgartirilgan."
+
+#~ msgid "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
+#~ msgstr "Qo'llab-quvvatlash xizmatiga murojaat qilsam bo'ladimi?"
+
+#~ msgid ""
+#~ "Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz "
+#~ "orqali istalgan vaqtda biz bilan bog'lanishingiz mumkin."
+#~ msgstr ""
+#~ "Ha, bizning qo'llab-quvvatlash elektron pochta yoki telefon raqamimiz "
+#~ "orqali istalgan vaqtda biz bilan bog'lanishingiz mumkin."
+
+#~ msgid "Bizning ishlar — Sizning kelajagingiz"
+#~ msgstr "Bizning ishlar — Sizning kelajagingiz"
+
+#~ msgid ""
+#~ "Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy "
+#~ "vositalar — bu yerda biz amalga oshirgan zamonaviy va innovatsion "
+#~ "loyihalar bilan tanishing."
+#~ msgstr ""
+#~ "Mashina o'qitish platformalari, blokcheyn protokollari va tahliliy "
+#~ "vositalar — bu yerda biz amalga oshirgan zamonaviy va innovatsion "
+#~ "loyihalar bilan tanishing."
+
+#~ msgid ""
+#~ "Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi "
+#~ "loyihalar bilan tanishishingiz mumkin."
+#~ msgstr ""
+#~ "Quyida dasturchilar jamoamiz tomonidan amalga oshirilgan eng yaxshi "
+#~ "loyihalar bilan tanishishingiz mumkin."
+
+#~ msgid "Bizning zamonaviy"
+#~ msgstr "Bizning zamonaviy"
+
+#~ msgid ""
+#~ "Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish "
+#~ "uchun zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, "
+#~ "ilg'or texnologiyalar va innovatsion yondashuv bilan har bir loyihada "
+#~ "yuqori natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab "
+#~ "IT xizmatlar bizda."
+#~ msgstr ""
+#~ "Aura Group jamoasi sizning biznesingizni yangi bosqichga olib chiqish "
+#~ "uchun zamonaviy raqamli xizmatlarni taklif etadi. Malakali mutaxassislar, "
+#~ "ilg'or texnologiyalar va innovatsion yondashuv bilan har bir loyihada "
+#~ "yuqori natijaga erishamiz. Web-dizayn, web-dasturlash va boshqa ko'plab "
+#~ "IT xizmatlar bizda."
+
+#~ msgid ""
+#~ "Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, "
+#~ "tajribali dasturchilar jamoasidan"
+#~ msgstr ""
+#~ "Sun'iy intellekt, blokcheyn va tahliliy yechimlar — barchasi bir joyda, "
+#~ "tajribali dasturchilar jamoasidan"
+
+#~ msgid "Muloqotga yozilish"
+#~ msgstr "Muloqotga yozilish"
+
+#~ msgid ""
+#~ "Mahsulotingiz ehtiyojlarini <b>%(company)s</b> mutaxassislari bilan "
+#~ "muhokama qilishga?"
+#~ msgstr ""
+#~ "Mahsulotingiz ehtiyojlarini <b>%(company)s</b> mutaxassislari bilan "
+#~ "muhokama qilishga?"
+
+#~ msgid ""
+#~ "Mahsulot ehtiyojlaringizni <b>Catalyst Analytic</b> mutaxassislari bilan "
+#~ "muhokama qiling."
+#~ msgstr ""
+#~ "Mahsulot ehtiyojlaringizni <b>Catalyst Analytic</b> mutaxassislari bilan "
+#~ "muhokama qiling."

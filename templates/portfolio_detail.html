@@ -54,17 +54,35 @@
             </div>
         </div>
 
-        <!-- Main Image -->
-        <div class="portfolio-main-image" data-aos="fade-up" data-aos-delay="100">
-            {% if portfolio.image %}
-            <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
-            {% else %}
-            <img src="https://via.placeholder.com/1200x600/5046e5/ffffff?text={{ portfolio.name }}" alt="{{ portfolio.name }}">
-            {% endif %}
-            {% if portfolio.is_featured %}
-            <span class="portfolio-featured"><i class="fas fa-star me-1"></i>{% trans "Tanlangan loyiha" %}</span>
-            {% endif %}
+        {% if portfolio.image or portfolio.images.all %}
+        <div class="portfolio-gallery-showcase" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-preview-frame">
+                {% if portfolio.image %}
+                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}" id="portfolioPreviewImage" class="portfolio-preview-image">
+                {% else %}
+                {% with first_img=portfolio.images.first %}
+                <img src="{{ first_img.image.url }}" alt="{{ portfolio.name }}" id="portfolioPreviewImage" class="portfolio-preview-image">
+                {% endwith %}
+                {% endif %}
+                {% if portfolio.is_featured %}
+                <span class="portfolio-featured"><i class="fas fa-star me-1"></i>{% trans "Tanlangan loyiha" %}</span>
+                {% endif %}
+            </div>
+
+            <div class="portfolio-thumb-selector">
+                {% if portfolio.image %}
+                <button type="button" class="portfolio-thumb-btn active" data-image="{{ portfolio.image.url }}" aria-label="{% trans 'Asosiy rasm' %}">
+                    <img src="{{ portfolio.image.url }}" alt="{% trans 'Asosiy rasm' %}">
+                </button>
+                {% endif %}
+                {% for img in portfolio.images.all %}
+                <button type="button" class="portfolio-thumb-btn {% if not portfolio.image and forloop.first %}active{% endif %}" data-image="{{ img.image.url }}" aria-label="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
+                    <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
+                </button>
+                {% endfor %}
+            </div>
         </div>
+        {% endif %}
 
         <!-- Info Grid -->
         <div class="portfolio-info-grid">
@@ -99,6 +117,10 @@
                     <a href="{{ portfolio.project_link }}" target="_blank" class="btn btn-primary btn-lg">
                         <i class="fas fa-external-link-alt me-2"></i>{% trans "Loyihani ko'rish" %}
                     </a>
+                    {% else %}
+                    <span class="btn btn-outline btn-lg disabled">
+                        <i class="fas fa-images me-2"></i>{% trans "Loyiha rasmlar orqali taqdim etilgan" %}
+                    </span>
                     {% endif %}
                     <button type="button" class="btn btn-outline btn-lg like-btn" id="likeBtn" data-project-id="{{ portfolio.id }}">
                         <i class="fas fa-heart me-2"></i>
@@ -147,49 +169,17 @@
                 </div>
                 {% endif %}
 
-                <!-- Website Link -->
-                {% if portfolio.website %}
+                <!-- Project Link (optional) -->
+                {% if portfolio.project_link %}
                 <div class="portfolio-sidebar-section">
                     <h5><i class="fas fa-globe me-2 text-primary"></i>{% trans "Sayt manzili" %}</h5>
-                    <a href="{{ portfolio.website }}" target="_blank" class="text-primary">
-                        {{ portfolio.website|truncatechars:40 }} <i class="fas fa-external-link-alt ms-1"></i>
+                    <a href="{{ portfolio.project_link }}" target="_blank" class="text-primary">
+                        {{ portfolio.project_link|truncatechars:40 }} <i class="fas fa-external-link-alt ms-1"></i>
                     </a>
                 </div>
                 {% endif %}
             </div>
         </div>
-
-        <!-- Image Gallery with Swiper Slider -->
-        {% if portfolio.images.all %}
-        <div class="portfolio-slider-container" data-aos="fade-up">
-            <h3 class="portfolio-gallery-title"><i class="fas fa-images me-2"></i>{% trans "Loyiha rasmlari" %}</h3>
-            
-            <!-- Swiper Slider -->
-            <div class="swiper portfolio-swiper">
-                <div class="swiper-wrapper">
-                    {% for img in portfolio.images.all %}
-                    <div class="swiper-slide">
-                        <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}" onclick="openLightbox({{ forloop.counter0 }})">
-                    </div>
-                    {% endfor %}
-                </div>
-                <!-- Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            
-            <!-- Thumbnails Grid -->
-            <div class="portfolio-gallery-grid mt-4">
-                {% for img in portfolio.images.all %}
-                <div class="portfolio-gallery-item" onclick="openLightbox({{ forloop.counter0 }})">
-                    <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
     </div>
 </section>
 
@@ -214,7 +204,7 @@
 </section>
 
 <!-- Lightbox -->
-{% if portfolio.images.all %}
+{% if portfolio.image or portfolio.images.all %}
 <div class="lightbox" id="lightbox">
     <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
     <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
@@ -297,47 +287,40 @@ function showToast(message, type = 'info') {
 }
 </script>
 
-{% if portfolio.images.all %}
+{% if portfolio.image or portfolio.images.all %}
 <script>
-    // ===== Swiper Slider Initialization =====
-    const portfolioSwiper = new Swiper('.portfolio-swiper', {
-        loop: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
-        effect: 'slide',
-        speed: 600,
-        grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 1,
-            },
-            1024: {
-                slidesPerView: 1,
-            },
-        },
-    });
-    
-    // ===== Lightbox Functionality =====
+    const previewImage = document.getElementById('portfolioPreviewImage');
+    const thumbButtons = document.querySelectorAll('.portfolio-thumb-btn');
     const images = [
+        {% if portfolio.image %}
+        "{{ portfolio.image.url }}",
+        {% endif %}
         {% for img in portfolio.images.all %}
         "{{ img.image.url }}"{% if not forloop.last %},{% endif %}
         {% endfor %}
     ];
     let currentIndex = 0;
-    
+
+    thumbButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            const imageUrl = btn.getAttribute('data-image');
+            if (!previewImage || !imageUrl) return;
+            previewImage.classList.add('is-switching');
+            setTimeout(() => {
+                previewImage.src = imageUrl;
+                previewImage.classList.remove('is-switching');
+            }, 120);
+
+            thumbButtons.forEach(item => item.classList.remove('active'));
+            btn.classList.add('active');
+            currentIndex = index;
+        });
+    });
+
+    if (previewImage) {
+        previewImage.addEventListener('click', () => openLightbox(currentIndex));
+    }
+
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById('lightbox-image').src = images[currentIndex];
