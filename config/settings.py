@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 import os
 from dotenv import load_dotenv
 from django.utils.translation import gettext_lazy as _
@@ -148,7 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LANGUAGES = [
     ('uz', "O'zbekcha"),
-    ('ru', '???????'),
+    ('ru', 'Русский'),
     ('en', 'English'),
 ]
 
@@ -170,7 +170,7 @@ JAZZMIN_SETTINGS = {
     "login_logo_dark": None,
     "site_logo_classes": "img-circle",
     "welcome_sign": "AURA Group Admin Paneli'ga Xush Kelibsiz",
-    "copyright": "AURA Group © 2024. Barcha huquqlar himoyalangan.",
+    "copyright": "AURA Group В© 2024. Barcha huquqlar himoyalangan.",
     "search_model": ["auth.User", "auth.Group"],
     "user_avatar": None,
     "topmenu_links": [

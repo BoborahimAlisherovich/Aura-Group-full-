@@ -71,8 +71,9 @@ class PortfolioDetailsView(DetailView):
         gallery_images = []
         if self.object.image:
             gallery_images.append(self.object.image)
-        gallery_images.extend([img.image for img in self.object.images.all() if img.image])
+        gallery_images.extend([img.image for img in self.object.images.all().order_by('id') if img.image])
         context['gallery_images'] = gallery_images
+        context['gallery_image_urls'] = [image.url for image in gallery_images if image]
         context['page_title'] = self.object.name
         return context
 

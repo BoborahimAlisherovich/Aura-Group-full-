@@ -62,6 +62,8 @@
                     alt="{{ portfolio.name }} 1"
                     class="portfolio-preview-image"
                     id="portfolioMainImage"
+                    loading="lazy"
+                    decoding="async"
                 >
 
                 <button type="button" class="portfolio-detail-nav portfolio-detail-prev" aria-label="{% trans 'Oldingi rasm' %}">
@@ -265,46 +267,76 @@ function showToast(message, type = 'info') {
 </script>
 
 {% if gallery_images %}
+{{ gallery_image_urls|json_script:"portfolio-gallery-urls" }}
 <script>
-    const galleryUrls = [
-        {% for gallery_image in gallery_images %}
-        "{{ gallery_image.url }}"{% if not forloop.last %},{% endif %}
-        {% endfor %}
-    ];
+document.addEventListener('DOMContentLoaded', function () {
+    const dataNode = document.getElementById('portfolio-gallery-urls');
+    if (!dataNode) return;
+
+    let galleryUrls = [];
+    try {
+        galleryUrls = JSON.parse(dataNode.textContent || "[]");
+    } catch (error) {
+        console.error('Gallery JSON parse error:', error);
+        return;
+    }
+
     const mainImage = document.getElementById('portfolioMainImage');
     const prevBtn = document.querySelector('.portfolio-detail-prev');
     const nextBtn = document.querySelector('.portfolio-detail-next');
+    const frame = document.querySelector('.portfolio-slider-frame');
+
+    if (!mainImage || !galleryUrls.length) return;
+
     let currentImageIndex = 0;
     let autoTimer = null;
 
-    const showImage = (index) => {
-        if (!mainImage || !galleryUrls.length) return;
-        currentImageIndex = (index + galleryUrls.length) % galleryUrls.length;
+    const normalizeIndex = (index) => (index + galleryUrls.length) % galleryUrls.length;
+
+    const showImage = (nextIndex) => {
+        currentImageIndex = normalizeIndex(nextIndex);
+        const targetUrl = galleryUrls[currentImageIndex];
+        if (!targetUrl || mainImage.src.endsWith(targetUrl)) {
+            return;
+        }
+
         mainImage.classList.add('is-switching');
         setTimeout(() => {
-            mainImage.src = galleryUrls[currentImageIndex];
+            mainImage.src = targetUrl;
+            mainImage.alt = "{{ portfolio.name|escapejs }}" + " " + (currentImageIndex + 1);
             mainImage.classList.remove('is-switching');
-        }, 140);
+        }, 130);
+    };
+
+    const startAuto = () => {
+        if (galleryUrls.length <= 1) return;
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => showImage(currentImageIndex + 1), 3800);
     };
 
     if (prevBtn) {
-        prevBtn.addEventListener('click', () => showImage(currentImageIndex - 1));
+        prevBtn.addEventListener('click', function () {
+            showImage(currentImageIndex - 1);
+            startAuto();
+        });
+        prevBtn.disabled = galleryUrls.length <= 1;
     }
 
     if (nextBtn) {
-        nextBtn.addEventListener('click', () => showImage(currentImageIndex + 1));
+        nextBtn.addEventListener('click', function () {
+            showImage(currentImageIndex + 1);
+            startAuto();
+        });
+        nextBtn.disabled = galleryUrls.length <= 1;
     }
 
-    if (galleryUrls.length > 1) {
-        autoTimer = setInterval(() => showImage(currentImageIndex + 1), 3200);
-        const frame = document.querySelector('.portfolio-slider-frame');
-        if (frame) {
-            frame.addEventListener('mouseenter', () => clearInterval(autoTimer));
-            frame.addEventListener('mouseleave', () => {
-                autoTimer = setInterval(() => showImage(currentImageIndex + 1), 3200);
-            });
-        }
+    if (frame && galleryUrls.length > 1) {
+        frame.addEventListener('mouseenter', () => clearInterval(autoTimer));
+        frame.addEventListener('mouseleave', startAuto);
     }
+
+    startAuto();
+});
 </script>
 {% endif %}
 {% endblock %}

@@ -3469,7 +3469,7 @@ h6 {
     height: min(62vh, 580px);
     object-fit: contain;
     display: block;
-    cursor: zoom-in;
+    cursor: default;
     transition: opacity 0.28s ease, transform 0.4s ease;
 }
 
@@ -3550,6 +3550,17 @@ h6 {
     color: #fff;
     box-shadow: 0 14px 28px rgba(12, 42, 95, 0.28);
     z-index: 3;
+    transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
+}
+
+.portfolio-detail-nav:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.portfolio-detail-nav:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    filter: grayscale(0.15);
 }
 
 .portfolio-detail-prev {
