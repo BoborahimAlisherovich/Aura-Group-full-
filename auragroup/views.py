@@ -42,6 +42,10 @@ class PortfolioView(ListView):
     model = Portfolio
     template_name = 'portfolio.html'
     context_object_name = 'portfolios'
+    paginate_by = 9
+
+    def get_queryset(self):
+        return Portfolio.objects.all().order_by('-id')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -64,6 +68,11 @@ class PortfolioDetailsView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        gallery_images = []
+        if self.object.image:
+            gallery_images.append(self.object.image)
+        gallery_images.extend([img.image for img in self.object.images.all() if img.image])
+        context['gallery_images'] = gallery_images
         context['page_title'] = self.object.name
         return context
 

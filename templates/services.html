@@ -24,12 +24,13 @@
                 {% trans "Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda ishlab chiqamiz" %}
             </p>
         </div>
-        
+
         <div class="row g-4">
             {% for service in services %}
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
                 <div class="service-card h-100">
-                    <div class="service-icon {% if 'brain' in service.icon or 'robot' in service.icon %}service-icon-ai{% endif %}">
+                    <div
+                        class="service-icon {% if 'brain' in service.icon or 'robot' in service.icon %}service-icon-ai{% endif %}">
                         <i class="{{ service.icon|default:'fas fa-cogs' }}"></i>
                     </div>
                     {% if service.image %}
@@ -152,7 +153,7 @@
             </div>
             <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-card text-center h-100">
-                    <div class="service-icon mx-auto" style="background: #0ea5e9;">
+                    <div class="service-icon mx-auto" style="background: #0369a1;">
                         <i class="fas fa-pencil-ruler"></i>
                     </div>
                     <h4>2. {% trans "Dizayn" %}</h4>

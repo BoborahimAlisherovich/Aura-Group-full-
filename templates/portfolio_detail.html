@@ -49,38 +49,33 @@
                 </div>
                 <div class="portfolio-detail-meta-item">
                     <i class="fas fa-heart"></i>
-                    <span>{{ portfolio.like_count }} {% trans "yoqtirish" %}</span>
+                    <span id="topLikeCount">{{ portfolio.like_count }} {% trans "yoqtirish" %}</span>
                 </div>
             </div>
         </div>
 
-        {% if portfolio.image or portfolio.images.all %}
+        {% if gallery_images %}
         <div class="portfolio-gallery-showcase" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-preview-frame">
-                {% if portfolio.image %}
-                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}" id="portfolioPreviewImage" class="portfolio-preview-image">
-                {% else %}
-                {% with first_img=portfolio.images.first %}
-                <img src="{{ first_img.image.url }}" alt="{{ portfolio.name }}" id="portfolioPreviewImage" class="portfolio-preview-image">
-                {% endwith %}
-                {% endif %}
+            <div class="portfolio-preview-frame portfolio-slider-frame">
+                <img
+                    src="{{ gallery_images.0.url }}"
+                    alt="{{ portfolio.name }} 1"
+                    class="portfolio-preview-image"
+                    id="portfolioMainImage"
+                >
+
+                <button type="button" class="portfolio-detail-nav portfolio-detail-prev" aria-label="{% trans 'Oldingi rasm' %}">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button type="button" class="portfolio-detail-nav portfolio-detail-next" aria-label="{% trans 'Keyingi rasm' %}">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
                 {% if portfolio.is_featured %}
                 <span class="portfolio-featured"><i class="fas fa-star me-1"></i>{% trans "Tanlangan loyiha" %}</span>
                 {% endif %}
             </div>
 
-            <div class="portfolio-thumb-selector">
-                {% if portfolio.image %}
-                <button type="button" class="portfolio-thumb-btn active" data-image="{{ portfolio.image.url }}" aria-label="{% trans 'Asosiy rasm' %}">
-                    <img src="{{ portfolio.image.url }}" alt="{% trans 'Asosiy rasm' %}">
-                </button>
-                {% endif %}
-                {% for img in portfolio.images.all %}
-                <button type="button" class="portfolio-thumb-btn {% if not portfolio.image and forloop.first %}active{% endif %}" data-image="{{ img.image.url }}" aria-label="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
-                    <img src="{{ img.image.url }}" alt="{% trans 'Loyiha rasmi' %} {{ forloop.counter }}">
-                </button>
-                {% endfor %}
-            </div>
         </div>
         {% endif %}
 
@@ -122,10 +117,8 @@
                         <i class="fas fa-images me-2"></i>{% trans "Loyiha rasmlar orqali taqdim etilgan" %}
                     </span>
                     {% endif %}
-                    <button type="button" class="btn btn-outline btn-lg like-btn" id="likeBtn" data-project-id="{{ portfolio.id }}">
-                        <i class="fas fa-heart me-2"></i>
-                        <span id="likeText">{% trans "Yoqtirish" %}</span>
-                        <span class="like-count" id="likeCount">{{ portfolio.like_count }}</span>
+                    <button type="button" class="like-btn-icon" id="likeBtn" data-like-url="{% url 'like_project' portfolio.id %}" aria-label="{% trans 'Loyihani yoqtirish' %}">
+                        <i class="fas fa-heart"></i>
                     </button>
                     <a href="{% url 'contact' %}" class="btn btn-dark btn-lg">
                         <i class="fas fa-comments me-2"></i>{% trans "Shunday loyiha buyurtma qilish" %}
@@ -203,17 +196,6 @@
     </div>
 </section>
 
-<!-- Lightbox -->
-{% if portfolio.image or portfolio.images.all %}
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
-    <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
-    <div class="lightbox-content">
-        <img src="" alt="Portfolio image" id="lightbox-image">
-    </div>
-    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)"><i class="fas fa-chevron-right"></i></button>
-</div>
-{% endif %}
 {% endblock %}
 
 {% block extra_js %}
@@ -224,14 +206,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (likeBtn) {
         likeBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            const projectId = this.dataset.projectId;
-            const likeCount = document.getElementById('likeCount');
-            const likeText = document.getElementById('likeText');
+            const likeUrl = this.dataset.likeUrl;
+            const topLikeCount = document.getElementById('topLikeCount');
             
             // Disable button temporarily
             likeBtn.disabled = true;
             
-            fetch(`/like/${projectId}/`, {
+            fetch(likeUrl, {
                 method: 'GET',
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
@@ -239,20 +220,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(data => {
-                // Update like count
-                likeCount.textContent = data.like_count;
+                // Update top meta like count only
+                if (topLikeCount) {
+                    topLikeCount.textContent = `${data.like_count} {% trans "yoqtirish" %}`;
+                }
                 
                 // Update button appearance
                 if (data.liked) {
                     likeBtn.classList.add('liked');
-                    likeBtn.classList.remove('btn-outline');
-                    likeBtn.classList.add('btn-danger');
-                    likeText.textContent = '{% trans "Yoqdi" %}';
                 } else {
                     likeBtn.classList.remove('liked');
-                    likeBtn.classList.add('btn-outline');
-                    likeBtn.classList.remove('btn-danger');
-                    likeText.textContent = '{% trans "Yoqtirish" %}';
                 }
                 
                 // Show toast notification
@@ -287,84 +264,47 @@ function showToast(message, type = 'info') {
 }
 </script>
 
-{% if portfolio.image or portfolio.images.all %}
+{% if gallery_images %}
 <script>
-    const previewImage = document.getElementById('portfolioPreviewImage');
-    const thumbButtons = document.querySelectorAll('.portfolio-thumb-btn');
-    const images = [
-        {% if portfolio.image %}
-        "{{ portfolio.image.url }}",
-        {% endif %}
-        {% for img in portfolio.images.all %}
-        "{{ img.image.url }}"{% if not forloop.last %},{% endif %}
+    const galleryUrls = [
+        {% for gallery_image in gallery_images %}
+        "{{ gallery_image.url }}"{% if not forloop.last %},{% endif %}
         {% endfor %}
     ];
-    let currentIndex = 0;
+    const mainImage = document.getElementById('portfolioMainImage');
+    const prevBtn = document.querySelector('.portfolio-detail-prev');
+    const nextBtn = document.querySelector('.portfolio-detail-next');
+    let currentImageIndex = 0;
+    let autoTimer = null;
 
-    thumbButtons.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            const imageUrl = btn.getAttribute('data-image');
-            if (!previewImage || !imageUrl) return;
-            previewImage.classList.add('is-switching');
-            setTimeout(() => {
-                previewImage.src = imageUrl;
-                previewImage.classList.remove('is-switching');
-            }, 120);
+    const showImage = (index) => {
+        if (!mainImage || !galleryUrls.length) return;
+        currentImageIndex = (index + galleryUrls.length) % galleryUrls.length;
+        mainImage.classList.add('is-switching');
+        setTimeout(() => {
+            mainImage.src = galleryUrls[currentImageIndex];
+            mainImage.classList.remove('is-switching');
+        }, 140);
+    };
 
-            thumbButtons.forEach(item => item.classList.remove('active'));
-            btn.classList.add('active');
-            currentIndex = index;
-        });
-    });
-
-    if (previewImage) {
-        previewImage.addEventListener('click', () => openLightbox(currentIndex));
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => showImage(currentImageIndex - 1));
     }
 
-    function openLightbox(index) {
-        currentIndex = index;
-        document.getElementById('lightbox-image').src = images[currentIndex];
-        document.getElementById('lightbox').classList.add('show');
-        document.body.style.overflow = 'hidden';
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => showImage(currentImageIndex + 1));
     }
-    
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('show');
-        document.body.style.overflow = '';
-    }
-    
-    function changeLightboxImage(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) currentIndex = images.length - 1;
-        if (currentIndex >= images.length) currentIndex = 0;
-        document.getElementById('lightbox-image').src = images[currentIndex];
-    }
-    
-    document.getElementById('lightbox').addEventListener('click', function(e) {
-        if (e.target === this) closeLightbox();
-    });
-    
-    document.addEventListener('keydown', function(e) {
-        if (!document.getElementById('lightbox').classList.contains('show')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') changeLightboxImage(-1);
-        if (e.key === 'ArrowRight') changeLightboxImage(1);
-    });
-    
-    // Touch swipe support for lightbox
-    let touchStartX = 0;
-    document.getElementById('lightbox').addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    document.getElementById('lightbox').addEventListener('touchend', (e) => {
-        const touchEndX = e.changedTouches[0].screenX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) changeLightboxImage(1);
-            else changeLightboxImage(-1);
+
+    if (galleryUrls.length > 1) {
+        autoTimer = setInterval(() => showImage(currentImageIndex + 1), 3200);
+        const frame = document.querySelector('.portfolio-slider-frame');
+        if (frame) {
+            frame.addEventListener('mouseenter', () => clearInterval(autoTimer));
+            frame.addEventListener('mouseleave', () => {
+                autoTimer = setInterval(() => showImage(currentImageIndex + 1), 3200);
+            });
         }
-    });
+    }
 </script>
 {% endif %}
 {% endblock %}

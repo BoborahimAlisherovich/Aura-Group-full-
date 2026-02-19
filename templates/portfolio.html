@@ -24,7 +24,7 @@
                 {% trans "Har bir loyiha bizning professional yondashuvimiz va sifatimizning dalilidir" %}
             </p>
         </div>
-        
+
         <!-- Filter Buttons -->
         <div class="portfolio-filter" data-aos="fade-up">
             <button class="filter-btn active" data-filter="all">
@@ -55,16 +55,18 @@
                 <i class="fas fa-palette me-2"></i>{% trans "Dizayn" %}
             </button>
         </div>
-        
+
         <div class="row g-4" id="portfolioGrid">
             {% for portfolio in portfolios %}
-            <div class="col-md-6 col-lg-4 portfolio-item" data-category="{{ portfolio.project_type.name }}" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="{{ portfolio.project_type.name }}"
+                data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
                 <div class="portfolio-card">
                     <div class="portfolio-image">
                         {% if portfolio.image %}
                         <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
                         {% else %}
-                        <img src="https://via.placeholder.com/600x450/6366f1/ffffff?text=AURA+Group" alt="{{ portfolio.name }}">
+                        <img src="https://via.placeholder.com/600x450/1e40af/ffffff?text=AURA+Group"
+                            alt="{{ portfolio.name }}">
                         {% endif %}
                         <div class="portfolio-overlay">
                             <a href="{% url 'portfolio_detail' portfolio.id %}" class="portfolio-link">
@@ -73,7 +75,6 @@
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">{{ portfolio.project_type.get_name_display }}</span>
                         <h5>{{ portfolio.name }}</h5>
                         <p class="text-muted">{{ portfolio.description|truncatechars:100 }}</p>
                         <div class="portfolio-stats">
@@ -92,7 +93,45 @@
             </div>
             {% endfor %}
         </div>
-        
+
+        {% if is_paginated %}
+        <nav class="portfolio-pagination-wrap" aria-label="Portfolio pagination">
+            <ul class="pagination justify-content-center mt-5">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Oldingi" %}</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">{% trans "Oldingi" %}</span>
+                </li>
+                {% endif %}
+
+                {% for num in paginator.page_range %}
+                    {% if num == page_obj.number %}
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">{{ num }}</span>
+                    </li>
+                    {% elif num >= page_obj.number|add:'-2' and num <= page_obj.number|add:'2' %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Keyingi" %}</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <span class="page-link">{% trans "Keyingi" %}</span>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+
         <!-- No results message (hidden by default) -->
         <div class="text-center mt-4 d-none" id="noFilterResults">
             <div class="alert alert-warning">
@@ -111,7 +150,8 @@
                 <span class="section-badge">{% trans "Statistika" %}</span>
                 <h2 class="text-white">{% trans "Raqamlarda AURA Group" %}</h2>
                 <p class="text-white-50 mt-4">
-                    {% trans "2025-yil 1-iyunda tashkil topgan kompaniyamiz qisqa vaqt ichida katta yutuqlarga erishdi. Mijozlarimizning ishonchi bizning eng katta yutuqimizdir." %}
+                    {% trans "2025-yil 1-iyunda tashkil topgan kompaniyamiz qisqa vaqt ichida katta yutuqlarga erishdi.
+                    Mijozlarimizning ishonchi bizning eng katta yutuqimizdir." %}
                 </p>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -171,109 +211,126 @@
 </section>
 
 <script>
-// Portfolio Filter Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const noResults = document.getElementById('noFilterResults');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            const filterValue = this.getAttribute('data-filter');
-            let visibleCount = 0;
-            
-            portfolioItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                
-                if (filterValue === 'all' || category === filterValue) {
-                    item.style.display = 'block';
-                    item.style.animation = 'fadeInUp 0.5s ease forwards';
-                    visibleCount++;
+    // Portfolio Filter Functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const noResults = document.getElementById('noFilterResults');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filterValue === 'all' || category === filterValue) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeInUp 0.5s ease forwards';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0 && portfolioItems.length > 0) {
+                    noResults.classList.remove('d-none');
                 } else {
-                    item.style.display = 'none';
+                    noResults.classList.add('d-none');
                 }
             });
-            
-            // Show/hide no results message
-            if (visibleCount === 0 && portfolioItems.length > 0) {
-                noResults.classList.remove('d-none');
-            } else {
-                noResults.classList.add('d-none');
-            }
         });
     });
-});
 </script>
 
 <style>
-/* Portfolio Filter Styles */
-.portfolio-filter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.filter-btn {
-    padding: 10px 20px;
-    border: 2px solid var(--gray-200);
-    background: var(--white);
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--gray-600);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-}
-
-.filter-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.filter-btn.active {
-    background: var(--gradient);
-    border-color: transparent;
-    color: var(--white);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-}
-
-.filter-btn i {
-    font-size: 16px;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
+    /* Portfolio Filter Styles */
     .portfolio-filter {
-        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 40px;
     }
-    
+
     .filter-btn {
-        padding: 8px 14px;
-        font-size: 12px;
-    }
-    
-    .filter-btn i {
+        padding: 10px 20px;
+        border: 2px solid var(--gray-200);
+        background: var(--white);
+        border-radius: 30px;
         font-size: 14px;
+        font-weight: 600;
+        color: var(--gray-600);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
     }
-}
+
+    .filter-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background: var(--gradient);
+        border-color: transparent;
+        color: var(--white);
+        box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+    }
+
+    .filter-btn i {
+        font-size: 16px;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-filter {
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 8px 14px;
+            font-size: 12px;
+        }
+
+        .filter-btn i {
+            font-size: 14px;
+        }
+    }
+
+    .portfolio-pagination-wrap .pagination .page-link {
+        border-radius: 12px;
+        border: 1px solid #cfe0ff;
+        color: #0f57ce;
+        margin: 0 4px;
+        min-width: 42px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .portfolio-pagination-wrap .pagination .page-item.active .page-link {
+        background: linear-gradient(135deg, #0f57ce, #1b78ff);
+        border-color: transparent;
+        color: #fff;
+    }
 </style>
 {% endblock %}

@@ -1,367 +1,311 @@
 {% extends 'base.html' %}
-{% load i18n static %}
+{% load static %}
 
-{% block title %}{% trans "Bosh sahifa" %}{% endblock %}
+{% block title %}AURA Group | Raqamli Mahsulotlar Injiringi{% endblock %}
 
 {% block content %}
-<section class="hero-section">
+<section class="hero-section premium-hero" id="hero">
+    <div class="hero-gradient-orb orb-1"></div>
+    <div class="hero-gradient-orb orb-2"></div>
     <div class="container">
         <div class="row align-items-center min-vh-100">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="hero-content hero-content-compact">
-                    <span class="hero-badge">
-                        <i class="fas fa-shield-alt"></i>{% trans "Ishonchli IT hamkor" %}
-                    </span>
-                    <h1 class="hero-title">
-                        {% trans "Biznesingiz uchun" %} <span class="gradient-text">{% trans "aniq va kuchli" %}</span> {% trans "raqamli yechimlar" %}
-                    </h1>
+            <div class="col-lg-7">
+                <div class="hero-content reveal">
+                    <span class="hero-badge">Biznes o‘sishini tezlashtiradigan IT hamkor</span>
+                    <h1 class="hero-title">AURA Group bilan kuchli raqamli mahsulot yarating va bozorga tez chiqing</h1>
                     <p class="hero-description">
-                        {% blocktrans %}AURA Group kompaniyangizga veb-platforma, CRM, mobil ilova va avtomatlashtirish yechimlarini tez, sifatli va biznes natijaga yo'naltirilgan tarzda ishlab beradi.{% endblocktrans %}
+                        Biz strategiya, UX/UI va engineering’ni bitta tizimga birlashtirib, kompaniyangizga
+                        real natija beradigan platformalar ishlab chiqamiz: tezroq ishga tushish, yuqori konversiya va barqaror o‘sish.
                     </p>
                     <div class="hero-buttons">
-                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">
-                            <i class="fas fa-comments me-2"></i>{% trans "Loyihani boshlash" %}
-                        </a>
-                        <a href="{% url 'services' %}" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-layer-group me-2"></i>{% trans "Xizmatlarni ko'rish" %}
-                        </a>
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg magnet-target">Loyihani boshlash</a>
+                        <a href="#case-studies" class="btn btn-outline-light btn-lg magnet-target">Case study ko‘rish</a>
                     </div>
-                    <div class="hero-trust-strip" data-aos="fade-up" data-aos-delay="120">
-                        <span><i class="fas fa-check-circle"></i>{% trans "Shaffof jarayon" %}</span>
-                        <span><i class="fas fa-check-circle"></i>{% trans "Sifat nazorati" %}</span>
-                        <span><i class="fas fa-check-circle"></i>{% trans "Doimiy qo'llab-quvvatlash" %}</span>
+                    <div class="hero-kpis">
+                        <div class="hero-kpi">
+                            <strong>42+</strong>
+                            <span>Muvaffaqiyatli topshirilgan loyihalar</span>
+                        </div>
+                        <div class="hero-kpi">
+                            <strong>97%</strong>
+                            <span>Muddatga rioya ko‘rsatkichi</span>
+                        </div>
+                        <div class="hero-kpi">
+                            <strong>3.1x</strong>
+                            <span>Mahsulot chiqarish tezligi o‘sishi</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="hero-image hero-image-compact">
-                    <img src="{% static 'imgs/hero-illustration.svg' %}" alt="AURA Group IT Solutions" class="img-fluid" fetchpriority="high" decoding="async">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-code"></i>
-                        <span>{% trans "Web va CRM" %}</span>
+            <div class="col-lg-5">
+                <div class="hero-visual reveal">
+                    <div class="hero-visual-panel parallax-layer" data-speed="0.08">
+                        <h3>Biz qanday qiymat beramiz</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Biznes tahlili va aniq texnik yechim xaritasi</li>
+                            <li><i class="fas fa-check-circle"></i> Konversiyaga yo‘naltirilgan premium UX/UI</li>
+                            <li><i class="fas fa-check-circle"></i> Masshtablanuvchi backend va cloud arxitektura</li>
+                            <li><i class="fas fa-check-circle"></i> KPI bilan o‘lchanadigan release jarayoni</li>
+                        </ul>
                     </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>{% trans "Mobil yechimlar" %}</span>
-                    </div>
+                    <div class="floating-signal signal-a">Tezroq bozorga chiqish</div>
+                    <div class="floating-signal signal-b">Mijoz ishonchi va o‘sish</div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="hero-bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
     </div>
 </section>
 
-<section class="services-section section-padding" id="services">
+<section class="section-padding premium-about section-transition">
     <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">{% trans "Xizmatlar" %}</span>
-            <h2 class="section-title">{% trans "Har Qanday Biznes Uchun" %} <span class="gradient-text">{% trans "IT Yechimlar" %}</span></h2>
-            <p class="section-description">
-                {% trans "E-tijorat, logistika, ta'lim, sog'liqni saqlash yoki boshqa turdagi biznesni avtomatlashtiring" %}
-            </p>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="section-header reveal">
+                    <span class="section-badge">Biz haqimizda</span>
+                    <h2 class="section-title">Biz kod yozmaymiz, biznes natija beradigan tizim quramiz</h2>
+                    <p class="section-description section-description-left">
+                        AURA Group product fikrlash asosida ishlaydi: maqsadni aniqlaymiz, foydalanuvchi oqimini tozalaymiz
+                        va texnik arxitekturani kelajakdagi o‘sish uchun tayyorlaymiz.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-metrics reveal">
+                    <article>
+                        <h4>12+</h4>
+                        <p>Turli sohalarda real tajriba: fintech, logistika, ta’lim, healthcare.</p>
+                    </article>
+                    <article>
+                        <h4>24/7</h4>
+                        <p>Yuqori yuklama tizimlari uchun doimiy monitoring va qo‘llab-quvvatlash.</p>
+                    </article>
+                    <article>
+                        <h4>Senior Team</h4>
+                        <p>Har bir bosqichda tajribali mutaxassislar bilan ishlaysiz.</p>
+                    </article>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
 
+<section class="services-section section-padding section-transition" id="services">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Xizmatlar</span>
+            <h2 class="section-title">Biznes vazifangizga mos full-cycle IT xizmatlar</h2>
+            <p class="section-description">Har bir loyiha KPI, muddat va sifat bo‘yicha nazorat qilinadigan delivery modeli asosida olib boriladi.</p>
+        </div>
         <div class="row g-4">
             {% for service in services %}
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
-                <div class="service-card">
-                    <div class="service-icon {% if 'brain' in service.icon or 'robot' in service.icon %}service-icon-ai{% endif %}">
-                        <i class="{{ service.icon|default:'fas fa-cogs' }}"></i>
-                    </div>
+            <div class="col-lg-4 col-md-6 reveal">
+                <article class="service-card premium-card">
+                    <div class="service-icon"><i class="{{ service.icon|default:'fas fa-layer-group' }}"></i></div>
                     <h4>{{ service.get_name_display }}</h4>
-                    <p>{{ service.description|truncatewords:20 }}</p>
-                    <a href="{% url 'service_request' service.id %}" class="service-link">
-                        {% trans "Batafsil" %} <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                    <p>{{ service.description|truncatewords:18 }}</p>
+                    <a href="{% url 'service_request' service.id %}" class="service-link">Xizmatni tanlash <i class="fas fa-arrow-right"></i></a>
+                </article>
             </div>
             {% empty %}
-            <div class="col-12 text-center">
-                <p class="text-muted">{% trans "Xizmatlar tez orada qo'shiladi..." %}</p>
+            <div class="col-lg-4 col-md-6 reveal">
+                <article class="service-card premium-card">
+                    <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                    <h4>Product Engineering</h4>
+                    <p>MVP’dan enterprise platformagacha bo‘lgan to‘liq engineering jarayoni.</p>
+                </article>
             </div>
             {% endfor %}
         </div>
+    </div>
+</section>
 
-        <div class="text-center mt-5" data-aos="fade-up">
-            <a href="{% url 'services' %}" class="btn btn-outline-primary btn-lg">
-                {% trans "Barcha xizmatlarni ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
-            </a>
+<section class="portfolio-section section-padding section-transition" id="case-studies">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Portfolio</span>
+            <h2 class="section-title">Real biznes natija bergan case study loyihalar</h2>
+            <p class="section-description">Bitta oynada 4 ta loyiha ko‘rinadi, strelkalar orqali keyingi loyihalarga silliq o‘tasiz.</p>
+        </div>
+
+        <div class="portfolio-slider-wrap reveal">
+            <button class="portfolio-nav-btn portfolio-nav-prev" aria-label="Oldingi loyihalar">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="portfolio-nav-btn portfolio-nav-next" aria-label="Keyingi loyihalar">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <div class="swiper portfolio-home-swiper">
+                <div class="swiper-wrapper">
+                    {% for portfolio in portfolios %}
+                    <div class="swiper-slide">
+                        <article class="portfolio-slide-card">
+                            <a href="{% url 'portfolio_detail' portfolio.pk %}" class="portfolio-slide-image-link">
+                                {% if portfolio.image %}
+                                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}" loading="lazy" decoding="async">
+                                {% else %}
+                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="{{ portfolio.name }}" loading="lazy" decoding="async">
+                                {% endif %}
+                            </a>
+                            <div class="portfolio-slide-content">
+                                <h4>{{ portfolio.name }}</h4>
+                                <p>{{ portfolio.description|truncatewords:16 }}</p>
+                                <a href="{% url 'portfolio_detail' portfolio.pk %}" class="portfolio-inline-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    {% empty %}
+                    <div class="swiper-slide">
+                        <article class="portfolio-slide-card">
+                            <a href="{% url 'portfolio' %}" class="portfolio-slide-image-link">
+                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="Portfolio" loading="lazy" decoding="async">
+                            </a>
+                            <div class="portfolio-slide-content">
+                                <h4>Loyihalar qo‘shilmoqda</h4>
+                                <p>Yaqin kunlarda yangi loyihalarimizni bu yerda e’lon qilamiz.</p>
+                                <a href="{% url 'portfolio' %}" class="portfolio-inline-link">Portfolio sahifasi <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-pagination portfolio-home-pagination"></div>
         </div>
     </div>
 </section>
 
-<section class="why-us-section section-padding bg-dark-gradient">
+<section class="section-padding premium-tech section-transition">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="why-us-content">
-                    <span class="section-badge">{% trans "Afzalliklar" %}</span>
-                    <h2 class="section-title text-white">{% trans "Nima Uchun" %} <span class="gradient-text">AURA Group</span>{% trans "'ni Tanlaysiz?" %}</h2>
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Texnologiyalar</span>
+            <h2 class="section-title">Ishonchli stack, zamonaviy arxitektura, tez delivery</h2>
+        </div>
+        <div class="tech-marquee reveal" aria-label="Technology carousel">
+            <div class="tech-track">
+                <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
+                <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+                <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
+                <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+                <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
+                <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+                <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
 
-                    <div class="why-us-list">
-                        <div class="why-us-item">
-                            <div class="why-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="why-content">
-                                <h5>{% trans "Tajriba va Professionallik" %}</h5>
-                                <p>{% trans "2025-yildan beri 20+ muvaffaqiyatli loyihani amalga oshirgan tajribali jamoamiz." %}</p>
-                            </div>
-                        </div>
-
-                        <div class="why-us-item">
-                            <div class="why-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="why-content">
-                                <h5>{% trans "Zamonaviy Texnologiyalar" %}</h5>
-                                <p>{% trans "React, Django, Flutter, Node.js va boshqa zamonaviy texnologiyalar bilan ishlaymiz." %}</p>
-                            </div>
-                        </div>
-
-                        <div class="why-us-item">
-                            <div class="why-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="why-content">
-                                <h5>{% trans "Sifat Kafolati" %}</h5>
-                                <p>{% trans "Eng yuqori sifat standartlari va 6 oylik bepul texnik qo'llab-quvvatlash." %}</p>
-                            </div>
-                        </div>
-
-                        <div class="why-us-item">
-                            <div class="why-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="why-content">
-                                <h5>{% trans "Shaffof Narxlar" %}</h5>
-                                <p>{% trans "Aniq smeta va shaffof ish jarayoni. Yashirin to'lovlar yo'q." %}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                        <h3>20+</h3>
-                        <p>{% trans "Tugallangan Loyihalar" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-smile"></i></div>
-                        <h3>100%</h3>
-                        <p>{% trans "Mijoz Qoniqishi" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-code"></i></div>
-                        <h3>15+</h3>
-                        <p>{% trans "Texnologiyalar" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-headset"></i></div>
-                        <h3>24/7</h3>
-                        <p>{% trans "Qo'llab-quvvatlash" %}</p>
-                    </div>
-                </div>
+                <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+                <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
+                <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+                <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+                <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
+                <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+                <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
+                <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+                <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+                <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+                <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+                <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
             </div>
         </div>
     </div>
 </section>
 
-{% if portfolios %}
-<section class="portfolio-section section-padding">
+<section class="section-padding industries-section section-transition">
     <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">{% trans "Portfolio" %}</span>
-            <h2 class="section-title">{% trans "So'nggi" %} <span class="gradient-text">{% trans "Loyihalarimiz" %}</span></h2>
-            <p class="section-description">
-                {% trans "Biz amalga oshirgan muvaffaqiyatli loyihalar bilan tanishing" %}
-            </p>
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Sohalar</span>
+            <h2 class="section-title">Murakkab biznes modellarga mos yechimlar</h2>
         </div>
-
         <div class="row g-4">
-            {% for portfolio in portfolios %}
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:100 }}">
-                <div class="portfolio-card">
-                    <div class="portfolio-image">
-                        {% if portfolio.image %}
-                        <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
-                        {% else %}
-                        <img src="{% static 'imgs/portfolio-placeholder.jpg' %}" alt="{{ portfolio.name }}">
-                        {% endif %}
-                        <div class="portfolio-overlay">
-                            <a href="{% url 'portfolio_detail' portfolio.pk %}" class="portfolio-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-category">{{ portfolio.project_type.get_name_display }}</span>
-                        <h5>{{ portfolio.name }}</h5>
-                        <div class="portfolio-stats">
-                            <span><i class="fas fa-eye"></i> {{ portfolio.view_count }}</span>
-                            <span><i class="fas fa-heart"></i> {{ portfolio.like_count }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up">
-            <a href="{% url 'portfolio' %}" class="btn btn-primary btn-lg">
-                {% trans "Barcha Loyihalarni Ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
-            </a>
+            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-landmark"></i><h5>Fintech</h5><p>To‘lovlar, onboarding va xavfsiz tranzaksiya oqimlari.</p></article></div>
+            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-truck-fast"></i><h5>Logistika</h5><p>Real-time kuzatuv va operatsion boshqaruv paneli.</p></article></div>
+            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-heart-pulse"></i><h5>Healthcare</h5><p>Ma’lumotga sezgir, barqaror va xavfsiz platformalar.</p></article></div>
+            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-graduation-cap"></i><h5>EdTech</h5><p>Retention va engagement oshiruvchi mahsulotlar.</p></article></div>
         </div>
     </div>
 </section>
-{% endif %}
 
-{% if team_members %}
-<section class="team-section section-padding">
+<section class="why-us-section section-padding bg-dark-gradient section-transition">
     <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge"><i class="fas fa-users me-2"></i>{% trans "Jamoamiz" %}</span>
-            <h2 class="section-title">{% trans "Bizning" %} <span class="gradient-text">{% trans "Professional Jamoamiz" %}</span></h2>
-            <p class="section-description">
-                {% trans "Tajribali mutaxassislardan tashkil topgan professional jamoamiz bilan tanishing" %}
-            </p>
-        </div>
-
-        <div class="team-grid-compact">
-            {% for member in team_members|slice:":4" %}
-            <div class="team-card-compact" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
-                <div class="team-image-compact">
-                    {% if member.image %}
-                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
-                    {% else %}
-                    <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text={{ member.name|first }}" alt="{{ member.name }}">
-                    {% endif %}
-                    <div class="team-overlay-compact">
-                        <div class="team-socials-compact">
-                            {% if member.telegram %}
-                            <a href="https://t.me/{{ member.telegram }}" target="_blank" title="Telegram">
-                                <i class="fab fa-telegram-plane"></i>
-                            </a>
-                            {% endif %}
-                            {% if member.linkedin %}
-                            <a href="{{ member.linkedin }}" target="_blank" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            {% endif %}
-                            {% if member.github %}
-                            <a href="{{ member.github }}" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="section-header reveal">
+                    <span class="section-badge section-badge-dark">Nega biz?</span>
+                    <h2 class="section-title text-white">Loyihada tezlik, tartib va sifatni bir vaqtda beramiz</h2>
                 </div>
-                <div class="team-content-compact">
-                    <h5>{{ member.name }}</h5>
-                    <span class="team-position-compact">{{ member.position }}</span>
-                    {% if member.description %}
-                    <p class="team-bio-compact">{{ member.description|truncatewords:15 }}</p>
-                    {% endif %}
+                <div class="why-us-list reveal">
+                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-shield-halved"></i></div><div class="why-content"><h5>Shaffof jarayon</h5><p>Har sprint bo‘yicha aniq status, risk va keyingi qadamlari bilan.</p></div></div>
+                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-chart-line"></i></div><div class="why-content"><h5>Biznesga bog‘langan KPI</h5><p>Yechimlarimiz real ko‘rsatkichlar bo‘yicha baholanadi.</p></div></div>
+                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-users-gear"></i></div><div class="why-content"><h5>Senior mutaxassislar</h5><p>Loyiha davomida bir xil professional jamoa bilan ishlaysiz.</p></div></div>
                 </div>
             </div>
-            {% endfor %}
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up">
-            <a href="{% url 'about' %}" class="btn btn-outline-primary btn-lg">
-                {% trans "Barcha jamoani ko'rish" %} <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-    </div>
-</section>
-{% endif %}
-
-<section class="faq-section section-padding bg-light">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-badge">{% trans "FAQ" %}</span>
-            <h2 class="section-title">{% trans "Ko'p So'raladigan" %} <span class="gradient-text">{% trans "Savollar" %}</span></h2>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion" id="faqAccordion" data-aos="fade-up">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                {% trans "AURA Group qanday xizmatlarni taklif etadi?" %}
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                {% trans "Biz veb-sayt, mobil ilova, CRM, Telegram bot, e-tijorat yechimi, API integratsiya va boshqa dasturiy xizmatlarni taklif etamiz. Har qanday turdagi biznes uchun maxsus yechimlarni yaratamiz." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                {% trans "Loyiha qancha vaqt davom etadi?" %}
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                {% trans "Loyihaning murakkabligiga qarab 2 haftadan 3-4 oygacha vaqt sarflanadi. Biz har bir loyiha uchun alohida vaqt tahmini beramiz va mijoz bilan kelishib ishlaymiz." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                {% trans "Loyiha yakunlanganidan keyin qo'llab-quvvatlash bormi?" %}
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                {% trans "Ha, loyiha yakunlanganidan keyin 6 oyga qadar bepul texnik qo'llab-quvvatlash va yangilashlar bilan sizga yordam beramiz. Keyin ham aloqada qolamiz." %}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                {% trans "Narxlar qanday belgilanadi?" %}
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                {% trans "Narx loyihaning murakkabligi, funksiyalari va muddatiga qarab belgilanadi. Bepul konsultatsiya orqali loyihangizni tahlil qilamiz va aniq smeta beramiz. Yashirin to'lovlar yo'q." %}
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-6">
+                <div class="process-mini-board reveal">
+                    <article><span>01</span><h6>Tahlil</h6><p>Biznes maqsadi, auditoriya va texnik cheklovlar.</p></article>
+                    <article><span>02</span><h6>Dizayn</h6><p>UX oqimlar, UI tizimi va prototiplash.</p></article>
+                    <article><span>03</span><h6>Ishlab chiqish</h6><p>QA va release nazorati bilan coding jarayoni.</p></article>
+                    <article><span>04</span><h6>Masshtablash</h6><p>Monitoring, optimizatsiya va growth iteratsiyalari.</p></article>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cta-section">
+<section class="section-padding process-section section-transition">
     <div class="container">
-        <div class="cta-content text-center" data-aos="zoom-in">
-            <h2>{% trans "Loyihangizni tez va sifatli ishga tushiramiz" %}</h2>
-            <p>{% trans "Maqsadni ayting, texnik yechimni biz qilamiz." %}</p>
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Ish jarayoni</span>
+            <h2 class="section-title">Strategiyadan launchgacha puxta boshqaruv</h2>
+        </div>
+        <div class="process-timeline">
+            <article class="reveal"><span>Discovery Workshop</span><p>Stakeholder intervyu, maqsad KPI va roadmap.</p></article>
+            <article class="reveal"><span>Arxitektura va UX Blueprint</span><p>Texnik yechim, dizayn tizimi va sprint rejasi.</p></article>
+            <article class="reveal"><span>Agile Delivery</span><p>Muntazam demo, QA avtomatizatsiya va CI/CD.</p></article>
+            <article class="reveal"><span>Launch + Growth</span><p>Monitoring, feedback asosida tez iteratsiya.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section section-padding section-transition">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-badge">Mijozlar fikri</span>
+            <h2 class="section-title">Biz bilan ishlagan rahbarlarning fikrlari</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 reveal">
+                <article class="testimonial-card premium-card">
+                    <p class="testimonial-content">AURA Group jamoasi KSD82 loyihamizni juda aniq reja asosida olib bordi. Har bir bosqich tushunarli, bajarilish esa ishonchli bo‘ldi. Natijada ish jarayonimiz sezilarli darajada tezlashdi.</p>
+                    <div class="testimonial-author-info"><h5>KSD82 kompaniyasi egasi</h5><p>Namangan</p></div>
+                </article>
+            </div>
+            <div class="col-lg-4 reveal">
+                <article class="testimonial-card premium-card">
+                    <p class="testimonial-content">O‘zBA Markaz uchun yaratilgan tizimda dizayn va funksionallik mukammal uyg‘unlashdi. Jamoa talabni to‘g‘ri tushundi va juda sifatli mahsulot topshirdi.</p>
+                    <div class="testimonial-author-info"><h5>O‘zBA Markaz rahbariyati</h5><p>Toshkent</p></div>
+                </article>
+            </div>
+            <div class="col-lg-4 reveal">
+                <article class="testimonial-card premium-card">
+                    <p class="testimonial-content">eHokimiyat loyihasida AURA Group professionalligi aniq sezildi. Yechimlar barqaror, foydalanuvchi uchun qulay va boshqaruv jarayoniga haqiqiy qulaylik olib keldi.</p>
+                    <div class="testimonial-author-info"><h5>eHokimiyat loyiha buyurtmachisi</h5><p>Namangan</p></div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section section-transition">
+    <div class="container">
+        <div class="cta-content text-center reveal">
+            <h2>Loyihangizni premium darajada ishga tushirishga tayyormisiz?</h2>
+            <p>Maqsadingizni yuboring, biz sizga aniq texnik reja va bajarish modelini taqdim etamiz.</p>
             <div class="cta-buttons">
-                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
-                    <i class="fas fa-paper-plane me-2"></i>{% trans "Bog'lanish" %}
-                </a>
-                <a href="tel:+998936658507" class="btn btn-outline-light btn-lg">
-                    <i class="fas fa-phone me-2"></i>+998 (93) 665-85-07
-                </a>
+                <a href="{% url 'contact' %}" class="btn btn-light btn-lg magnet-target">Brief yuborish</a>
+                <a href="tel:+998936658507" class="btn btn-outline-light btn-lg magnet-target">+998 (93) 665-85-07</a>
             </div>
         </div>
     </div>
