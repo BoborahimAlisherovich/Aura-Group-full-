@@ -1,29 +1,36 @@
 {% load i18n static %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AURA Group is a full-cycle software engineering partner building scalable digital products for ambitious companies.">
-    <meta name="keywords" content="software engineering, digital transformation, web development, mobile development, product design, AURA Group">
+    <meta name="description"
+        content="AURA Group is a full-cycle software engineering partner building scalable digital products for ambitious companies.">
+    <meta name="keywords"
+        content="software engineering, digital transformation, web development, mobile development, product design, AURA Group">
     <meta name="author" content="AURA Group">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
     <meta property="og:title" content="AURA Group | Software Engineering Partner">
-    <meta property="og:description" content="Enterprise-grade digital products, platform engineering and growth-driven product delivery.">
+    <meta property="og:description"
+        content="Enterprise-grade digital products, platform engineering and growth-driven product delivery.">
     <meta property="og:image" content="{% static 'imgs/logo_image/og-image.png' %}">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ request.build_absolute_uri }}">
     <meta property="twitter:title" content="AURA Group | Software Engineering Partner">
-    <meta property="twitter:description" content="Enterprise-grade digital products, platform engineering and growth-driven product delivery.">
+    <meta property="twitter:description"
+        content="Enterprise-grade digital products, platform engineering and growth-driven product delivery.">
     <meta property="twitter:image" content="{% static 'imgs/logo_image/og-image.png' %}">
     <link rel="icon" type="image/png" href="{% static 'imgs/logo_image/logo_transparent.png' %}">
     <link rel="apple-touch-icon" href="{% static 'imgs/logo_image/logo_transparent.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
@@ -33,48 +40,96 @@
     {% block extra_head %}{% endblock %}
     <title>{% block title %}AURA Group{% endblock %} | Software Engineering Partner</title>
 </head>
+
 <body class="site-shell">
+
+    <!-- Digital Preloader -->
+    <div id="wow-preloader" class="wow-preloader">
+        <!-- <div class="loader-content">
+            <span class="loader-text" data-text="AURA GROUP">AURA GROUP</span>
+            <div class="loader-bar"></div>
+        </div> -->
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="wow-cursor" id="wowCursor"></div>
+    <div class="wow-cursor-follower" id="wowCursorFollower"></div>
+
     <div class="page-transition-overlay" aria-hidden="true"></div>
 
-    <nav class="navbar navbar-expand-lg fixed-top aura-nav" id="mainNavbar" aria-label="Primary">
-        <div class="container aura-nav-container">
-            <a class="navbar-brand aura-brand" href="{% url 'index' %}" aria-label="AURA Group">
-                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="AURA Group" class="navbar-logo" width="60" height="60" fetchpriority="high" decoding="async">
+    <!-- Billz.io-style Top Bar -->
+    <div class="top-info-bar" id="topInfoBar">
+        <div class="container d-flex justify-content-end align-items-center">
+            <div class="top-bar-right d-flex align-items-center gap-4">
+                <a href="tel:+998936658507"
+                    style="color: #4B5563; text-decoration: none; font-size: 14px; font-weight: 500;">
+                    <i class="fas fa-phone" style="margin-right: 6px; color: var(--aura-indigo);"></i>+998 93 665 85 07
+                </a>
+                <a href="https://t.me/Boborahim_00" target="_blank"
+                    style="color: #4B5563; text-decoration: none; font-size: 14px; font-weight: 500;">
+                    <i class="fab fa-telegram" style="margin-right: 6px; color: #0088cc;"></i>Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clean Navbar -->
+    <nav class="navbar navbar-expand-lg" id="mainNavbar" aria-label="Primary">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}" aria-label="AURA Group">
+                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="AURA Group" class="navbar-logo"
+                    width="50" height="50" fetchpriority="high" decoding="async">
             </a>
 
-            <button class="navbar-toggler aura-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Toggle navigation" style="border: 1px solid var(--gray-300); padding: 8px 12px;">
+                <i class="fas fa-bars" style="color: var(--text-primary);"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto aura-nav-links">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
+                            href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}" href="{% url 'services' %}">{% trans "Xizmatlar" %}</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}"
+                            href="{% url 'services' %}">{% trans "Xizmatlar" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}" href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'portfolio' %}active{% endif %}"
+                            href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">{% trans "Biz haqimizda" %}</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                            href="{% url 'about' %}">{% trans "Biz haqimizda" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.resolver_match.url_name == 'career' %}active{% endif %}" href="{% url 'career' %}">{% trans "Karyera" %}</a>
+                        <a class="nav-link {% if request.resolver_match.url_name == 'career' %}active{% endif %}"
+                            href="{% url 'career' %}">{% trans "Karyera" %}</a>
                     </li>
                 </ul>
 
                 <div class="navbar-right d-flex align-items-center gap-3">
                     {% get_current_language as CURRENT_LANGUAGE %}
-                    <div class="language-switcher" role="group" aria-label="Language switcher">
-                        <a href="#" class="lang-link js-lang-link {% if CURRENT_LANGUAGE == 'uz' %}active{% endif %}" data-lang="uz">UZ</a>
-                        <a href="#" class="lang-link js-lang-link {% if CURRENT_LANGUAGE == 'ru' %}active{% endif %}" data-lang="ru">RU</a>
-                        <a href="#" class="lang-link js-lang-link {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" data-lang="en">EN</a>
+                    <div class="lang-dropdown" role="group" aria-label="Language switcher">
+                        <button class="lang-dropdown-toggle" type="button">
+                            <i class="fas fa-globe" style="margin-right: 4px;"></i>
+                            {% if CURRENT_LANGUAGE == 'uz' %}UZ{% elif CURRENT_LANGUAGE == 'ru' %}RU{% else %}EN{% endif %}
+                            <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'uz' %}active{% endif %}" data-lang="uz">
+                                <span class="lang-flag">UZ</span> O'zbekcha</a>
+                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'ru' %}active{% endif %}" data-lang="ru">
+                                <span class="lang-flag">RU</span> Русский</a>
+                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" data-lang="en">
+                                <span class="lang-flag">EN</span> English</a>
+                        </div>
                     </div>
-                    <a href="{% url 'contact' %}" class="btn btn-primary btn-contact magnet-target">
-                        <i class="fas fa-paper-plane"></i>{% trans "Brief yuborish" %}
-                    </a>
+                    <a href="{% url 'contact' %}" class="btn btn-primary"
+                        style="padding: 10px 28px; border-radius: 50px; font-size: 15px;">
+                        {% trans "Bepul maslahat" %}</a>
                 </div>
             </div>
         </div>
@@ -102,42 +157,53 @@
                     <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                         <div class="footer-brand">
                             <h3><strong>AURA</strong> Group</h3>
-                            <p>{% trans "We design, build and scale software products that move business metrics, not just launch features." %}</p>
+                            <p>{% blocktranslate %}Biz nafaqat funksiyalarni ishga tushiruvchi, balki biznes ko'rsatkichlarini oshiruvchi dasturiy mahsulotlarni loyihalashtiramiz, quramiz va kengaytiramiz.{% endblocktranslate %}</p>
                             <div class="social-links">
-                                <a href="https://t.me/myaura_uz" target="_blank" rel="noreferrer" title="Telegram"><i class="fab fa-telegram"></i></a>
-                                <a href="https://www.instagram.com/myaura_uz/" target="_blank" rel="noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="#" target="_blank" rel="noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" target="_blank" rel="noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://t.me/myaura_uz" target="_blank" rel="noreferrer" title="Telegram"><i
+                                        class="fab fa-telegram"></i></a>
+                                <a href="https://www.instagram.com/myaura_uz/" target="_blank" rel="noreferrer"
+                                    title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" target="_blank" rel="noreferrer" title="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="#" target="_blank" rel="noreferrer" title="GitHub"><i
+                                        class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                         <h5>{% trans "Sahifalar" %}</h5>
                         <ul class="footer-links">
-                            <li><a href="{% url 'index' %}">{% trans "Bosh sahifa" %}</a></li>
-                            <li><a href="{% url 'services' %}">{% trans "Xizmatlar" %}</a></li>
-                            <li><a href="{% url 'portfolio' %}">{% trans "Portfolio" %}</a></li>
-                            <li><a href="{% url 'about' %}">{% trans "Biz haqimizda" %}</a></li>
-                            <li><a href="{% url 'career' %}">{% trans "Karyera" %}</a></li>
+                            <li><a href="{% url 'index' %}" class="magnet-target">{% trans "Bosh sahifa" %}</a></li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "Xizmatlar" %}</a></li>
+                            <li><a href="{% url 'portfolio' %}" class="magnet-target">{% trans "Portfolio" %}</a></li>
+                            <li><a href="{% url 'about' %}" class="magnet-target">{% trans "Biz haqimizda" %}</a></li>
+                            <li><a href="{% url 'career' %}" class="magnet-target">{% trans "Karyera" %}</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                         <h5>{% trans "Xizmatlar" %}</h5>
                         <ul class="footer-links">
-                            <li><a href="{% url 'services' %}">{% trans "Platform Engineering" %}</a></li>
-                            <li><a href="{% url 'services' %}">{% trans "Product Design" %}</a></li>
-                            <li><a href="{% url 'services' %}">{% trans "AI Integration" %}</a></li>
-                            <li><a href="{% url 'services' %}">{% trans "Cloud & DevOps" %}</a></li>
-                            <li><a href="{% url 'services' %}">{% trans "Data & Analytics" %}</a></li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "Web saytlar" %}</a></li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "Mobil ilovalar" %}</a>
+                            </li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "Telegram botlar" %}</a>
+                            </li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "CRM tizimlar" %}</a>
+                            </li>
+                            <li><a href="{% url 'services' %}" class="magnet-target">{% trans "Sun'iy intellekt" %}</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h5>{% trans "Aloqa" %}</h5>
                         <ul class="footer-contact">
-                            <li><i class="fas fa-map-marker-alt"></i><span>{% trans "Toshkent, O'zbekiston" %}</span></li>
+                            <li><i class="fas fa-map-marker-alt"></i><span>{% trans "Toshkent, O'zbekiston" %}</span>
+                            </li>
                             <li><i class="fas fa-phone"></i><a href="tel:+998936658507">+998 (93) 665-85-07</a></li>
-                            <li><i class="fas fa-envelope"></i><a href="mailto:info@auragroup.uz">info@auragroup.uz</a></li>
-                            <li><i class="fab fa-telegram"></i><a href="https://t.me/AuraGroupAdmin" target="_blank" rel="noreferrer">@AuraGroupAdmin</a></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:info@auragroup.uz">info@auragroup.uz</a>
+                            </li>
+                            <li><i class="fab fa-telegram"></i><a href="https://t.me/Boborahim_00" target="_blank"
+                                    rel="noreferrer">@AuraGroupAdmin</a></li>
                         </ul>
                     </div>
                 </div>
@@ -160,10 +226,17 @@
 
     <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- Walking Robot Animation for Wow Effect -->
+    <div id="ai-robot" class="floating-robot d-none d-md-block" style="position: fixed; bottom: 10px; left: 10px; z-index: 1000; width: 120px; height: 120px; pointer-events: none;">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://lottie.host/805e714f-b636-4074-a690-34ba2f30f5ba/wOKU4V7R3n.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
+    </div>
+
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="{% static 'js/script.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>
+
 </html>

@@ -12,6 +12,7 @@ from .models import (
     PortfolioImage,
     Career,
     CareerApplication,
+    SiteSettings,
 )
 
 
@@ -304,5 +305,29 @@ admin.site.site_header = "🚀 AURA Group Boshqaruv Paneli"
 admin.site.site_title = "AURA Group Admin"
 admin.site.index_title = "Boshqaruv Paneliga Xush Kelibsiz!"
 
+# ============================================
+# SAYT SOZLAMALARI ADMIN
+# ============================================
+@admin.register(SiteSettings)
+class SiteSettingsAdmin(admin.ModelAdmin):
+    """Sayt sozlamalari — faqat 1 ta yozuv"""
+    list_display = ('__str__', 'projects_base_count')
+
+    fieldsets = (
+        ('\ud83d\uddbc\ufe0f Biz haqimizda sahifasi', {
+            'fields': ('about_background',),
+            'description': 'About sahifasining yuqori qismidagi fon rasmi.'
+        }),
+        ('\ud83d\udcca Hisoblagichlar', {
+            'fields': ('projects_base_count',),
+            'description': 'Portfolio loyiha soniga qo\'shiladigan boshlang\'ich raqam.'
+        }),
+    )
+
+    def has_add_permission(self, request):
+        return not SiteSettings.objects.exists()
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 

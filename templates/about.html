@@ -5,7 +5,7 @@
 
 {% block content %}
 <!-- Page Header -->
-<section class="page-header">
+<section class="page-header"{% if about_bg %} style="background-image: linear-gradient(rgba(10,10,30,0.7), rgba(10,10,30,0.85)), url('{{ about_bg.url }}'); background-size: cover; background-position: center;"{% endif %}>
     <div class="container">
         <h1 data-aos="fade-up">{% trans "Biz haqimizda" %}</h1>
         <p data-aos="fade-up" data-aos-delay="100">
@@ -34,7 +34,7 @@
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="about-stats">
                     <div class="about-stat">
-                        <h3>20+</h3>
+                        <h3>{{ total_projects }}+</h3>
                         <p>{% trans "Loyihalar" %}</p>
                     </div>
                     <div class="about-stat">
@@ -76,9 +76,9 @@
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h4>{% trans "Bizning vizyonimiz" %}</h4>
+                    <h4>{% trans "Bizning Maqsadimiz " %}</h4>
                     <p>
-                        {% blocktrans %}Vizionimiz AURA Group'ni O'zbekistonning eng ishonchli IT kompaniyalari qatoriga olib chiqish, mintaqaviy bozorda tanilish va kelajakda global IT maydonda munosib o'rin egallashdir.{% endblocktrans %}
+                        {% blocktrans %}Maqsadimiz AURA Group'ni O'zbekistonning eng ishonchli IT kompaniyalari qatoriga olib chiqish, mintaqaviy bozorda tanilish va kelajakda global IT maydonda munosib o'rin egallashdir.{% endblocktrans %}
                     </p>
                     <ul class="list-unstyled mt-4">
                         <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{% trans "IT jahon sahnasiga chiqish" %}</li>
@@ -158,9 +158,9 @@
             <div class="team-card-compact" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
                 <div class="team-image-compact">
                     {% if member.image %}
-                    <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                    <img src="{{ member.image.url }}" alt="{{ member.name }}" loading="lazy">
                     {% else %}
-                    <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text={{ member.name|first }}" alt="{{ member.name }}">
+                    <img src="https://via.placeholder.com/300x300/6366f1/ffffff?text={{ member.name|first }}" alt="{{ member.name }}" loading="lazy">
                     {% endif %}
                     <div class="team-overlay-compact">
                         <div class="team-socials-compact">

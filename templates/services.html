@@ -1,56 +1,54 @@
 {% extends 'base.html' %}
 {% load i18n static %}
 
-{% block title %}{% trans "Xizmatlar" %}{% endblock %}
+{% block title %}{% trans "Xizmatlar | AURA Group" %}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <h1 data-aos="fade-up">{% trans "Bizning xizmatlarimiz" %}</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-            {% trans "Biznesingiz uchun zamonaviy raqamli yechimlar yaratamiz" %}
+<section class="hero-section" style="min-height: 40vh; padding-top: 100px; padding-bottom: 40px;">
+    <div class="container text-center">
+        <span class="hero-badge reveal" style="margin-bottom: 16px; display: inline-block;">{% trans "Xizmatlar" %}</span>
+        <h1 class="hero-title reveal" style="margin-bottom: 16px; font-size: clamp(2rem, 4vw, 3rem);">
+            Biznesingiz uchun<br>zamonaviy raqamli yechimlar
+        </h1>
+        <p class="hero-description reveal" style="max-width: 700px; margin: 0 auto;">
+            Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda ishlab chiqamiz. Sifat, tezlik va
+            xavfsizlik kafolati bilan.
         </p>
     </div>
 </section>
 
 <!-- Services Grid -->
-<section class="section-padding">
+<section class="services-section section-padding section-transition">
     <div class="container">
-        <div class="section-header text-center">
-            <span class="section-badge">{% trans "Xizmatlar" %}</span>
-            <h2 class="section-title">{% trans "Professional IT xizmatlar" %}</h2>
-            <p class="section-description">
-                {% trans "Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda ishlab chiqamiz" %}
-            </p>
-        </div>
-
         <div class="row g-4">
             {% for service in services %}
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}50">
-                <div class="service-card h-100">
+            <div class="col-lg-4 col-md-6 reveal">
+                <article class="service-card">
                     <div
                         class="service-icon {% if 'brain' in service.icon or 'robot' in service.icon %}service-icon-ai{% endif %}">
-                        <i class="{{ service.icon|default:'fas fa-cogs' }}"></i>
+                        <i class="{{ service.icon|default:'fas fa-layer-group' }}"></i>
                     </div>
                     {% if service.image %}
-                    <div class="service-image-wrapper">
-                        <img src="{{ service.image.url }}" alt="{{ service.get_name_display }}" class="service-image">
+                    <div style="margin-bottom: 24px; border-radius: 12px; overflow: hidden;">
+                        <img src="{{ service.image.url }}" alt="{{ service.get_name_display }}"
+                            style="width: 100%; height: 200px; object-fit: cover;">
                     </div>
                     {% endif %}
-                    <h4>{{ service.get_name_display }}</h4>
-                    <p>{{ service.description|truncatewords:25 }}</p>
-                    <a href="{% url 'service_request' service.id %}" class="service-link">
-                        {% trans "Buyurtma berish" %} <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                        {{ service.get_name_display }}</h4>
+                    <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">{{ service.description }}
+                    </p>
+                    <a href="{% url 'service_request' service.id %}" class="service-link">{% trans "Buyurtma berish" %}
+                        <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                </article>
             </div>
             {% empty %}
-            <!-- Agar backend'da xizmatlar bo'lmasa -->
-            <div class="col-12 text-center">
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle me-2"></i>
-                    {% trans "Hozircha xizmatlar mavjud emas. Admin paneldan xizmatlar qo'shing." %}
+            <div class="col-12 text-center reveal">
+                <div class="glass-panel" style="padding: 40px; display: inline-block;">
+                    <i class="fas fa-info-circle"
+                        style="font-size: 32px; color: var(--aura-indigo); margin-bottom: 16px;"></i>
+                    <p style="color: var(--text-body); margin: 0;">{% trans "Hozircha xizmatlar mavjud emas. Admin paneldan xizmatlar qo'shing." %}</p>
                 </div>
             </div>
             {% endfor %}
@@ -58,124 +56,48 @@
     </div>
 </section>
 
-<!-- Why Choose Our Services -->
-<section class="section-padding bg-dark-gradient">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                <span class="section-badge">{% trans "Afzalliklar" %}</span>
-                <h2 class="text-white">{% trans "Nega aynan bizni tanlash kerak?" %}</h2>
-                <div class="why-us-list">
-                    <div class="why-us-item">
-                        <div class="why-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="why-content">
-                            <h5>{% trans "Professional jamoa" %}</h5>
-                            <p>{% trans "Tajribali dasturchilar va dizaynerlardan iborat kuchli jamoa" %}</p>
-                        </div>
-                    </div>
-                    <div class="why-us-item">
-                        <div class="why-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="why-content">
-                            <h5>{% trans "Zamonaviy texnologiyalar" %}</h5>
-                            <p>{% trans "Eng so'nggi va samarali texnologiyalardan foydalanamiz" %}</p>
-                        </div>
-                    </div>
-                    <div class="why-us-item">
-                        <div class="why-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="why-content">
-                            <h5>{% trans "24/7 qo'llab-quvvatlash" %}</h5>
-                            <p>{% trans "Loyihadan keyin ham doimiy texnik yordam beramiz" %}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h3>20+</h3>
-                        <p>{% trans "Yakunlangan loyihalar" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-smile"></i>
-                        </div>
-                        <h3>100%</h3>
-                        <p>{% trans "Mijozlar qoniqishi" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>24/7</h3>
-                        <p>{% trans "Qo'llab-quvvatlash" %}</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>100%</h3>
-                        <p>{% trans "Xavfsiz yechimlar" %}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Process Section -->
-<section class="section-padding">
+<section class="section-padding section-transition" style="background: var(--bg-void-light);">
     <div class="container">
-        <div class="section-header text-center">
-            <span class="section-badge">{% trans "Jarayon" %}</span>
-            <h2 class="section-title">{% trans "Qanday ishlaymiz" %}</h2>
-            <p class="section-description">
-                {% trans "Loyihani boshidan oxirigacha professional tarzda olib boramiz" %}
-            </p>
+        <div class="section-header text-center reveal">
+            <span class="hero-badge" style="margin-bottom: 16px; display: inline-block;">{% trans "Jarayon" %}</span>
+            <h2 class="section-title">Loyihani qanday amalga oshiramiz?</h2>
         </div>
         <div class="row g-4">
-            <div class="col-md-6 col-lg-3" data-aos="fade-up">
-                <div class="service-card text-center h-100">
-                    <div class="service-icon mx-auto" style="background: #10b981;">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h4>1. {% trans "Konsultatsiya" %}</h4>
-                    <p>{% trans "Ehtiyojlaringizni o'rganib, eng yaxshi yechimni tavsiya qilamiz" %}</p>
+            <div class="col-lg-3 col-md-6 reveal">
+                <div class="glass-panel text-center" style="padding: 30px;">
+                    <span
+                        style="font-size: 24px; width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(16, 185, 129, 0.1); color: #10b981; margin-bottom: 20px; font-weight: 700;">01</span>
+                    <h5 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">{% trans "Konsultatsiya" %}</h5>
+                    <p style="color: var(--text-body); margin: 0; font-size: 14px;">{% trans "Ehtiyojlarni o'rganish" %}
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card text-center h-100">
-                    <div class="service-icon mx-auto" style="background: #0369a1;">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h4>2. {% trans "Dizayn" %}</h4>
-                    <p>{% trans "Zamonaviy va foydalanuvchi uchun qulay dizayn yaratamiz" %}</p>
+            <div class="col-lg-3 col-md-6 reveal">
+                <div class="glass-panel text-center" style="padding: 30px;">
+                    <span
+                        style="font-size: 24px; width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(37, 99, 235, 0.1); color: #2563EB; margin-bottom: 20px; font-weight: 700;">02</span>
+                    <h5 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">{% trans "Dizayn UX/UI" %}</h5>
+                    <p style="color: var(--text-body); margin: 0; font-size: 14px;">{% trans "Arxitektura prototipi" %}
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card text-center h-100">
-                    <div class="service-icon mx-auto" style="background: #f59e0b;">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>3. {% trans "Dasturlash" %}</h4>
-                    <p>{% trans "Eng zamonaviy texnologiyalar yordamida kodlaymiz" %}</p>
+            <div class="col-lg-3 col-md-6 reveal">
+                <div class="glass-panel text-center" style="padding: 30px;">
+                    <span
+                        style="font-size: 24px; width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(245, 158, 11, 0.1); color: #f59e0b; margin-bottom: 20px; font-weight: 700;">03</span>
+                    <h5 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">{% trans "Dasturlash (Dev)" %}</h5>
+                    <p style="color: var(--text-body); margin: 0; font-size: 14px;">{% trans "Sprintlar asosida code" %}
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card text-center h-100">
-                    <div class="service-icon mx-auto" style="background: #ef4444;">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h4>4. {% trans "Ishga tushirish" %}</h4>
-                    <p>{% trans "Loyihani sinab, ishga tushiramiz va qo'llab-quvvatlaymiz" %}</p>
+            <div class="col-lg-3 col-md-6 reveal">
+                <div class="glass-panel text-center" style="padding: 30px;">
+                    <span
+                        style="font-size: 24px; width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(239, 68, 68, 0.1); color: #ef4444; margin-bottom: 20px; font-weight: 700;">04</span>
+                    <h5 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">{% trans "Launch & Growth" %}</h5>
+                    <p style="color: var(--text-body); margin: 0; font-size: 14px;">{% trans "Reliz va monitoring" %}
+                    </p>
                 </div>
             </div>
         </div>
@@ -183,20 +105,20 @@
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section">
+<section class="section-padding section-transition" style="background: var(--aura-indigo);">
     <div class="container">
-        <div class="cta-content text-center">
-            <h2 data-aos="fade-up">{% trans "Loyihangizni muhokama qilishga tayyormisiz?" %}</h2>
-            <p data-aos="fade-up" data-aos-delay="100">
-                {% trans "Biz bilan bog'laning va bepul konsultatsiya oling" %}
-            </p>
-            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
-                <a href="{% url 'contact' %}" class="btn btn-light btn-lg">
-                    <i class="fas fa-phone me-2"></i>{% trans "Bog'lanish" %}
-                </a>
-                <a href="{% url 'portfolio' %}" class="btn btn-outline-light btn-lg">
-                    <i class="fas fa-briefcase me-2"></i>{% trans "Portfoliomizni ko'rish" %}
-                </a>
+        <div class="text-center reveal" style="padding: 40px 20px;">
+            <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; color: #ffffff;">
+                Loyihangizni muhokama qilishga tayyormisiz?</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px;">Biz
+                bilan hoziroq bog'laning va IT hamkoringiz bilan birinchi qadamni qo'ying.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="{% url 'contact' %}" class="btn"
+                    style="background: #fff; color: var(--aura-indigo); font-weight: 700; border: none;">Bog'lanish <i
+                        class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                <a href="{% url 'portfolio' %}" class="btn"
+                    style="background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4);"><i
+                        class="fas fa-briefcase" style="margin-right: 8px;"></i> Portfoliomiz</a>
             </div>
         </div>
     </div>

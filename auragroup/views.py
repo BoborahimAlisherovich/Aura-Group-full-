@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import (
     OurTeam, ContactUs, Services, ServicesDetails,
-    Portfolio, Career, CareerApplication
+    Portfolio, Career, CareerApplication, SiteSettings
 )
 from .forms import ContactForm, ServicesDetailsForm, CareerApplicationForm
 from .bot import send_message, send_service_request, send_vocation
@@ -22,6 +22,10 @@ class IndexView(TemplateView):
         context['services'] = Services.objects.all()[:6]
         context['portfolios'] = Portfolio.objects.all()[:6]
         context['page_title'] = _("Bosh sahifa")
+        # Dynamic counters
+        settings = SiteSettings.load()
+        context['total_projects'] = Portfolio.objects.count() + settings.projects_base_count
+        context['total_team'] = OurTeam.objects.count()
         return context
 
 
@@ -51,6 +55,8 @@ class PortfolioView(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = Services.objects.all()
         context['page_title'] = _("Portfolio")
+        settings = SiteSettings.load()
+        context['total_projects'] = Portfolio.objects.count() + settings.projects_base_count
         return context
 
 
@@ -87,6 +93,9 @@ class AboutView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page_title'] = _("Biz haqimizda")
+        settings = SiteSettings.load()
+        context['total_projects'] = Portfolio.objects.count() + settings.projects_base_count
+        context['about_bg'] = settings.about_background if settings.about_background else None
         return context
 
 
@@ -103,6 +112,9 @@ class CareerView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['page_title'] = _("Karyera")
+        settings = SiteSettings.load()
+        context['total_projects'] = Portfolio.objects.count() + settings.projects_base_count
+        context['total_team'] = OurTeam.objects.count()
         return context
 
 

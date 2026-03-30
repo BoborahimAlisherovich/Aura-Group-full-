@@ -1,85 +1,90 @@
 ﻿{% extends 'base.html' %}
 {% load i18n static %}
 
-{% block title %}{% trans "AURA Group | Raqamli Mahsulotlar Injiringi" %}{% endblock %}
+{% block title %}AURA Group | Raqamli yechimlar{% endblock %}
 
 {% block content %}
-<section class="hero-section premium-hero" id="hero">
-    <div class="hero-gradient-orb orb-1"></div>
-    <div class="hero-gradient-orb orb-2"></div>
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <div class="col-lg-7">
+<section class="hero-section" id="hero">
+    <!-- Particles Wrapper -->
+    <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></div>
+    
+    <div class="container hero-container" style="position: relative; z-index: 1;">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
                 <div class="hero-content reveal">
-                    <span class="hero-badge">{% trans "Biznes o'sishini tezlashtiradigan IT hamkor" %}</span>
-                    <h1 class="hero-title">{% trans "AURA Group bilan kuchli raqamli mahsulot yarating va bozorga tez chiqing" %}</h1>
-                    <p class="hero-description">
-                        {% blocktrans %}Biz strategiya, UX/UI va engineering'ni bitta tizimga birlashtirib, kompaniyangizga real natija beradigan platformalar ishlab chiqamiz: tezroq ishga tushish, yuqori konversiya va barqaror o'sish.{% endblocktrans %}
+                    <span class="hero-badge reveal"><strong>AURA Group</strong>{% trans " IT yechimlar" %}</span>
+                    <h1 class="hero-title reveal">
+                        {% blocktranslate %}Biznesingizni biz bilan <br>
+                        avtomatlashtiring{% endblocktranslate %}
+                    </h1>
+                    <p class="hero-description reveal">
+                        {% blocktranslate %}AURA Group – Sizning biznesingizga og‘riqli muammolarni IT texnologiyalar bilan yechim topib
+                        beruvchi kompaniya. Biz har qanday turdagi loyihani amalga oshira olamiz.{% endblocktranslate %}
                     </p>
                     <div class="hero-buttons">
-                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg magnet-target">{% trans "Loyihani boshlash" %}</a>
-                        <a href="#case-studies" class="btn btn-outline-light btn-lg magnet-target">{% trans "Case study ko'rish" %}</a>
-                    </div>
-                    <div class="hero-kpis">
-                        <div class="hero-kpi">
-                            <strong>42+</strong>
-                            <span>{% trans "Muvaffaqiyatli topshirilgan loyihalar" %}</span>
-                        </div>
-                        <div class="hero-kpi">
-                            <strong>97%</strong>
-                            <span>{% trans "Muddatga rioya ko'rsatkichi" %}</span>
-                        </div>
-                        <div class="hero-kpi">
-                            <strong>3.1x</strong>
-                            <span>{% trans "Mahsulot chiqarish tezligi o'sishi" %}</span>
-                        </div>
+                        <a href="{% url 'contact' %}" class="btn btn-primary magnet-target">{% trans 'Boshlash' %}
+                            <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                        <a href="#case-studies" class="btn btn-secondary magnet-target">Portfolio</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="hero-visual reveal">
-                    <div class="hero-visual-panel parallax-layer" data-speed="0.08">
-                        <h3>{% trans "Biz qanday qiymat beramiz" %}</h3>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> {% trans "Biznes tahlili va aniq texnik yechim xaritasi" %}</li>
-                            <li><i class="fas fa-check-circle"></i> {% trans "Konversiyaga yo'naltirilgan premium UX/UI" %}</li>
-                            <li><i class="fas fa-check-circle"></i> {% trans "Masshtablanuvchi backend va cloud arxitektura" %}</li>
-                            <li><i class="fas fa-check-circle"></i> {% trans "KPI bilan o'lchanadigan release jarayoni" %}</li>
-                        </ul>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="hero-image reveal-delayed" style="padding: 40px;">
+                    <!-- Simple metric cards instead of glass orb -->
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="glass-panel text-center" style="padding: 30px 20px;">
+                                <h3
+                                    style="font-size: 3rem; font-weight: 800; color: var(--aura-indigo); margin-bottom: 8px;">
+                                    {{ total_projects }}+</h3>
+                                <p
+                                    style="font-size: 14px; color: var(--text-body); font-weight: 600; margin: 0; text-transform: uppercase;">
+                                    {% trans 'Loyihalar' %}</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass-panel text-center"
+                                style="padding: 30px 20px; transform: translateY(30px);">
+                                <h3 style="font-size: 3rem; font-weight: 800; color: #10B981; margin-bottom: 8px;">97%
+                                </h3>
+                                <p
+                                    style="font-size: 14px; color: var(--text-body); font-weight: 600; margin: 0; text-transform: uppercase;">
+                                    {% trans 'Mamnuniyat' %}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="floating-signal signal-a">{% trans "Tezroq bozorga chiqish" %}</div>
-                    <div class="floating-signal signal-b">{% trans "Mijoz ishonchi va o'sish" %}</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section-padding premium-about section-transition">
+<section class="section-padding section-transition" id="about" style="background: var(--white);">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="section-header reveal">
-                    <span class="section-badge">{% trans "Biz haqimizda" %}</span>
-                    <h2 class="section-title">{% trans "Biz kod yozmaymiz, biznes natija beradigan tizim quramiz" %}</h2>
-                    <p class="section-description section-description-left">
-                        {% blocktrans %}AURA Group product fikrlash asosida ishlaydi: maqsadni aniqlaymiz, foydalanuvchi oqimini tozalaymiz va texnik arxitekturani kelajakdagi o'sish uchun tayyorlaymiz.{% endblocktrans %}
+                    <h2 class="section-title">{% blocktranslate %}Biz shunchaki loyiha qilib sotmaymiz —<br>biz sizga yechim beramiz.{% endblocktranslate %}</h2>
+                    <p class="section-description" style="margin-left: 0;">
+                        {% blocktranslate %}AURA Group sizning biznesingizga mos yechimni taqdim etadi: maqsadni aniqlaymiz,
+                        jarayonlarni optimallashtiramiz va texnik arxitekturani kelajakdagi o'sish uchun
+                        tayyor qilib quramiz.{% endblocktranslate %}
                     </p>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="about-metrics reveal">
-                    <article>
-                        <h4>12+</h4>
-                        <p>{% trans "Turli sohalarda real tajriba: fintech, logistika, ta'lim, healthcare." %}</p>
+                <div class="reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+                    <article class="glass-panel" style="padding: 30px;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--aura-indigo);">12+ Soha</h4>
+                        <p style="margin: 0; font-size: 14px;">{% trans "Ishlab chiqarish, fintech, logistika, ta'lim, tibbiyot, KPI, CRM, ERP va boshqa sohalar." %}</p>
                     </article>
-                    <article>
-                        <h4>24/7</h4>
-                        <p>{% trans "Yuqori yuklama tizimlari uchun doimiy monitoring va qo'llab-quvvatlash." %}</p>
+                    <article class="glass-panel" style="padding: 30px;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--aura-indigo);">{% trans "Doimiy qo'llab-quvvatlash" %}</h4>
+                        <p style="margin: 0; font-size: 14px;">{% trans "Loyiha yakunlangandan keyin ham sizga doimo yordam beramiz va texnik xizmat ko'rsatamiz." %}</p>
                     </article>
-                    <article>
-                        <h4>Senior Team</h4>
-                        <p>{% trans "Har bir bosqichda tajribali mutaxassislar bilan ishlaysiz." %}</p>
+                    <article class="glass-panel" style="grid-column: span 2; padding: 30px;">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--aura-indigo);">{% trans "Tajribali jamoa" %}</h4>
+                        <p style="margin: 0; font-size: 14px;">{% trans "Har bir loyiha o'z sohasining mutaxassislari tomonidan ishlab chiqiladi." %}</p>
                     </article>
                 </div>
             </div>
@@ -90,26 +95,47 @@
 <section class="services-section section-padding section-transition" id="services">
     <div class="container">
         <div class="section-header text-center reveal">
-            <span class="section-badge">{% trans "Xizmatlar" %}</span>
-            <h2 class="section-title">{% trans "Biznes vazifangizga mos full-cycle IT xizmatlar" %}</h2>
-            <p class="section-description">{% trans "Har bir loyiha KPI, muddat va sifat bo'yicha nazorat qilinadigan delivery modeli asosida olib boriladi." %}</p>
+            <span class="hero-badge"
+                style="background: rgba(37, 99, 235, 0.1); color: var(--aura-indigo); margin-bottom: 16px;">Xizmatlar</span>
+            <h2 class="section-title">{% trans "Bizning xizmatlar" %}</h2>
+            <p class="section-description mx-auto">{% trans "Har bir loyihani aniq reja va tartib asosida sifatli bajaramiz." %}</p>
         </div>
         <div class="row g-4">
             {% for service in services %}
             <div class="col-lg-4 col-md-6 reveal">
-                <article class="service-card premium-card">
-                    <div class="service-icon"><i class="{{ service.icon|default:'fas fa-layer-group' }}"></i></div>
-                    <h4>{{ service.get_name_display }}</h4>
-                    <p>{{ service.description|truncatewords:18 }}</p>
-                    <a href="{% url 'service_request' service.id %}" class="service-link">{% trans "Xizmatni tanlash" %} <i class="fas fa-arrow-right"></i></a>
+                <article class="service-card">
+                    <div class="service-icon"><i class="{{ service.icon|default:'fas fa-layer-group' }}"></i>
+                    </div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                        {{ service.get_name_display }}</h4>
+                    <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">{{
+                        service.description|truncatewords:18 }}</p>
+                    <a href="{% url 'service_request' service.id %}" class="service-link">{% trans "Batafsil" %} <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
                 </article>
             </div>
             {% empty %}
             <div class="col-lg-4 col-md-6 reveal">
-                <article class="service-card premium-card">
+                <article class="service-card">
                     <div class="service-icon"><i class="fas fa-code-branch"></i></div>
-                    <h4>{% trans "Product Engineering" %}</h4>
-                    <p>{% trans "MVP'dan enterprise platformagacha bo'lgan to'liq engineering jarayoni." %}</p>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                        {% trans "Dasturiy ta'minot ishlab chiqish" %}</h4>
+                    <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">{% trans "Biznesingiz uchun to'liq miqyosda professional dasturiy mahsulotlar yaratamiz." %}</p>
+                </article>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal">
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                        {% trans "Sun'iy intellekt" %}</h4>
+                    <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">{% trans "AI texnologiyalar yordamida biznesingizni raqobatchilardan bir qadam oldinga olib chiqamiz." %}</p>
+                </article>
+            </div>
+            <div class="col-lg-4 col-md-6 reveal">
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+                        {% trans "Bulutli xizmatlar" %}</h4>
+                    <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.6;">{% trans "Tez ishlaydigan, barqaror va kengaytirilishi oson tizimlar quramiz." %}</p>
                 </article>
             </div>
             {% endfor %}
@@ -117,12 +143,15 @@
     </div>
 </section>
 
-<section class="portfolio-section section-padding section-transition" id="case-studies">
+<section class="portfolio-section section-padding section-transition" id="case-studies"
+    style="background: var(--white);">
     <div class="container">
         <div class="section-header text-center reveal">
-            <span class="section-badge">{% trans "Portfolio" %}</span>
-            <h2 class="section-title">{% trans "Real biznes natija bergan case study loyihalar" %}</h2>
-            <p class="section-description">{% trans "Bitta oynada 4 ta loyiha ko'rinadi, strelkalar orqali keyingi loyihalarga silliq o'tasiz." %}</p>
+            <span class="hero-badge" style="margin-bottom: 16px; display: inline-block;">Portfolio</span>
+            <h2 class="section-title">{% blocktranslate %}Real biznes natija bergan<br><span
+                    style="color: var(--aura-indigo);">loyihalarimiz</span>{% endblocktranslate %}</h2>
+            <p class="section-description">{% blocktranslate %}AURA Group muhandislik jamoasi tomonidan noldan qurilgan va mijozlar
+                biznesini o‘stirgan asosiy loyihalarimiz bilan tanishing.{% endblocktranslate %}</p>
         </div>
 
         <div class="portfolio-slider-wrap reveal">
@@ -140,9 +169,11 @@
                         <article class="portfolio-slide-card">
                             <a href="{% url 'portfolio_detail' portfolio.pk %}" class="portfolio-slide-image-link">
                                 {% if portfolio.image %}
-                                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}" loading="lazy" decoding="async">
+                                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}" loading="lazy"
+                                    decoding="async">
                                 {% else %}
-                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="{{ portfolio.name }}" loading="lazy" decoding="async">
+                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}"
+                                    alt="{{ portfolio.name }}" loading="lazy" decoding="async">
                                 {% endif %}
                             </a>
                             <div class="portfolio-slide-content">
@@ -156,7 +187,8 @@
                     <div class="swiper-slide">
                         <article class="portfolio-slide-card">
                             <a href="{% url 'portfolio' %}" class="portfolio-slide-image-link">
-                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="Portfolio" loading="lazy" decoding="async">
+                                <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="Portfolio"
+                                    loading="lazy" decoding="async">
                             </a>
                             <div class="portfolio-slide-content">
                                 <h4>{% trans "Loyihalar qo'shilmoqda" %}</h4>
@@ -173,40 +205,42 @@
     </div>
 </section>
 
-<section class="section-padding premium-tech section-transition">
+<section class="section-padding section-transition" style="background: var(--bg-void-light);">
     <div class="container">
-        <div class="section-header text-center reveal">
-            <span class="section-badge">{% trans "Texnologiyalar" %}</span>
+        <div class="section-header text-center reveal" style="margin-bottom: 40px;">
+            <span class="hero-badge" style="margin-bottom: 16px; display: inline-block;">{% trans "Texnologiyalar" %}</span>
             <h2 class="section-title">{% trans "Ishonchli stack, zamonaviy arxitektura, tez delivery" %}</h2>
         </div>
-        <div class="tech-marquee reveal" aria-label="Technology carousel">
-            <div class="tech-track">
-                <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
-                <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
-                <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
-                <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
-                <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
-                <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
-                <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
-                <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
-                <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
-                <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
-                <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+    </div>
+    <div class="tech-marquee reveal" aria-label="Technology carousel">
+        <div class="tech-track">
+            <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+            <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
+            <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+            <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+            <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
+            <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+            <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
+            <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+            <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+            <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+            <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+            <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+            <div class="tech-logo-item"><img src="https://odoo-community.org/logo.png" alt="Odoo" style="height: 28px; width: auto; object-fit: contain;"><span>Odoo</span></div>
 
-                <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
-                <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
-                <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
-                <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
-                <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
-                <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
-                <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
-                <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
-                <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
-                <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
-                <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
-                <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
-            </div>
+            <div class="tech-logo-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+            <div class="tech-logo-item"><i class="devicon-django-plain"></i><span>Django</span></div>
+            <div class="tech-logo-item"><i class="devicon-fastapi-plain"></i><span>FastAPI</span></div>
+            <div class="tech-logo-item"><i class="devicon-nodejs-plain"></i><span>Node.js</span></div>
+            <div class="tech-logo-item"><i class="devicon-react-original"></i><span>React</span></div>
+            <div class="tech-logo-item"><i class="devicon-nextjs-original"></i><span>Next.js</span></div>
+            <div class="tech-logo-item"><i class="devicon-flutter-plain"></i><span>Flutter</span></div>
+            <div class="tech-logo-item"><i class="devicon-postgresql-plain"></i><span>PostgreSQL</span></div>
+            <div class="tech-logo-item"><i class="devicon-redis-plain"></i><span>Redis</span></div>
+            <div class="tech-logo-item"><i class="devicon-amazonwebservices-plain-wordmark"></i><span>AWS</span></div>
+            <div class="tech-logo-item"><i class="devicon-docker-plain"></i><span>Docker</span></div>
+            <div class="tech-logo-item"><i class="devicon-kubernetes-plain"></i><span>Kubernetes</span></div>
+            <div class="tech-logo-item"><img src="https://odoo-community.org/logo.png" alt="Odoo" style="height: 28px; width: auto; object-fit: contain;"><span>Odoo</span></div>
         </div>
     </div>
 </section>
@@ -214,14 +248,34 @@
 <section class="section-padding industries-section section-transition">
     <div class="container">
         <div class="section-header text-center reveal">
-            <span class="section-badge">{% trans "Sohalar" %}</span>
-            <h2 class="section-title">{% trans "Murakkab biznes modellarga mos yechimlar" %}</h2>
+            <span class="section-badge">Sohalar</span>
+            <h2 class="section-title">{% trans "Turli sohalardagi bizneslarga yechim beramiz" %}</h2>
         </div>
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-landmark"></i><h5>Fintech</h5><p>{% trans "To'lovlar, onboarding va xavfsiz tranzaksiya oqimlari." %}</p></article></div>
-            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-truck-fast"></i><h5>Logistika</h5><p>{% trans "Real-time kuzatuv va operatsion boshqaruv paneli." %}</p></article></div>
-            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-heart-pulse"></i><h5>Healthcare</h5><p>{% trans "Ma'lumotga sezgir, barqaror va xavfsiz platformalar." %}</p></article></div>
-            <div class="col-lg-3 col-md-6 reveal"><article class="industry-card"><i class="fas fa-graduation-cap"></i><h5>EdTech</h5><p>{% trans "Retention va engagement oshiruvchi mahsulotlar." %}</p></article></div>
+            <div class="col-lg-3 col-md-6 reveal">
+                <article class="industry-card"><i class="fas fa-landmark"></i>
+                    <h5>{% trans "Fintech" %}</h5>
+                    <p>{% trans "To'lov tizimlari, bank xizmatlari va xavfsiz tranzaksiyalar." %}</p>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal">
+                <article class="industry-card"><i class="fas fa-industry"></i>
+                    <h5>{% trans "Sanoat va Ishlab chiqarish" %}</h5>
+                    <p>{% trans "Turli xil turdagi ishlab chiqaruvchi bizneslarga ERP o'rnatib berish orqali jarayonlarni to'liq avtomatlashtiramiz." %}</p>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal">
+                <article class="industry-card"><i class="fas fa-heart-pulse"></i>
+                    <h5>{% trans "Tibbiyot" %}</h5>
+                    <p>{% trans "Xavfsiz va barqaror tibbiy platformalar." %}</p>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 reveal">
+                <article class="industry-card"><i class="fas fa-graduation-cap"></i>
+                    <h5>{% trans "Ta'lim (CRM)" %}</h5>
+                    <p>{% trans "O'quvchilar, ota-onalar, xodimlarni va moliya (kirim-chiqim)ni bitta yaxlit tizimda boshqarasiz." %}</p>
+                </article>
+            </div>
         </div>
     </div>
 </section>
@@ -231,21 +285,52 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="section-header reveal">
-                    <span class="section-badge section-badge-dark">{% trans "Nega biz?" %}</span>
-                    <h2 class="section-title text-white">{% trans "Loyihada tezlik, tartib va sifatni bir vaqtda beramiz" %}</h2>
+                    <span class="section-badge section-badge-dark"><strong>Nega Biz?</strong></span>
+                    <h2 class="section-title text-white">{% blocktranslate %}Loyihada tezlik, tartib va<br><span
+                            class="gradient-text">sifatni bir vaqtda beramiz</span>{% endblocktranslate %}</h2>
                 </div>
                 <div class="why-us-list reveal">
-                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-shield-halved"></i></div><div class="why-content"><h5>{% trans "Shaffof jarayon" %}</h5><p>{% trans "Har sprint bo'yicha aniq status, risk va keyingi qadamlar bilan." %}</p></div></div>
-                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-chart-line"></i></div><div class="why-content"><h5>{% trans "Biznesga bog'langan KPI" %}</h5><p>{% trans "Yechimlarimiz real ko'rsatkichlar bo'yicha baholanadi." %}</p></div></div>
-                    <div class="why-us-item"><div class="why-icon"><i class="fas fa-users-gear"></i></div><div class="why-content"><h5>{% trans "Senior mutaxassislar" %}</h5><p>{% trans "Loyiha davomida bir xil professional jamoa bilan ishlaysiz." %}</p></div></div>
+                    <div class="why-us-item">
+                        <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="why-content">
+                            <h5>{% trans "Shaffof jarayon" %}</h5>
+                            <p>{% trans "Har bir bosqichda aniq holat, mumkin bo'lgan muammolar va keyingi qadamlar haqida xabar beramiz." %}</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="why-content">
+                            <h5>{% trans "Natijaga yo'naltirilgan" %}</h5>
+                            <p>{% trans "Yechimlarimiz aniq biznes ko'rsatkichlar bo'yicha baholanadi." %}</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="why-icon"><i class="fas fa-users-gear"></i></div>
+                        <div class="why-content">
+                            <h5>{% trans "Tajribali mutaxassislar" %}</h5>
+                            <p>{% trans "Loyiha boshidan oxirigacha bitta professional jamoa bilan ishlaysiz." %}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="process-mini-board reveal">
-                    <article><span>01</span><h6>{% trans "Tahlil" %}</h6><p>{% trans "Biznes maqsadi, auditoriya va texnik cheklovlar." %}</p></article>
-                    <article><span>02</span><h6>{% trans "Dizayn" %}</h6><p>{% trans "UX oqimlar, UI tizimi va prototiplash." %}</p></article>
-                    <article><span>03</span><h6>{% trans "Ishlab chiqish" %}</h6><p>{% trans "QA va release nazorati bilan coding jarayoni." %}</p></article>
-                    <article><span>04</span><h6>{% trans "Masshtablash" %}</h6><p>{% trans "Monitoring, optimizatsiya va growth iteratsiyalari." %}</p></article>
+                    <article><span>01</span>
+                        <h6>{% trans "Tahlil" %}</h6>
+                        <p>{% trans "Biznes maqsadi, auditoriya va texnik cheklovlarni o'rganamiz." %}</p>
+                    </article>
+                    <article><span>02</span>
+                        <h6>{% trans "Dizayn" %}</h6>
+                        <p>{% trans "Foydalanuvchi tajribasini loyihalash va prototip yaratish." %}</p>
+                    </article>
+                    <article><span>03</span>
+                        <h6>{% trans "Ishlab chiqish" %}</h6>
+                        <p>{% trans "Sifat nazorati bilan dasturlash jarayoni." %}</p>
+                    </article>
+                    <article><span>04</span>
+                        <h6>{% trans "Yo'lga qo'yish" %}</h6>
+                        <p>{% trans "Loyihani ishga tushirish, kuzatish va takomillashtirish." %}</p>
+                    </article>
                 </div>
             </div>
         </div>
@@ -256,13 +341,21 @@
     <div class="container">
         <div class="section-header text-center reveal">
             <span class="section-badge">{% trans "Ish jarayoni" %}</span>
-            <h2 class="section-title">{% trans "Strategiyadan launchgacha puxta boshqaruv" %}</h2>
+            <h2 class="section-title">{% trans "Strategiyadan ishga tushirishgacha puxta boshqaruv" %}</h2>
         </div>
         <div class="process-timeline">
-            <article class="reveal"><span>Discovery Workshop</span><p>{% trans "Stakeholder intervyu, maqsad KPI va roadmap." %}</p></article>
-            <article class="reveal"><span>{% trans "Arxitektura va UX Blueprint" %}</span><p>{% trans "Texnik yechim, dizayn tizimi va sprint rejasi." %}</p></article>
-            <article class="reveal"><span>Agile Delivery</span><p>{% trans "Muntazam demo, QA avtomatizatsiya va CI/CD." %}</p></article>
-            <article class="reveal"><span>Launch + Growth</span><p>{% trans "Monitoring, feedback asosida tez iteratsiya." %}</p></article>
+            <article class="reveal"><span>{% trans "Dastlabki uchrashuv" %}</span>
+                <p>{% trans "Sizning ehtiyojlaringizni o'rganamiz va loyiha rejasini tuzamiz." %}</p>
+            </article>
+            <article class="reveal"><span>{% trans "Arxitektura va dizayn" %}</span>
+                <p>{% trans "Texnik yechim va dizayn tizimini yaratamiz." %}</p>
+            </article>
+            <article class="reveal"><span>{% trans "Dasturlash" %}</span>
+                <p>{% trans "Muntazam namoyishlar va sifat nazorati bilan ishlab chiqamiz." %}</p>
+            </article>
+            <article class="reveal"><span>{% trans "Ishga tushirish" %}</span>
+                <p>{% trans "Loyihani yo'lga qo'yamiz va doimiy kuzatib boramiz." %}</p>
+            </article>
         </div>
     </div>
 </section>
@@ -270,42 +363,88 @@
 <section class="testimonials-section section-padding section-transition">
     <div class="container">
         <div class="section-header text-center reveal">
-            <span class="section-badge">{% trans "Mijozlar fikri" %}</span>
-            <h2 class="section-title">{% trans "Biz bilan ishlagan rahbarlarning fikrlari" %}</h2>
+            <span class="hero-badge"><strong>Fikrlar</strong></span>
+            <h2 class="section-title">{% blocktranslate %}Biz bilan ishlagan rahbarlarning<br><span class="gradient-text">haqiqiy
+                    fikrlari</span>{% endblocktranslate %}</h2>
         </div>
         <div class="row g-4">
             <div class="col-lg-4 reveal">
-                <article class="testimonial-card premium-card">
-                    <p class="testimonial-content">{% trans "AURA Group jamoasi KSD82 loyihamizni juda aniq reja asosida olib bordi. Har bir bosqich tushunarli, bajarilish esa ishonchli bo'ldi. Natijada ish jarayonimiz sezilarli darajada tezlashdi." %}</p>
-                    <div class="testimonial-author-info"><h5>{% trans "KSD82 kompaniyasi egasi" %}</h5><p>{% trans "Namangan" %}</p></div>
+                <article class="testimonial-card glass-panel">
+                    <p class="testimonial-content">{% trans "AURA Group jamoasi KSD82 loyihamizni juda aniq reja asosida olib bordi. Har bir bosqich tushunarli, bajarilish esa ishonchli bo'ldi." %}</p>
+                    <div class="testimonial-author-info">
+                        <h5>KSD82 kompaniyasi</h5>
+                        <p class="text-aura-cyan">Namangan</p>
+                    </div>
                 </article>
             </div>
             <div class="col-lg-4 reveal">
-                <article class="testimonial-card premium-card">
+                <article class="testimonial-card glass-panel">
                     <p class="testimonial-content">{% trans "O'zBA Markaz uchun yaratilgan tizimda dizayn va funksionallik mukammal uyg'unlashdi. Jamoa talabni to'g'ri tushundi va juda sifatli mahsulot topshirdi." %}</p>
-                    <div class="testimonial-author-info"><h5>{% trans "O'zBA Markaz rahbariyati" %}</h5><p>{% trans "Toshkent" %}</p></div>
+                    <div class="testimonial-author-info">
+                        <h5>O'zBA Markaz</h5>
+                        <p class="text-aura-cyan">Toshkent</p>
+                    </div>
                 </article>
             </div>
             <div class="col-lg-4 reveal">
-                <article class="testimonial-card premium-card">
-                    <p class="testimonial-content">{% trans "eHokimiyat loyihasida AURA Group professionalligi aniq sezildi. Yechimlar barqaror, foydalanuvchi uchun qulay va boshqaruv jarayoniga haqiqiy qulaylik olib keldi." %}</p>
-                    <div class="testimonial-author-info"><h5>{% trans "eHokimiyat loyiha buyurtmachisi" %}</h5><p>{% trans "Namangan" %}</p></div>
+                <article class="testimonial-card glass-panel">
+                    <p class="testimonial-content">{% trans "eHokimiyat loyihasida AURA Group professionalligi aniq sezildi. Yechimlar barqaror, boshqaruv jarayoniga haqiqiy qulaylik olib keldi." %}</p>
+                    <div class="testimonial-author-info">
+                        <h5>eHokimiyat loyihasi</h5>
+                        <p class="text-aura-cyan">Navoi</p>
+                    </div>
                 </article>
             </div>
         </div>
     </div>
 </section>
 
-<section class="cta-section section-transition">
+<section class="section-padding section-transition" style="background: var(--aura-indigo);">
     <div class="container">
-        <div class="cta-content text-center reveal">
-            <h2>{% trans "Loyihangizni premium darajada ishga tushirishga tayyormisiz?" %}</h2>
-            <p>{% trans "Maqsadingizni yuboring, biz sizga aniq texnik reja va bajarish modelini taqdim etamiz." %}</p>
-            <div class="cta-buttons">
-                <a href="{% url 'contact' %}" class="btn btn-light btn-lg magnet-target">{% trans "Brief yuborish" %}</a>
-                <a href="tel:+998936658507" class="btn btn-outline-light btn-lg magnet-target">+998 (93) 665-85-07</a>
+        <div class="text-center reveal" style="padding: 40px 20px;">
+            <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; color: #ffffff;">
+                {% trans "Keyingi loyiha sizniki bo'lishi mumkin" %}</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px;">{% blocktranslate %}Biz
+                sizga aniq texnik reja va amalga oshirish modelini taqdim etamiz.{% endblocktranslate %}</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="{% url 'contact' %}" class="btn"
+                    style="background: #fff; color: var(--aura-indigo); font-weight: 700; border: none;">{% trans "Brief yuborish" %}
+                    <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                <a href="tel:+998936658507" class="btn"
+                    style="background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4);"><i
+                        class="fas fa-phone" style="margin-right: 8px;"></i> +998 93 665 85 07</a>
             </div>
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if(document.getElementById('particles-js')) {
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#2563EB" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#2563EB", "opacity": 0.4, "width": 1 },
+                    "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" },
+                        "onclick": { "enable": true, "mode": "push" },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            });
+        }
+    });
+</script>
 {% endblock %}

@@ -142,6 +142,26 @@ function initLanguageTransition() {
       }, 320);
     });
   });
+}
+
+function initLangDropdown() {
+  const dropdown = document.querySelector(".lang-dropdown");
+  if (!dropdown) return;
+  const toggle = dropdown.querySelector(".lang-dropdown-toggle");
+  if (!toggle) return;
+
+  // Mobile: toggle on click
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle("open");
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
 
   window.addEventListener("pageshow", () => {
     overlay.classList.remove("is-active");
@@ -278,6 +298,7 @@ function initScripts() {
   initMagneticButtons();
   initPortfolioPreview();
   initLanguageTransition();
+  initLangDropdown();
   initLegacyFaq();
   initLegacyPortfolioFilter();
   initLegacyFormHelpers();
@@ -290,3 +311,105 @@ if (document.readyState === "loading") {
 } else {
   initScripts();
 }
+
+function init3DTilt() {
+  const tiltElements = document.querySelectorAll(".js-3d-tilt");
+  if (!tiltElements.length) return;
+
+  tiltElements.forEach(el => {
+    el.addEventListener("mousemove", (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -15;
+      const rotateY = ((x - centerX) / centerX) * 15;
+
+      el.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    });
+  });
+}
+
+function initAppleReveal() {
+  const revealNodes = document.querySelectorAll(".reveal-apple, .reveal-apple-slide-up, .reveal-apple-scale, .reveal-apple-delayed");
+  if (!revealNodes.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  revealNodes.forEach(node => observer.observe(node));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    init3DTilt();
+    initAppleReveal();
+  }, 100);
+});
+
+ 
+ f u n c t i o n   i n i t W o w E f f e c t s ( )   { 
+     / /   P r e l o a d e r 
+     c o n s t   p r e l o a d e r   =   d o c u m e n t . g e t E l e m e n t B y I d ( " w o w - p r e l o a d e r " ) ; 
+     i f   ( p r e l o a d e r )   { 
+         w i n d o w . a d d E v e n t L i s t e n e r ( " l o a d " ,   ( )   = >   { 
+             s e t T i m e o u t ( ( )   = >   { 
+                 p r e l o a d e r . c l a s s L i s t . a d d ( " l o a d e d " ) ; 
+             } ,   1 5 0 0 ) ;   / /   g i v e   i t   a   c o o l   l o a d i n g   t i m e 
+         } ) ; 
+     } 
+ 
+     / /   C u s t o m   C u r s o r 
+     c o n s t   c u r s o r   =   d o c u m e n t . g e t E l e m e n t B y I d ( " w o w C u r s o r " ) ; 
+     c o n s t   f o l l o w e r   =   d o c u m e n t . g e t E l e m e n t B y I d ( " w o w C u r s o r F o l l o w e r " ) ; 
+     i f   ( c u r s o r   & &   f o l l o w e r )   { 
+         l e t   p o s X   =   0 ,   p o s Y   =   0 ,   m o u s e X   =   0 ,   m o u s e Y   =   0 ; 
+         
+         / /   F o l l o w e r   a n i m a t i o n   l o o p 
+         c o n s t   u p d a t e F o l l o w e r   =   ( )   = >   { 
+             p o s X   + =   ( m o u s e X   -   p o s X )   *   0 . 1 5 ; 
+             p o s Y   + =   ( m o u s e Y   -   p o s Y )   *   0 . 1 5 ; 
+             f o l l o w e r . s t y l e . t r a n s f o r m   =   ` t r a n s l a t e ( $ { p o s X } p x ,   $ { p o s Y } p x ) ` ; 
+             r e q u e s t A n i m a t i o n F r a m e ( u p d a t e F o l l o w e r ) ; 
+         } ; 
+         u p d a t e F o l l o w e r ( ) ; 
+ 
+         w i n d o w . a d d E v e n t L i s t e n e r ( " m o u s e m o v e " ,   ( e )   = >   { 
+             m o u s e X   =   e . c l i e n t X ; 
+             m o u s e Y   =   e . c l i e n t Y ; 
+             c u r s o r . s t y l e . t r a n s f o r m   =   ` t r a n s l a t e ( $ { m o u s e X } p x ,   $ { m o u s e Y } p x ) ` ; 
+         } ) ; 
+ 
+         / /   H o v e r   e f f e c t   o n   l i n k s   a n d   b u t t o n s 
+         c o n s t   h o v e r E l e m e n t s   =   d o c u m e n t . q u e r y S e l e c t o r A l l ( " a ,   b u t t o n ,   . m a g n e t - t a r g e t " ) ; 
+         h o v e r E l e m e n t s . f o r E a c h ( e l   = >   { 
+             e l . a d d E v e n t L i s t e n e r ( " m o u s e e n t e r " ,   ( )   = >   { 
+                 c u r s o r . c l a s s L i s t . a d d ( " h o v e r i n g " ) ; 
+                 f o l l o w e r . c l a s s L i s t . a d d ( " h o v e r i n g " ) ; 
+             } ) ; 
+             e l . a d d E v e n t L i s t e n e r ( " m o u s e l e a v e " ,   ( )   = >   { 
+                 c u r s o r . c l a s s L i s t . r e m o v e ( " h o v e r i n g " ) ; 
+                 f o l l o w e r . c l a s s L i s t . r e m o v e ( " h o v e r i n g " ) ; 
+             } ) ; 
+         } ) ; 
+     } 
+ } 
+ 
+ / /   E n s u r e   W o w   E f f e c t s   r u n 
+ i f   ( d o c u m e n t . r e a d y S t a t e   = = =   " l o a d i n g " )   { 
+     d o c u m e n t . a d d E v e n t L i s t e n e r ( " D O M C o n t e n t L o a d e d " ,   i n i t W o w E f f e c t s ) ; 
+ }   e l s e   { 
+     i n i t W o w E f f e c t s ( ) ; 
+ }  
+ 

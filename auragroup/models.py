@@ -226,3 +226,36 @@ class CareerApplication(models.Model):
     def __str__(self):
         return f"{self.full_name} - {self.career.position}"
 
+
+class SiteSettings(models.Model):
+    """Sayt sozlamalari — faqat 1 ta yozuv bo'lishi kerak"""
+    about_background = models.ImageField(
+        _("Biz haqimizda — fon rasmi"),
+        upload_to='images/site/',
+        blank=True,
+        null=True,
+        help_text=_("About sahifasining yuqori qismidagi fon rasmi. Bo'sh qolsa standart gradient ishlatiladi.")
+    )
+    projects_base_count = models.PositiveIntegerField(
+        _("Loyihalar boshlang'ich soni"),
+        default=10,
+        help_text=_("Portfolio'dagi haqiqiy loyihalar soniga qo'shiladigan boshlang'ich raqam.")
+    )
+
+    class Meta:
+        verbose_name = _("Sayt sozlamasi")
+        verbose_name_plural = _("Sayt sozlamalari")
+
+    def __str__(self):
+        return "Sayt sozlamalari"
+
+    def save(self, *args, **kwargs):
+        # Faqat bitta yozuv bo'lishi uchun
+        self.pk = 1
+        super().save(*args, **kwargs)
+
+    @classmethod
+    def load(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj
+

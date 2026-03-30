@@ -78,6 +78,15 @@
                 {% endif %}
             </div>
 
+            {% if gallery_images|length > 1 %}
+            <div class="portfolio-gallery-thumbs" id="galleryThumbs">
+                {% for img in gallery_images %}
+                <div class="portfolio-gallery-thumb {% if forloop.first %}active{% endif %}" data-index="{{ forloop.counter0 }}">
+                    <img src="{{ img.url }}" alt="{{ portfolio.name }} {{ forloop.counter }}" loading="lazy">
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
         {% endif %}
 
@@ -285,6 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.querySelector('.portfolio-detail-prev');
     const nextBtn = document.querySelector('.portfolio-detail-next');
     const frame = document.querySelector('.portfolio-slider-frame');
+    const thumbs = document.querySelectorAll('.portfolio-gallery-thumb');
 
     if (!mainImage || !galleryUrls.length) return;
 
@@ -293,10 +303,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const normalizeIndex = (index) => (index + galleryUrls.length) % galleryUrls.length;
 
+    const updateThumbs = () => {
+        thumbs.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === currentImageIndex);
+        });
+    };
+
     const showImage = (nextIndex) => {
         currentImageIndex = normalizeIndex(nextIndex);
         const targetUrl = galleryUrls[currentImageIndex];
         if (!targetUrl || mainImage.src.endsWith(targetUrl)) {
+            updateThumbs();
             return;
         }
 
@@ -305,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mainImage.src = targetUrl;
             mainImage.alt = "{{ portfolio.name|escapejs }}" + " " + (currentImageIndex + 1);
             mainImage.classList.remove('is-switching');
+            updateThumbs();
         }, 130);
     };
 
@@ -334,6 +352,17 @@ document.addEventListener('DOMContentLoaded', function () {
         frame.addEventListener('mouseenter', () => clearInterval(autoTimer));
         frame.addEventListener('mouseleave', startAuto);
     }
+
+    // Thumbnail clicks
+    thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', function () {
+            const idx = parseInt(this.dataset.index, 10);
+            if (!isNaN(idx)) {
+                showImage(idx);
+                startAuto();
+            }
+        });
+    });
 
     startAuto();
 });
