@@ -9,11 +9,10 @@
     <div class="container text-center">
         <span class="hero-badge reveal" style="margin-bottom: 16px; display: inline-block;">{% trans "Xizmatlar" %}</span>
         <h1 class="hero-title reveal" style="margin-bottom: 16px; font-size: clamp(2rem, 4vw, 3rem);">
-            Biznesingiz uchun<br>zamonaviy raqamli yechimlar
+            {% blocktranslate %}Biznesingiz uchun<br>zamonaviy raqamli yechimlar{% endblocktranslate %}
         </h1>
         <p class="hero-description reveal" style="max-width: 700px; margin: 0 auto;">
-            Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda ishlab chiqamiz. Sifat, tezlik va
-            xavfsizlik kafolati bilan.
+            {% trans "Har bir loyihani mijoz ehtiyojlariga mos ravishda individual yondashuvda ishlab chiqamiz. Sifat, tezlik va xavfsizlik kafolati bilan." %}
         </p>
     </div>
 </section>
@@ -61,7 +60,7 @@
     <div class="container">
         <div class="section-header text-center reveal">
             <span class="hero-badge" style="margin-bottom: 16px; display: inline-block;">{% trans "Jarayon" %}</span>
-            <h2 class="section-title">Loyihani qanday amalga oshiramiz?</h2>
+            <h2 class="section-title">{% trans "Loyihani qanday amalga oshiramiz?" %}</h2>    
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-md-6 reveal">
@@ -109,16 +108,15 @@
     <div class="container">
         <div class="text-center reveal" style="padding: 40px 20px;">
             <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; color: #ffffff;">
-                Loyihangizni muhokama qilishga tayyormisiz?</h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px;">Biz
-                bilan hoziroq bog'laning va IT hamkoringiz bilan birinchi qadamni qo'ying.</p>
+                {% trans "Loyihangizni muhokama qilishga tayyormisiz?" %}</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px;">{% trans "Biz bilan hoziroq bog'laning va IT hamkoringiz bilan birinchi qadamni qo'ying." %}</p>
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                 <a href="{% url 'contact' %}" class="btn"
-                    style="background: #fff; color: var(--aura-indigo); font-weight: 700; border: none;">Bog'lanish <i
+                    style="background: #fff; color: var(--aura-indigo); font-weight: 700; border: none;">{% trans "Bog'lanish" %} <i
                         class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
                 <a href="{% url 'portfolio' %}" class="btn"
                     style="background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4);"><i
-                        class="fas fa-briefcase" style="margin-right: 8px;"></i> Portfoliomiz</a>
+                        class="fas fa-briefcase" style="margin-right: 8px;"></i> {% trans "Portfoliomiz" %}</a>
             </div>
         </div>
     </div>

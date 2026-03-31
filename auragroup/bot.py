@@ -1,10 +1,10 @@
 import requests
-from os import getenv
+# from os import getenv
 from dotenv import load_dotenv
 
 load_dotenv()
-BOT_TOKEN = getenv("BOT_TOKEN")
-CHAT_ID = getenv("CHAT_ID")
+BOT_TOKEN = "7935151260:AAFEylpFNSQFbmrYqeF_vKwtsUDMotZpA9c"
+CHAT_ID = 1718572899
 
 
 def send_message(name, email, phone_number, description):
