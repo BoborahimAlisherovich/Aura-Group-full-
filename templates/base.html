@@ -112,6 +112,11 @@
 
                 <div class="navbar-right d-flex align-items-center gap-3">
                     {% get_current_language as CURRENT_LANGUAGE %}
+                    <form action="{% url 'set_language' %}" method="post" id="lang-form" style="display:none;">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                        <input name="language" type="hidden" id="lang-input">
+                    </form>
                     <div class="lang-dropdown" role="group" aria-label="Language switcher">
                         <button class="lang-dropdown-toggle" type="button">
                             <i class="fas fa-globe" style="margin-right: 4px;"></i>
@@ -119,12 +124,12 @@
                             <i class="fas fa-chevron-down" style="margin-left: 4px; font-size: 10px;"></i>
                         </button>
                         <div class="lang-dropdown-menu">
-                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'uz' %}active{% endif %}" data-lang="uz">
-                                <span class="lang-flag">UZ</span> O'zbekcha</a>
-                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'ru' %}active{% endif %}" data-lang="ru">
-                                <span class="lang-flag">RU</span> Русский</a>
-                            <a href="#" class="lang-dropdown-item js-lang-link {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" data-lang="en">
-                                <span class="lang-flag">EN</span> English</a>
+                            <button type="button" class="lang-dropdown-item {% if CURRENT_LANGUAGE == 'uz' %}active{% endif %}" onclick="document.getElementById('lang-input').value='uz'; document.getElementById('lang-form').submit();" style="background: none; border: none; width: 100%; text-align: left; padding: 10px 16px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                                <span class="lang-flag" style="font-weight: 600;">UZ</span> O'zbekcha</button>
+                            <button type="button" class="lang-dropdown-item {% if CURRENT_LANGUAGE == 'ru' %}active{% endif %}" onclick="document.getElementById('lang-input').value='ru'; document.getElementById('lang-form').submit();" style="background: none; border: none; width: 100%; text-align: left; padding: 10px 16px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                                <span class="lang-flag" style="font-weight: 600;">RU</span> Русский</button>
+                            <button type="button" class="lang-dropdown-item {% if CURRENT_LANGUAGE == 'en' %}active{% endif %}" onclick="document.getElementById('lang-input').value='en'; document.getElementById('lang-form').submit();" style="background: none; border: none; width: 100%; text-align: left; padding: 10px 16px; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                                <span class="lang-flag" style="font-weight: 600;">EN</span> English</button>
                         </div>
                     </div>
                     <a href="{% url 'contact' %}" class="btn btn-primary"
@@ -237,6 +242,22 @@
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="{% static 'js/script.js' %}"></script>
     {% block extra_js %}{% endblock %}
-</body>
 
+    <!-- Fallback if static JS fails to load or crashes -->
+    <script>
+        setTimeout(function() {
+            document.querySelectorAll('.reveal, .reveal-apple, .reveal-apple-slide-up, .reveal-apple-scale, .reveal-apple-delayed, .page-transition-overlay').forEach(function(el) {
+                el.classList.add('is-visible');
+                el.style.opacity = '1';
+                el.style.visibility = 'visible';
+                if(el.classList.contains('page-transition-overlay')) {
+                    el.classList.remove('is-active');
+                    el.style.opacity = '0';
+                    el.style.display = 'none';
+                }
+            });
+            const preloader = document.getElementById("wow-preloader");
+            if (preloader) preloader.classList.add("loaded");
+        }, 1500);
+    </script>
 </html>

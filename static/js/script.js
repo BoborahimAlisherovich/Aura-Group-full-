@@ -164,7 +164,8 @@ function initLangDropdown() {
   });
 
   window.addEventListener("pageshow", () => {
-    overlay.classList.remove("is-active");
+    const overlay = document.querySelector(".page-transition-overlay");
+    if (overlay) overlay.classList.remove("is-active");
   });
 }
 
@@ -411,5 +412,6 @@ document.addEventListener("DOMContentLoaded", () => {
      d o c u m e n t . a d d E v e n t L i s t e n e r ( " D O M C o n t e n t L o a d e d " ,   i n i t W o w E f f e c t s ) ; 
  }   e l s e   { 
      i n i t W o w E f f e c t s ( ) ; 
- }  
+ } 
+ 
  
