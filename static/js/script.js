@@ -132,8 +132,7 @@ function initLanguageTransition() {
 
       const basePath = pathNoLang();
       const normalizedPath = basePath === "" ? "/" : basePath;
-      const targetPath =
-        targetLang === "uz" ? normalizedPath : `/${targetLang}${normalizedPath}`;
+      const targetPath = `/${targetLang}${normalizedPath.startsWith('/') ? normalizedPath : '/' + normalizedPath}`.replace('//', '/');
       const targetUrl = `${targetPath}${window.location.search}${window.location.hash}`;
 
       overlay.classList.add("is-active");

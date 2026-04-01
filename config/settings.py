@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9t*^^qi)nln5&uh@#ssxn70t_3zk3ob#0qq&4yhvc*3$owqa6w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 raw_allowed_hosts = os.getenv("ALLOWED_HOSTS", "")
 if raw_allowed_hosts.strip():
@@ -108,8 +108,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

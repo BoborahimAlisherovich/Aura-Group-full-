@@ -9,6 +9,7 @@ const routes = {
   "/details": "/pages/ProductDetails.html",
 };
 
+
 function getPath() {
   // 🔹 faqat path qismini olish (id=... ni olib tashlash)
   const hash = location.hash.slice(1); // masalan: /details?id=2
