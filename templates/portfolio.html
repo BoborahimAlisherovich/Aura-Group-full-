@@ -1,41 +1,32 @@
 {% extends 'base.html' %}
 {% load i18n static %}
 
-{% block title %}{% trans "Portfolio | AURA Group" %}{% endblock %}
+{% block title %}{% trans "Portfolio | UMRC" %}{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
-<section class="hero-section" style="min-height: 35vh; padding-top: 100px; padding-bottom: 30px;">
+<section class="hero-section" style="min-height: 35vh; padding-top: 120px; padding-bottom: 30px;">
     <div class="container text-center">
-        <span class="hero-badge reveal" style="margin-bottom: 16px; display: inline-block;">{% trans "Portfolio" %}</span>
-        <h1 class="hero-title reveal" style="margin-bottom: 16px; font-size: clamp(1.8rem, 3vw, 2.5rem);">
-            {% blocktranslate %}Real biznes natija bergan<br><span style="color: var(--aura-indigo);">loyihalarimiz</span>{% endblocktranslate %}
-        </h1>
-        <p class="hero-description reveal" style="max-width: 600px; margin: 0 auto; font-size: 1rem;">
+        <span class="hero-badge reveal">{% trans "Portfolio" %}</span>
+        <h1 class="hero-title reveal">{% blocktranslate %}Real biznes natija bergan<br>loyihalarimiz{% endblocktranslate %}</h1>
+        <p class="hero-description reveal" style="max-width: 600px; margin: 0 auto;">
             {% blocktranslate %}Biznes operatsiyalarni raqamlashtirgan va haqiqiy konversiya keltirgan {{ total_projects }}+ muvaffaqiyatli loyihalarimiz bilan tanishing.{% endblocktranslate %}
         </p>
     </div>
 </section>
 
-<!-- Portfolio Grid -->
-<section class="section-padding section-transition" style="background: var(--white);">
+<section class="section-padding">
     <div class="container">
-
-        <!-- Filter Buttons -->
-        <div class="portfolio-filter reveal" style="margin-bottom: 60px;">
+        <div class="portfolio-filter reveal">
             <button class="filter-btn active" data-filter="all">{% trans "Barchasi" %}</button>
-            <button class="filter-btn" data-filter="web">{% trans "Web platformalar" %}</button>
-            <button class="filter-btn" data-filter="mobile">{% trans "Mobil ilovalar" %}</button>
-            <button class="filter-btn" data-filter="telegram">{% trans "Telegram bot" %}</button>
-            <button class="filter-btn" data-filter="ai">{% trans "AI Integration" %}</button>
-            <button class="filter-btn" data-filter="crm">{% trans "CRM & ERP" %}</button>
-            <button class="filter-btn" data-filter="ecommerce">{% trans "E-commerce" %}</button>
+            {% for cat in categories %}
+            <button class="filter-btn" data-filter="{{ cat.name }}">{{ cat.get_name_display }}</button>
+            {% endfor %}
         </div>
 
         <div class="row g-4" id="portfolioGrid">
             {% for portfolio in portfolios %}
-            <div class="col-md-6 col-lg-4 portfolio-item reveal" data-category="{{ portfolio.project_type.name }}">
-                <article class="portfolio-slide-card" style="height: 100%; display: flex; flex-direction: column;">
+            <div class="col-md-6 col-lg-4 portfolio-item reveal" data-category="{{ portfolio.project_type.name }}" data-category-label="{{ portfolio.project_type.get_name_display }}">
+                <article class="portfolio-slide-card">
                     <a href="{% url 'portfolio_detail' portfolio.id %}" class="portfolio-slide-image-link">
                         {% if portfolio.image %}
                         <img src="{{ portfolio.image.url }}" alt="{{ portfolio.name }}">
@@ -43,18 +34,12 @@
                         <img src="{% static 'imgs/logo_image/logo_transparent.png' %}" alt="{{ portfolio.name }}">
                         {% endif %}
                     </a>
-                    <div class="portfolio-slide-content" style="flex-grow: 1; display: flex; flex-direction: column;">
-                        <h4 style="margin-bottom: 12px; font-size: 1.25rem;">{{ portfolio.name }}</h4>
-                        <p style="margin-bottom: auto; font-size: 14px;">{{ portfolio.description|truncatechars:100 }}
-                        </p>
-
-                        <div
-                            style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
-                            <a href="{% url 'portfolio_detail' portfolio.id %}" class="portfolio-inline-link">Batafsil
-                                <i class="fas fa-arrow-right"></i></a>
-
-                            <div class="portfolio-stats"
-                                style="display: flex; gap: 16px; color: var(--text-body); font-size: 14px;">
+                    <div class="portfolio-slide-content">
+                        <h4>{{ portfolio.name }}</h4>
+                        <p>{{ portfolio.description|truncatechars:100 }}</p>
+                        <div class="d-flex align-items-center justify-content-between" style="margin-top: 20px;">
+                            <a href="{% url 'portfolio_detail' portfolio.id %}" class="portfolio-inline-link">Batafsil <i class="fas fa-arrow-right"></i></a>
+                            <div class="d-flex gap-4" style="color: var(--color-text-muted); font-size: var(--small-size);">
                                 {% if portfolio.like_count %}<span><i class="fas fa-heart" style="color: #ef4444;"></i> {{ portfolio.like_count }}</span>{% endif %}
                                 {% if portfolio.view_count %}<span><i class="fas fa-eye"></i> {{ portfolio.view_count }}</span>{% endif %}
                             </div>
@@ -63,11 +48,10 @@
                 </article>
             </div>
             {% empty %}
-            <div class="col-12 text-center" id="noPortfolios">
+            <div class="col-12 text-center">
                 <div class="glass-panel" style="padding: 40px; display: inline-block;">
-                    <i class="fas fa-info-circle"
-                        style="font-size: 32px; color: var(--aura-indigo); margin-bottom: 16px;"></i>
-                    <p style="color: var(--text-body); margin: 0;">{% trans "Hozircha portfolio loyihalar mavjud emas." %}</p>
+                    <i class="fas fa-info-circle" style="font-size: 32px; color: var(--color-primary); margin-bottom: 16px;"></i>
+                    <p style="color: var(--color-text-secondary); margin: 0;">{% trans "Hozircha portfolio loyihalar mavjud emas." %}</p>
                 </div>
             </div>
             {% endfor %}
@@ -75,91 +59,63 @@
 
         {% if is_paginated %}
         <nav class="mt-5 reveal" aria-label="Portfolio pagination">
-            <ul class="pagination justify-content-center">
+            <ul class="d-flex justify-content-center gap-2" style="list-style: none;">
                 {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i
-                            class="fas fa-chevron-left"></i></a>
-                </li>
+                <li><a class="btn btn-secondary" href="?page={{ page_obj.previous_page_number }}"><i class="fas fa-chevron-left"></i></a></li>
                 {% endif %}
-
                 {% for num in paginator.page_range %}
                 {% if num == page_obj.number %}
-                <li class="page-item active" aria-current="page">
-                    <span class="page-link"
-                        style="background: var(--aura-indigo); color: white; border-color: transparent;">{{ num
-                        }}</span>
-                </li>
-                {% elif num >= page_obj.number|add:'-2' and num <= page_obj.number|add:'2' %} <li class="page-item">
-                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                    </li>
-                    {% endif %}
-                    {% endfor %}
-
-                    {% if page_obj.has_next %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ page_obj.next_page_number }}"><i
-                                class="fas fa-chevron-right"></i></a>
-                    </li>
-                    {% endif %}
+                <li><span class="btn btn-primary" style="cursor: default;">{{ num }}</span></li>
+                {% elif num >= page_obj.number|add:'-2' and num <= page_obj.number|add:'2' %}
+                <li><a class="btn btn-secondary" href="?page={{ num }}">{{ num }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <li><a class="btn btn-secondary" href="?page={{ page_obj.next_page_number }}"><i class="fas fa-chevron-right"></i></a></li>
+                {% endif %}
             </ul>
         </nav>
         {% endif %}
 
-        <!-- No results message -->
         <div class="text-center mt-5 d-none" id="noFilterResults">
-            <div class="glass-panel" style="padding: 40px; display: inline-block; width: 100%; max-width: 600px;">
-                <i class="fas fa-search" style="font-size: 32px; color: var(--aura-indigo); margin-bottom: 16px;"></i>
-                <h4 style="color: var(--text-primary);">Natija topilmadi</h4>
-                <p style="color: var(--text-body); margin: 0;">Bu kategoriyada loyihalar hozircha mavjud emas. Boshqa
-                    kategoriyani tanlab ko'ring.</p>
+            <div class="glass-panel" style="padding: 40px; display: inline-block; width: 100%; max-width: 600px;" role="status" aria-live="polite">
+                <i class="fas fa-search" style="font-size: 32px; color: var(--color-primary); margin-bottom: 16px;"></i>
+                <h4 style="color: var(--color-text);">{% trans "Natija topilmadi" %}</h4>
+                <p style="color: var(--color-text-secondary); margin: 0;">{% trans "Bu kategoriyada loyihalar hozircha mavjud emas. Boshqa kategoriyani tanlab ko'ring." %}</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Statistics Section -->
-<section class="section-padding section-transition" style="background: var(--bg-void-light);">
+<section class="section-padding" style="background: var(--color-bg-alt);">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
                 <div class="section-header reveal">
-                    <span class="hero-badge" style="margin-bottom: 16px; display: inline-block;">Statistika</span>
-                    <h2 class="section-title">Raqamlarda<br><span style="color: var(--aura-indigo);">AURA Group</span>
-                    </h2>
+                    <span class="section-badge">{% trans "Statistika" %}</span>
+                    <h2 class="section-title">{% trans "Raqamlarda UMRC" %}</h2>
                     <p class="section-description" style="margin-left: 0;">
                         {% trans "Mijozlarimizning ishonchi va muhandislik yondashuvimizning natijalari." %}
                     </p>
                 </div>
             </div>
             <div class="col-lg-7">
-                <div class="reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+                <div class="reveal stats-grid" style="gap: 24px;">
                     <div class="glass-panel text-center" style="padding: 30px;">
-                        <h3 style="font-size: 3rem; font-weight: 800; color: var(--aura-indigo); margin-bottom: 8px;">
-                            {{ total_projects }}+</h3>
-                        <p
-                            style="color: var(--text-body); margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase;">
-                            {% trans "Loyihalar" %}</p>
+                        <h3 class="stat-number" style="color: var(--color-primary);">{{ total_projects }}+</h3>
+                        <p class="stat-label">{% trans "Loyihalar" %}</p>
                     </div>
                     <div class="glass-panel text-center" style="padding: 30px;">
-                        <h3 style="font-size: 3rem; font-weight: 800; color: var(--aura-indigo); margin-bottom: 8px;">
-                            15+</h3>
-                        <p
-                            style="color: var(--text-body); margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase;">
-                            {% trans "Korporativ Mijozlar" %}</p>
+                        <h3 class="stat-number" style="color: var(--color-primary);">15+</h3>
+                        <p class="stat-label">{% trans "Korporativ Mijozlar" %}</p>
                     </div>
                     <div class="glass-panel text-center" style="padding: 30px;">
-                        <h3 style="font-size: 3rem; font-weight: 800; color: #10b981; margin-bottom: 8px;">98%</h3>
-                        <p
-                            style="color: var(--text-body); margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase;">
-                            Qoniqish Darajasi</p>
+                        <h3 class="stat-number" style="color: var(--color-success);">98%</h3>
+                        <p class="stat-label">{% trans "Qoniqish Darajasi" %}</p>
                     </div>
                     <div class="glass-panel text-center" style="padding: 30px;">
-                        <h3 style="font-size: 3rem; font-weight: 800; color: var(--aura-indigo); margin-bottom: 8px;">
-                            24/7</h3>
-                        <p
-                            style="color: var(--text-body); margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase;">
-                            Texnik yordam</p>
+                        <h3 class="stat-number" style="color: var(--color-primary);">24/7</h3>
+                        <p class="stat-label">{% trans "Texnik yordam" %}</p>
                     </div>
                 </div>
             </div>
@@ -167,114 +123,50 @@
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="section-padding section-transition" style="background: var(--aura-indigo);">
+<section class="section-padding" style="background: var(--color-primary);">
     <div class="container">
         <div class="text-center reveal" style="padding: 40px 20px;">
-            <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; margin-bottom: 16px; color: #ffffff;">
-                Keyingi case study sizniki bo'lishi mumkin</h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px;">Raqamli
-                o'sish uchun hoziroq maslahat oling va IT arxitekturasini quring.</p>
-            <a href="{% url 'contact' %}" class="btn"
-                style="background: #fff; color: var(--aura-indigo); font-weight: 700; border: none;">Loyiha boshlash <i
-                    class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            <h2 style="font-size: var(--heading-size); font-weight: 800; margin-bottom: 16px; color: var(--color-bg);">
+                {% trans "Keyingi case study sizniki bo'lishi mumkin" %}</h2>
+            <p style="font-size: 1.1rem; color: var(--color-bg); opacity: 0.85; max-width: 600px; margin: 0 auto 32px;">{% trans "Raqamli o'sish uchun hoziroq maslahat oling va IT arxitekturasini quring." %}</p>
+            <a href="{% url 'contact' %}" class="btn btn-secondary">{% trans "Loyiha boshlash" %} <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
+{% endblock %}
 
+{% block extra_js %}
 <script>
-    // Portfolio Filter Functionality
-    document.addEventListener('DOMContentLoaded', function () {
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        const noResults = document.getElementById('noFilterResults');
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const noResults = document.getElementById('noFilterResults');
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
 
-                const filterValue = this.getAttribute('data-filter');
-                let visibleCount = 0;
+            const filterValue = this.getAttribute('data-filter');
+            let visibleCount = 0;
 
-                portfolioItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-
-                    if (filterValue === 'all' || category === filterValue) {
-                        item.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-
-                if (visibleCount === 0 && portfolioItems.length > 0) {
-                    noResults.classList.remove('d-none');
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filterValue === 'all' || String(category) === String(filterValue)) {
+                    item.style.display = 'block';
+                    visibleCount++;
                 } else {
-                    noResults.classList.add('d-none');
+                    item.style.display = 'none';
                 }
             });
+
+            if (visibleCount === 0 && portfolioItems.length > 0) {
+                noResults.classList.remove('d-none');
+            } else {
+                noResults.classList.add('d-none');
+            }
         });
     });
+});
 </script>
-
-<style>
-    /* Clean Filter Styles */
-    .portfolio-filter {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        background: var(--gray-100);
-        padding: 8px;
-        border-radius: 12px;
-        width: fit-content;
-        margin: 0 auto;
-    }
-
-    .filter-btn {
-        background: transparent;
-        border: none;
-        color: var(--text-body);
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-family: var(--font);
-        font-size: 14px;
-        font-weight: 600;
-        transition: var(--transition);
-        cursor: pointer;
-    }
-
-    .filter-btn:hover {
-        color: var(--text-primary);
-        background: var(--white);
-    }
-
-    .filter-btn.active {
-        background: var(--aura-indigo);
-        color: #ffffff;
-        box-shadow: var(--glow-sm);
-    }
-
-    .pagination .page-link {
-        font-family: var(--font);
-        margin: 0 4px;
-        border-radius: 8px;
-        font-weight: 600;
-        color: var(--text-primary);
-        border-color: var(--gray-200);
-    }
-
-    @media (max-width: 768px) {
-        .portfolio-filter {
-            border-radius: 12px;
-            padding: 8px;
-        }
-
-        .filter-btn {
-            padding: 8px 14px;
-            font-size: 13px;
-        }
-    }
-</style>
 {% endblock %}
